@@ -1,0 +1,14 @@
+{
+  "name": "Võ Đạo Chiến Thần",
+  "author": "Turbo",
+  "version": "1.1.0",
+  "description": "Võ đạo, Thiên Nhân và Chân Thần. Cửu Trọng Lôi Kiếp: chín đợt sét, chiến tích hạ Thiên Nhân và thập tử nhất sinh.",
+  "GUID": "TURBO_SAKUGA",
+  "iconPath": "icon.png",
+  "targetGameBuild": 719,
+  "ModType": "NEOMOD",
+  "UsePublicizedAssembly": true,
+  "Dependencies": [],
+  "OptionalDependencies": [],
+  "IncompatibleWith": []
+}

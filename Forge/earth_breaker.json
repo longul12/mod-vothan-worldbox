@@ -1,0 +1,1204 @@
+[
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Body",
+   "Ground"
+  ],
+  "steps": [
+   "step",
+   "strike Headbutt 0.31",
+   "strike Body 0.37",
+   "L2:strike Elbow 0.31",
+   "strike Stomp 1.02 hurt=DriveIn crater=0.65 finisher"
+  ],
+  "element": "Stone",
+  "school": "earth_breaker",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Bedrock Quarry Brawl",
+  "id": "bedrock_quarry_brawl",
+  "info": "A headbutt, a body blow, an elbow, and a stomp that drives the foe into the ground",
+  "kind": "combo",
+  "arch": "brawl"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 9.0,
+  "width": 1.0,
+  "accepts": [
+   "Thrown",
+   "Launched",
+   "Scattered"
+  ],
+  "forms": [
+   "Ground",
+   "Projectile",
+   "Throw"
+  ],
+  "steps": [
+   "crouch 0.12",
+   "shot Boulder 1.81 speed=14 size=1.0 range=9.0"
+  ],
+  "element": "School",
+  "school": "earth_breaker",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Quarry Rock Hurl",
+  "id": "quarry_rock_hurl",
+  "info": "Rips a boulder out of the ground and hurls it: it carries a light foe off until they crash, and shatters on a heavy one",
+  "kind": "projectile",
+  "arch": "rock_hurl"
+ },
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Light",
+  "reach": 3.2,
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Ground",
+   "Rising"
+  ],
+  "steps": [
+   "crouch 0.12",
+   "strike Stomp 0.4",
+   "pillar 1.2 height=1.6 lift=2.2",
+   "L2:hold 0.1",
+   "leaves Launched"
+  ],
+  "element": "Stone",
+  "school": "earth_breaker",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Landslide Monolith",
+  "id": "landslide_monolith",
+  "info": "Stamps, and a pillar of rock bursts up under the foe and hurls it into the air",
+  "kind": "eruption",
+  "arch": "pillar"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "reach": 4.2,
+  "hold": true,
+  "answers": [
+   "Guard"
+  ],
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Grab",
+   "Throw"
+  ],
+  "steps": [
+   "dash",
+   "grab",
+   "lift Hug",
+   "L2:hold 0.1 tremble",
+   "suplex 1.55 0.9 1.0"
+  ],
+  "element": "Stone",
+  "school": "earth_breaker",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Colossus Bomb",
+  "id": "colossus_bomb",
+  "info": "Seizes the foe, heaves it up and arches back into a crater-making suplex",
+  "kind": "grab",
+  "arch": "throw"
+ },
+ {
+  "plan": "self",
+  "role": "Area",
+  "scale": "Light",
+  "radius": 3.15,
+  "need": 2,
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Area",
+   "Ground"
+  ],
+  "steps": [
+   "crouch 0.12",
+   "strike Stomp 0.68 crater=0.6",
+   "quake 3.4 1.92 cracks=6"
+  ],
+  "element": "School",
+  "school": "earth_breaker",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   14.0,
+   23.8,
+   37.8
+  ],
+  "cooldown": [
+   7.0,
+   8.4,
+   9.8
+  ],
+  "name": "Bedrock Upheaval",
+  "id": "bedrock_upheaval",
+  "info": "Stamps so hard the ground splits open around it: cracks race out and everyone standing on them falls",
+  "kind": "eruption",
+  "arch": "quake"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Light",
+  "radius": 1.8,
+  "range": 6.0,
+  "need": 1,
+  "accepts": [
+   "Down",
+   "Scattered"
+  ],
+  "forms": [
+   "Aerial",
+   "Area",
+   "Body",
+   "Overhead"
+  ],
+  "steps": [
+   "crouch 0.14",
+   "leap target 2.5 0.45",
+   "land 1.05 1.7 2.22"
+  ],
+  "element": "Stone",
+  "school": "earth_breaker",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   14.0,
+   23.8,
+   37.8
+  ],
+  "cooldown": [
+   7.0,
+   8.4,
+   9.8
+  ],
+  "name": "Quarry Landslide Drop",
+  "id": "quarry_landslide_drop",
+  "info": "Leaps high and comes down on the enemy with its whole weight: everyone under it is flattened and the ground breaks",
+  "kind": "slam",
+  "arch": "body_press"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 8.0,
+  "width": 1.8,
+  "accepts": [
+   "Close",
+   "Scattered"
+  ],
+  "forms": [
+   "Ground",
+   "Projectile"
+  ],
+  "steps": [
+   "crouch 0.1",
+   "strike Stomp 0.26",
+   "shot Stone 0.51 count=6 spread=8 gap=0.03 speed=22 range=8.0"
+  ],
+  "element": "School",
+  "school": "earth_breaker",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Landslide Scree Blast",
+  "id": "landslide_scree_blast",
+  "info": "Kicks up the ground in front of it: a spray of 6 rocks blasts into the enemy",
+  "kind": "projectile",
+  "arch": "rock_spray"
+ },
+ {
+  "plan": "counter",
+  "role": "Defense",
+  "scale": "Light",
+  "contact": "parried",
+  "answers": [
+   "Strike"
+  ],
+  "hold": true,
+  "forms": [
+   "Counter",
+   "Grab",
+   "Throw"
+  ],
+  "steps": [
+   "guard 0.2",
+   "grab",
+   "lift Front",
+   "toss 1.73 3.4 0.8 1.2"
+  ],
+  "element": "Stone",
+  "school": "earth_breaker",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Bedrock Stone Embrace",
+  "id": "bedrock_stone_embrace",
+  "info": "Takes the blow on its chest, closes its arms round the attacker and throws it away",
+  "kind": "counter",
+  "arch": "reversal_throw"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 10.0,
+  "width": 1.0,
+  "accepts": [
+   "Thrown",
+   "Launched",
+   "Scattered"
+  ],
+  "forms": [
+   "Ground",
+   "Projectile",
+   "Throw"
+  ],
+  "steps": [
+   "crouch 0.12",
+   "shot Boulder 2.24 speed=15 size=1.15 range=10.0"
+  ],
+  "element": "Stone",
+  "school": "earth_breaker",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Colossus Stone Cannon",
+  "id": "colossus_stone_cannon",
+  "info": "Rips a boulder out of the ground and hurls it: it carries a light foe off until they crash, and shatters on a heavy one",
+  "kind": "projectile",
+  "arch": "rock_hurl"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 7.6,
+  "width": 1.0,
+  "accepts": [
+   "Close",
+   "Scattered"
+  ],
+  "forms": [
+   "Ground",
+   "Line"
+  ],
+  "steps": [
+   "crouch 0.14",
+   "strike Stomp 0.47 crater=0.5",
+   "trench 7.6 0.8 2.48 speed=16"
+  ],
+  "element": "Stone",
+  "school": "earth_breaker",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Quarry Earth Split",
+  "id": "quarry_earth_split",
+  "info": "A stamp splits the earth: a fissure races out along the ground and throws everyone on it to either side",
+  "kind": "beam",
+  "arch": "rift"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Body",
+   "Ground"
+  ],
+  "steps": [
+   "step",
+   "strike Headbutt 0.48",
+   "strike Body 0.58",
+   "L2:strike Elbow 0.48",
+   "strike Stomp 1.61 hurt=DriveIn crater=0.89 finisher",
+   "shockwave 2.0 0.39"
+  ],
+  "element": "School",
+  "school": "earth_breaker",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Basalt Rockhead Combination",
+  "id": "basalt_rockhead_combination",
+  "info": "A headbutt, a body blow, an elbow, and a stomp that drives the foe into the ground",
+  "kind": "combo",
+  "arch": "brawl"
+ },
+ {
+  "plan": "self",
+  "role": "Area",
+  "scale": "Light",
+  "radius": 3.5,
+  "need": 2,
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Area",
+   "Ground"
+  ],
+  "steps": [
+   "crouch 0.12",
+   "strike Stomp 0.81 crater=0.7",
+   "quake 3.8 2.28 cracks=7"
+  ],
+  "element": "School",
+  "school": "earth_breaker",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   22.4,
+   39.2,
+   61.6
+  ],
+  "cooldown": [
+   8.4,
+   9.8,
+   11.2
+  ],
+  "name": "Avalanche Quake",
+  "id": "avalanche_quake",
+  "info": "Stamps so hard the ground splits open around it: cracks race out and everyone standing on them falls",
+  "kind": "eruption",
+  "arch": "quake"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 9.0,
+  "width": 1.8,
+  "accepts": [
+   "Close",
+   "Scattered"
+  ],
+  "forms": [
+   "Ground",
+   "Projectile"
+  ],
+  "steps": [
+   "crouch 0.1",
+   "strike Stomp 0.32",
+   "shot Stone 0.65 count=7 spread=8 gap=0.03 speed=24 range=9.0"
+  ],
+  "element": "Stone",
+  "school": "earth_breaker",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Basalt Rock Spray",
+  "id": "basalt_rock_spray",
+  "info": "Kicks up the ground in front of it: a spray of 7 rocks blasts into the enemy",
+  "kind": "projectile",
+  "arch": "rock_spray"
+ },
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Light",
+  "reach": 3.2,
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Ground",
+   "Rising"
+  ],
+  "steps": [
+   "crouch 0.12",
+   "strike Stomp 0.69",
+   "pillar 2.08 height=2.0 lift=2.6",
+   "L2:hold 0.1",
+   "leaves Launched"
+  ],
+  "element": "School",
+  "school": "earth_breaker",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Mountain Monolith",
+  "id": "mountain_monolith",
+  "info": "Stamps, and a pillar of rock bursts up under the foe and hurls it into the air",
+  "kind": "eruption",
+  "arch": "pillar"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 3.5,
+  "range": 9.0,
+  "need": 2,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Ground"
+  ],
+  "steps": [
+   "crouch 0.12",
+   "strike Stomp 0.41 crater=0.6",
+   "hold 0.15 tremble",
+   "rain Meteors 14 3.5 1.15 dur=1.18"
+  ],
+  "element": "School",
+  "school": "earth_breaker",
+  "tier": "master",
+  "worthy": true,
+  "mana": [
+   33.6,
+   56.0,
+   86.8
+  ],
+  "cooldown": [
+   9.8,
+   11.9,
+   14.0
+  ],
+  "name": "Avalanche",
+  "id": "avalanche",
+  "info": "Stamps and the mountains answer: burning rocks fall out of the sky on the enemy ranks",
+  "kind": "rain",
+  "arch": "rockfall"
+ },
+ {
+  "plan": "self",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 4.5,
+  "need": 2,
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Area",
+   "Ground",
+   "Rising"
+  ],
+  "steps": [
+   "crouch 0.16",
+   "strike Stomp 0.57",
+   "quake 4.5 1.33 cracks=10",
+   "pillar 1.71 height=2.6 lift=3 spike",
+   "leaves Launched"
+  ],
+  "element": "Stone",
+  "school": "earth_breaker",
+  "tier": "master",
+  "worthy": true,
+  "mana": [
+   33.6,
+   56.0,
+   86.8
+  ],
+  "cooldown": [
+   9.8,
+   11.9,
+   14.0
+  ],
+  "name": "Stone Grove",
+  "id": "stone_grove",
+  "info": "Stamps, and a forest of stone spears bursts out of the cracked ground, the greatest skewering the foe into the sky",
+  "kind": "eruption",
+  "arch": "pillar_forest"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 2.2,
+  "range": 6.0,
+  "need": 1,
+  "accepts": [
+   "Down",
+   "Scattered"
+  ],
+  "forms": [
+   "Aerial",
+   "Area",
+   "Body",
+   "Overhead"
+  ],
+  "steps": [
+   "crouch 0.14",
+   "leap target 3.1 0.45",
+   "land 1.35 2.1 3.66",
+   "quake 3.3 0.81 cracks=8"
+  ],
+  "element": "School",
+  "school": "earth_breaker",
+  "tier": "master",
+  "worthy": true,
+  "mana": [
+   33.6,
+   56.0,
+   86.8
+  ],
+  "cooldown": [
+   9.8,
+   11.9,
+   14.0
+  ],
+  "name": "Granite Landslide Drop",
+  "id": "granite_landslide_drop",
+  "info": "Leaps high and comes down on the enemy with its whole weight: everyone under it is flattened and the ground breaks",
+  "kind": "slam",
+  "arch": "body_press"
+ },
+ {
+  "plan": "counter",
+  "role": "Defense",
+  "scale": "Light",
+  "contact": "parried",
+  "answers": [
+   "Dash"
+  ],
+  "hold": true,
+  "forms": [
+   "Counter",
+   "Grab",
+   "Throw"
+  ],
+  "steps": [
+   "guard 0.2",
+   "grab",
+   "lift Front",
+   "toss 2.78 4.2 0.8 1.2"
+  ],
+  "element": "School",
+  "school": "earth_breaker",
+  "tier": "master",
+  "worthy": false,
+  "mana": [
+   24.0,
+   40.0,
+   62.0
+  ],
+  "cooldown": [
+   7.0,
+   8.5,
+   10.0
+  ],
+  "name": "Avalanche Stone Embrace",
+  "id": "avalanche_stone_embrace",
+  "info": "Takes the blow on its chest, closes its arms round the attacker and throws it away",
+  "kind": "counter",
+  "arch": "reversal_throw"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "reach": 5.1,
+  "hold": true,
+  "answers": [
+   "Guard"
+  ],
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Grab",
+   "Throw"
+  ],
+  "steps": [
+   "dash",
+   "grab",
+   "lift Hug",
+   "L2:hold 0.1 tremble",
+   "toss 3.14 4.5 1.1 1.65",
+   "quake 3.5 0.84 cracks=9"
+  ],
+  "element": "Stone",
+  "school": "earth_breaker",
+  "tier": "master",
+  "worthy": false,
+  "mana": [
+   24.0,
+   40.0,
+   62.0
+  ],
+  "cooldown": [
+   7.0,
+   8.5,
+   10.0
+  ],
+  "name": "Granite Suplex",
+  "id": "granite_suplex",
+  "info": "Seizes the foe, heaves it up and hurls it into its own lines",
+  "kind": "grab",
+  "arch": "throw"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Heavy",
+  "len": 13.0,
+  "width": 1.4,
+  "accepts": [
+   "Close",
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Ground",
+   "Line"
+  ],
+  "steps": [
+   "crouch 0.16",
+   "strike Stomp 0.69 crater=0.8",
+   "trench 13.0 1 2.31 speed=18",
+   "quake 4.8 1.38 cracks=10"
+  ],
+  "element": "Stone",
+  "school": "earth_breaker",
+  "tier": "grandmaster",
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Land Sunder",
+  "id": "land_sunder",
+  "info": "Brings both fists down on the earth: the land tears open in a fissure across the field and the ground around it quakes",
+  "kind": "beam",
+  "arch": "earth_split"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Heavy",
+  "reach": 5.4,
+  "hold": true,
+  "answers": [
+   "Guard"
+  ],
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Grab",
+   "Ground",
+   "Throw"
+  ],
+  "steps": [
+   "dash",
+   "grab",
+   "lift Overhead",
+   "rise 2.4 0.25",
+   "hold 0.12 tremble",
+   "suplex 3.27 1.68 2.4",
+   "quake 4.6 1.17 cracks=12"
+  ],
+  "element": "Stone",
+  "school": "earth_breaker",
+  "tier": "grandmaster",
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Tectonic Driver",
+  "id": "tectonic_driver",
+  "info": "Seizes the foe, leaps with it, and suplexes it into the earth so hard the land around them breaks",
+  "kind": "grab",
+  "arch": "route"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 4.6,
+  "range": 12.0,
+  "need": 1,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Ground"
+  ],
+  "element": "Fire",
+  "steps": [
+   "rise 2 0.3",
+   "hold 0.25 tremble",
+   "meteor 4.6 4.69 size=3.0 kind=Rock",
+   "hold 1.4",
+   "drop 0.15",
+   "land 0 0 0"
+  ],
+  "school": "earth_breaker",
+  "tier": "grandmaster",
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Falling Peak",
+  "id": "falling_peak",
+  "info": "Tears a burning mountain out of the sky: its shadow swallows the enemy, and it lands in a blast that leaves a smoking crater",
+  "kind": "slam",
+  "arch": "mountain_fall"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Heavy",
+  "len": 9.2,
+  "width": 1.0,
+  "accepts": [
+   "Close",
+   "Scattered"
+  ],
+  "forms": [
+   "Ground",
+   "Line"
+  ],
+  "steps": [
+   "crouch 0.14",
+   "strike Stomp 0.7 crater=0.5",
+   "trench 9.2 0.9 3.73 speed=16"
+  ],
+  "element": "Stone",
+  "school": "earth_breaker",
+  "tier": "grandmaster",
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Granite Earth Split",
+  "id": "granite_earth_split",
+  "info": "A stamp splits the earth: a fissure races out along the ground and throws everyone on it to either side",
+  "kind": "beam",
+  "arch": "rift"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 11.0,
+  "width": 1.8,
+  "accepts": [
+   "Close",
+   "Scattered"
+  ],
+  "forms": [
+   "Ground",
+   "Projectile"
+  ],
+  "steps": [
+   "crouch 0.1",
+   "strike Stomp 0.48",
+   "shot Stone 0.96 count=9 spread=8 gap=0.03 speed=28 range=11.0"
+  ],
+  "element": "Stone",
+  "school": "earth_breaker",
+  "tier": "grandmaster",
+  "worthy": false,
+  "mana": [
+   36.0,
+   58.0,
+   90.0
+  ],
+  "cooldown": [
+   9.0,
+   11.0,
+   13.0
+  ],
+  "name": "Tectonic Scree Blast",
+  "id": "tectonic_scree_blast",
+  "info": "Kicks up the ground in front of it: a spray of 9 rocks blasts into the enemy",
+  "kind": "projectile",
+  "arch": "rock_spray"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Ultimate",
+  "reach": 5.7,
+  "hold": true,
+  "answers": [
+   "Guard"
+  ],
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Grab",
+   "Ground",
+   "Throw"
+  ],
+  "steps": [
+   "cinematic",
+   "dash",
+   "grab",
+   "lift Overhead",
+   "rise 2.6 0.25",
+   "hold 0.12 tremble",
+   "suplex 4.08 1.8 2.55",
+   "quake 5.0 1.46 cracks=13",
+   "hold 0.1",
+   "pillar 1.17 height=3 lift=3.4 spike",
+   "meteor 3.4 2.33 size=2.4 kind=Rock",
+   "hold 1.2"
+  ],
+  "element": "Stone",
+  "school": "earth_breaker",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "World Breaker Throw",
+  "id": "world_breaker_throw",
+  "info": "Seizes the foe, leaps with it, and suplexes it into the earth so hard the land around them breaks; a spire of stone throws the body back up, and a burning mountain falls on it",
+  "kind": "grab",
+  "arch": "route"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Ultimate",
+  "radius": 5.0,
+  "range": 12.0,
+  "need": 1,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Ground"
+  ],
+  "element": "Fire",
+  "steps": [
+   "cinematic",
+   "rise 2 0.3",
+   "hold 0.25 tremble",
+   "meteor 5.0 5.84 size=3.3 kind=Rock",
+   "hold 1.4",
+   "drop 0.15",
+   "land 0 0 0",
+   "quake 5.5 1.23 cracks=14"
+  ],
+  "school": "earth_breaker",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Sky Boulder",
+  "id": "sky_boulder",
+  "info": "Tears a burning mountain out of the sky: its shadow swallows the enemy, and it lands in a blast that leaves a smoking crater",
+  "kind": "slam",
+  "arch": "mountain_fall"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Ultimate",
+  "radius": 4.1,
+  "range": 9.0,
+  "need": 2,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Ground"
+  ],
+  "element": "Fire",
+  "steps": [
+   "cinematic",
+   "crouch 0.12",
+   "strike Stomp 0.57 crater=0.6",
+   "hold 0.15 tremble",
+   "rain Meteors 18 4.1 1.61 dur=1.3"
+  ],
+  "school": "earth_breaker",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Rockfall",
+  "id": "rockfall",
+  "info": "Stamps and the mountains answer: burning rocks fall out of the sky on the enemy ranks",
+  "kind": "rain",
+  "arch": "rockfall"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Ultimate",
+  "len": 14.0,
+  "width": 1.4,
+  "accepts": [
+   "Close",
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Ground",
+   "Line"
+  ],
+  "steps": [
+   "cinematic",
+   "crouch 0.16",
+   "strike Stomp 0.84 crater=0.8",
+   "trench 14.0 1 2.81 speed=18",
+   "quake 5.1 1.69 cracks=10"
+  ],
+  "element": "School",
+  "school": "earth_breaker",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Great Rift",
+  "id": "great_rift",
+  "info": "Brings both fists down on the earth: the land tears open in a fissure across the field and the ground around it quakes",
+  "kind": "beam",
+  "arch": "earth_split"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "reach": 5.7,
+  "hold": true,
+  "answers": [
+   "Guard"
+  ],
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Grab",
+   "Throw"
+  ],
+  "steps": [
+   "dash",
+   "grab",
+   "lift Inverted",
+   "L2:hold 0.1 tremble",
+   "slam 4.67 1.4 1.75 headfirst",
+   "quake 4.1 1.17 cracks=11"
+  ],
+  "element": "Stone",
+  "school": "earth_breaker",
+  "tier": "god",
+  "worthy": false,
+  "mana": [
+   55.0,
+   85.0,
+   130.0
+  ],
+  "cooldown": [
+   12.0,
+   15.0,
+   18.0
+  ],
+  "name": "Bedrock Driver",
+  "id": "bedrock_driver",
+  "info": "Seizes the foe, heaves it up and smashes it head first into the ground",
+  "kind": "grab",
+  "arch": "throw"
+ }
+]

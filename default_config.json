@@ -1,0 +1,397 @@
+{
+  "sakuga_progress": [
+    {
+      "Type": "INT_SLIDER",
+      "Id": "sakuga_progress_speed",
+      "IconPath": "ui/Icons/sakuga/iconTierAdept",
+      "IntVal": 2,
+      "MinIntVal": 0,
+      "MaxIntVal": 4,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "INT_SLIDER",
+      "Id": "sakuga_max_tier",
+      "IconPath": "ui/Icons/sakuga/iconTierGrandmaster",
+      "IntVal": 6,
+      "MinIntVal": 1,
+      "MaxIntVal": 6,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "INT_SLIDER",
+      "Id": "sakuga_god_cap",
+      "IconPath": "ui/Icons/sakuga/iconTierGod",
+      "IntVal": 2,
+      "MinIntVal": 0,
+      "MaxIntVal": 1000,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_beasts_awaken",
+      "IconPath": "ui/Icons/sakuga/iconTierNovice",
+      "BoolVal": false,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "INT_SLIDER",
+      "Id": "sakuga_announce_from",
+      "IconPath": "ui/Icons/sakuga/iconTierExpert",
+      "IntVal": 3,
+      "MinIntVal": 1,
+      "MaxIntVal": 7,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_true_god_growth",
+      "IconPath": "ui/Icons/sakuga/iconTierPrimordial",
+      "Callback": "Sakuga.Settings:OnChanged",
+      "BoolVal": true
+    },
+    {
+      "Type": "INT_SLIDER",
+      "Id": "sakuga_true_god_cap",
+      "IconPath": "ui/Icons/sakuga/iconTierPrimordial",
+      "Callback": "Sakuga.Settings:OnChanged",
+      "IntVal": 10,
+      "MinIntVal": 0,
+      "MaxIntVal": 1000
+    },
+    {
+      "Type": "INT_SLIDER",
+      "Id": "sakuga_true_god_xp",
+      "IconPath": "ui/Icons/sakuga/iconTierPrimordial",
+      "Callback": "Sakuga.Settings:OnChanged",
+      "IntVal": 50000,
+      "MinIntVal": 1000,
+      "MaxIntVal": 1000000
+    },
+    {
+      "Type": "INT_SLIDER",
+      "Id": "sakuga_true_god_years",
+      "IconPath": "ui/Icons/sakuga/iconTierPrimordial",
+      "Callback": "Sakuga.Settings:OnChanged",
+      "IntVal": 50,
+      "MinIntVal": 1,
+      "MaxIntVal": 1000
+    },
+    {
+      "Type": "INT_SLIDER",
+      "Id": "sakuga_true_god_kills",
+      "IconPath": "ui/Icons/sakuga/iconTierPrimordial",
+      "IntVal": 10,
+      "MinIntVal": 0,
+      "MaxIntVal": 1000,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "INT_SLIDER",
+      "Id": "sakuga_tribulation_power",
+      "IconPath": "ui/Icons/sakuga/iconTierPrimordial",
+      "IntVal": 100,
+      "MinIntVal": 10,
+      "MaxIntVal": 500,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_true_god_brink",
+      "IconPath": "ui/Icons/sakuga/iconTierPrimordial",
+      "BoolVal": true,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_tribulation_effects",
+      "IconPath": "ui/Icons/sakuga/iconTierPrimordial",
+      "BoolVal": true,
+      "Callback": "Sakuga.Settings:OnChanged"
+    }
+  ],
+  "sakuga_star": [
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_star_novice",
+      "IconPath": "ui/Icons/sakuga/iconTierNovice",
+      "BoolVal": false,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_star_adept",
+      "IconPath": "ui/Icons/sakuga/iconTierAdept",
+      "BoolVal": false,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_star_expert",
+      "IconPath": "ui/Icons/sakuga/iconTierExpert",
+      "BoolVal": false,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_star_master",
+      "IconPath": "ui/Icons/sakuga/iconTierMaster",
+      "BoolVal": true,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_star_grandmaster",
+      "IconPath": "ui/Icons/sakuga/iconTierGrandmaster",
+      "BoolVal": true,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_star_god",
+      "IconPath": "ui/Icons/sakuga/iconTierGod",
+      "BoolVal": true,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_star_primordial",
+      "IconPath": "ui/Icons/sakuga/iconTierPrimordial",
+      "BoolVal": true,
+      "Callback": "Sakuga.Settings:OnChanged"
+    }
+  ],
+  "sakuga_spectacle": [
+    {
+      "Type": "SLIDER",
+      "Id": "sakuga_hitstop",
+      "IconPath": "ui/Icons/sakuga/iconMeteorSlam",
+      "FloatVal": 1.0,
+      "MinFloatVal": 0.0,
+      "MaxFloatVal": 1.5,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "INT_SLIDER",
+      "Id": "sakuga_cinematics",
+      "IconPath": "ui/Icons/sakuga/iconTierGod",
+      "IntVal": 2,
+      "MinIntVal": 0,
+      "MaxIntVal": 2,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_title_cards",
+      "IconPath": "ui/Icons/sakuga/iconZeroMoment",
+      "BoolVal": true,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_auras",
+      "IconPath": "ui/Icons/sakuga/iconTierMaster",
+      "BoolVal": true,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_spotlight",
+      "IconPath": "ui/Icons/sakuga/iconTierGod",
+      "BoolVal": true,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "INT_SLIDER",
+      "Id": "sakuga_spotlight_from",
+      "IconPath": "ui/Icons/sakuga/iconTierGrandmaster",
+      "IntVal": 5,
+      "MinIntVal": 1,
+      "MaxIntVal": 7,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_camera_follow",
+      "IconPath": "ui/Icons/sakuga/iconStarfall",
+      "BoolVal": false,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "INT_SLIDER",
+      "Id": "sakuga_primordial_shake",
+      "IconPath": "ui/Icons/sakuga/iconTierPrimordial",
+      "IntVal": 1,
+      "MinIntVal": 0,
+      "MaxIntVal": 2,
+      "Callback": "Sakuga.Settings:OnChanged"
+    }
+  ],
+  "sakuga_aura": [
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_aura_novice",
+      "IconPath": "ui/Icons/sakuga/iconTierNovice",
+      "BoolVal": true,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_aura_adept",
+      "IconPath": "ui/Icons/sakuga/iconTierAdept",
+      "BoolVal": true,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_aura_expert",
+      "IconPath": "ui/Icons/sakuga/iconTierExpert",
+      "BoolVal": true,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_aura_master",
+      "IconPath": "ui/Icons/sakuga/iconTierMaster",
+      "BoolVal": true,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_aura_grandmaster",
+      "IconPath": "ui/Icons/sakuga/iconTierGrandmaster",
+      "BoolVal": true,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_aura_god",
+      "IconPath": "ui/Icons/sakuga/iconTierGod",
+      "BoolVal": true,
+      "Callback": "Sakuga.Settings:OnChanged"
+    }
+  ],
+  "sakuga_balance": [
+    {
+      "Type": "INT_SLIDER",
+      "Id": "sakuga_bare_level",
+      "IconPath": "ui/Icons/sakuga/iconRisingTempest",
+      "IntVal": 3,
+      "MinIntVal": 1,
+      "MaxIntVal": 3,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SLIDER",
+      "Id": "sakuga_frequency",
+      "IconPath": "ui/Icons/sakuga/iconMeteorSlam",
+      "FloatVal": 1.0,
+      "MinFloatVal": 0.1,
+      "MaxFloatVal": 3.0,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SLIDER",
+      "Id": "sakuga_mana_cost",
+      "IconPath": "ui/Icons/sakuga/iconTierAdept",
+      "FloatVal": 1.0,
+      "MinFloatVal": 0.0,
+      "MaxFloatVal": 3.0,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SLIDER",
+      "Id": "sakuga_cooldowns",
+      "IconPath": "ui/Icons/sakuga/iconTierExpert",
+      "FloatVal": 1.0,
+      "MinFloatVal": 0.1,
+      "MaxFloatVal": 3.0,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_class_limits",
+      "IconPath": "ui/Icons/sakuga/iconTierMaster",
+      "BoolVal": true,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_team_techniques",
+      "IconPath": "ui/Icons/sakuga/iconTierAdept",
+      "BoolVal": true,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_duels",
+      "IconPath": "ui/Icons/sakuga/iconTierGrandmaster",
+      "BoolVal": true,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_worlds_end",
+      "IconPath": "ui/Icons/sakuga/iconTierPrimordial",
+      "BoolVal": false,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_situations",
+      "IconPath": "ui/Icons/sakuga/iconTierMaster",
+      "BoolVal": true,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_schools",
+      "IconPath": "ui/Icons/sakuga/iconSchoolIronFist",
+      "BoolVal": true,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "INT_SLIDER",
+      "Id": "sakuga_destruction",
+      "IconPath": "ui/Icons/sakuga/iconFaultLine",
+      "IntVal": 2,
+      "MinIntVal": 0,
+      "MaxIntVal": 2,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SLIDER",
+      "Id": "sakuga_power",
+      "IconPath": "ui/Icons/sakuga/iconTierGod",
+      "FloatVal": 1.0,
+      "MinFloatVal": 0.25,
+      "MaxFloatVal": 3.0,
+      "Callback": "Sakuga.Settings:OnChanged"
+    }
+  ],
+  "sakuga_crab": [
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_crabzilla_cinematic",
+      "IconPath": "ui/Icons/sakuga/iconTierGod",
+      "BoolVal": true,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "INT_SLIDER",
+      "Id": "sakuga_crabzilla_grace",
+      "IconPath": "ui/Icons/sakuga/iconTierGod",
+      "IntVal": 4,
+      "MinIntVal": 0,
+      "MaxIntVal": 30,
+      "Callback": "Sakuga.Settings:OnChanged"
+    },
+    {
+      "Type": "SWITCH",
+      "Id": "sakuga_crabzilla_grandmasters",
+      "IconPath": "ui/Icons/sakuga/iconTierGrandmaster",
+      "BoolVal": false,
+      "Callback": "Sakuga.Settings:OnChanged"
+    }
+  ]
+}

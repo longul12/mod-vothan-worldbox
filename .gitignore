@@ -1,0 +1,16 @@
+bin/
+obj/
+.vs/
+.idea/
+dev/
+__pycache__/
+*.dll
+*.pdb
+*.log
+*.tmp
+*.bak
+*.user
+*.suo
+.env
+.env.*
+!.env.example

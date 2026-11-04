@@ -1,0 +1,1172 @@
+[
+ {
+  "plan": "counter",
+  "role": "Defense",
+  "scale": "Light",
+  "contact": "evaded",
+  "answers": [
+   "Line",
+   "Dash"
+  ],
+  "forms": [
+   "Counter",
+   "Evasive",
+   "Teleport"
+  ],
+  "steps": [
+   "slip 0.5",
+   "blink behind",
+   "strike Hook 0.62",
+   "L2:strike Knee 0.41",
+   "strike SnapKick 1.03 hurt=Launch lift=2 finisher"
+  ],
+  "element": "School",
+  "school": "phantom_step",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Velvet Fade",
+  "id": "velvet_fade",
+  "info": "The blow tears through an afterimage; the real one is already behind the attacker, striking",
+  "kind": "counter",
+  "arch": "fade"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 8.0,
+  "width": 1.0,
+  "accepts": [
+   "Thrown",
+   "Scattered"
+  ],
+  "forms": [
+   "Fast",
+   "Projectile"
+  ],
+  "steps": [
+   "crouch 0.08",
+   "shot Disc 1.2 count=1 spread=14 gap=0.08 speed=18 flight=Boomerang pierce=3 range=8.0"
+  ],
+  "element": "Shadow",
+  "school": "phantom_step",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Velvet Shadow Disc",
+  "id": "velvet_shadow_disc",
+  "info": "Whips out a disc of shadow that cuts through the line and comes back to its hand, cutting again",
+  "kind": "projectile",
+  "arch": "shadow_disc"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "reach": 5.2,
+  "accepts": [
+   "Close",
+   "Scattered"
+  ],
+  "forms": [
+   "Clone",
+   "Fast",
+   "Teleport"
+  ],
+  "steps": [
+   "blink behind",
+   "strike Backfist 0.41",
+   "blink behind",
+   "strike Knee 0.41",
+   "clones 3 Hook 0.61",
+   "strike HeelDrop 0.82 hurt=DriveIn crater=0.55 finisher"
+  ],
+  "element": "Shadow",
+  "school": "phantom_step",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Wraith Afterimages",
+  "id": "wraith_afterimages",
+  "info": "Blinks behind the foe again and again; its afterimages keep striking where it was, and a heel from nowhere ends it",
+  "kind": "phantom",
+  "arch": "afterimages"
+ },
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Light",
+  "reach": 5.2,
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Kick",
+   "Rising",
+   "Teleport"
+  ],
+  "steps": [
+   "blink behind",
+   "strike Knee 0.39",
+   "strike SnapKick 1.17 hurt=Launch lift=2.2 finisher",
+   "leaves Launched"
+  ],
+  "element": "School",
+  "school": "phantom_step",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Twilight Shade Rise",
+  "id": "twilight_shade_rise",
+  "info": "Appears beneath the foe's guard with a knee, and a kick from nowhere throws it into the air",
+  "kind": "launcher",
+  "arch": "ghost_lift"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 5.4,
+  "width": 0.7,
+  "accepts": [
+   "Close",
+   "Thrown"
+  ],
+  "forms": [
+   "Dash",
+   "Fast",
+   "Teleport"
+  ],
+  "steps": [
+   "crouch 0.06",
+   "dash behind",
+   "ghost lines",
+   "strike Knee 2.0 hurt=Crumple finisher",
+   "L2:hold 0.1",
+   "L3:clones 3 Backfist 0.53"
+  ],
+  "element": "School",
+  "school": "phantom_step",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Phantom Mirage Pass",
+  "id": "phantom_mirage_pass",
+  "info": "Drifts straight through the foe like smoke; only on the other side does the knee it left behind land",
+  "kind": "rush",
+  "arch": "mirage_pass"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 8.0,
+  "width": 1.6,
+  "accepts": [
+   "Thrown",
+   "Scattered"
+  ],
+  "forms": [
+   "Evasive",
+   "Projectile"
+  ],
+  "steps": [
+   "backhop 0.9",
+   "shot Disc 0.64 count=3 spread=16 gap=0.08 speed=20 flight=Boomerang pierce=2"
+  ],
+  "element": "Shadow",
+  "school": "phantom_step",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Specter Wheel Scatter",
+  "id": "specter_wheel_scatter",
+  "info": "Springs back into the shadows and throws 3 discs of shadow that cut through the enemy and come back",
+  "kind": "projectile",
+  "arch": "disc_volley"
+ },
+ {
+  "plan": "air",
+  "role": "Air",
+  "scale": "Light",
+  "accepts": [
+   "Launched"
+  ],
+  "forms": [
+   "Aerial",
+   "Teleport"
+  ],
+  "steps": [
+   "crouch 0.08",
+   "rise 2.0 0.14",
+   "strike Knee 0.38 air",
+   "strike Backfist 0.38 air",
+   "L2:strike Hook 0.3 air",
+   "strike HeelDrop 1.13 air hurt=DriveIn crater=0.72 finisher",
+   "drop 0.12",
+   "land 0.62 1.15 0.25"
+  ],
+  "element": "School",
+  "school": "phantom_step",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Wraith Ghost Ladder",
+  "id": "wraith_ghost_ladder",
+  "info": "Flickers up beside the launched foe, strikes it from one side and then the other, and heels it down into the ground",
+  "kind": "juggle",
+  "arch": "ghost_ladder"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "reach": 5.5,
+  "accepts": [
+   "Close"
+  ],
+  "forms": [
+   "Fast",
+   "Teleport"
+  ],
+  "steps": [
+   "blink behind",
+   "strike Jab 0.37",
+   "strike Hook 0.45",
+   "L2:strike Knee 0.37",
+   "strike Knee 1.25 hurt=Crumple  finisher"
+  ],
+  "element": "School",
+  "school": "phantom_step",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Specter Blink Combination",
+  "id": "specter_blink_combination",
+  "info": "Vanishes and is already behind the foe: a jab, a hook, a knee and a knee before it can turn",
+  "kind": "combo",
+  "arch": "blink_combo"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "reach": 5.5,
+  "accepts": [
+   "Close",
+   "Scattered"
+  ],
+  "forms": [
+   "Clone",
+   "Fast",
+   "Teleport"
+  ],
+  "steps": [
+   "blink behind",
+   "strike Backfist 0.52",
+   "blink behind",
+   "strike Knee 0.52",
+   "clones 3 Hook 0.78",
+   "strike HeelDrop 1.05 hurt=DriveIn crater=0.67 finisher"
+  ],
+  "element": "School",
+  "school": "phantom_step",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Phantom Afterimages",
+  "id": "phantom_afterimages",
+  "info": "Blinks behind the foe again and again; its afterimages keep striking where it was, and a heel from nowhere ends it",
+  "kind": "phantom",
+  "arch": "afterimages"
+ },
+ {
+  "plan": "self",
+  "role": "Area",
+  "scale": "Light",
+  "radius": 6.0,
+  "need": 3,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Clone"
+  ],
+  "steps": [
+   "legion Knee 2.32 max=6"
+  ],
+  "element": "Shadow",
+  "school": "phantom_step",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   22.4,
+   39.2,
+   61.6
+  ],
+  "cooldown": [
+   8.4,
+   9.8,
+   11.2
+  ],
+  "name": "Mirage Legion",
+  "id": "mirage_legion",
+  "info": "Splits into a legion of shadows that fall on every enemy around at once",
+  "kind": "legion",
+  "arch": "legion"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 8.0,
+  "width": 1.6,
+  "accepts": [
+   "Thrown",
+   "Scattered"
+  ],
+  "forms": [
+   "Evasive",
+   "Projectile"
+  ],
+  "steps": [
+   "backhop 1.0",
+   "shot Disc 0.78 count=4 spread=16 gap=0.08 speed=22 flight=Boomerang pierce=2"
+  ],
+  "element": "Shadow",
+  "school": "phantom_step",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Smoke Disc Volley",
+  "id": "smoke_disc_volley",
+  "info": "Springs back into the shadows and throws 4 discs of shadow that cut through the enemy and come back",
+  "kind": "projectile",
+  "arch": "disc_volley"
+ },
+ {
+  "plan": "counter",
+  "role": "Defense",
+  "scale": "Light",
+  "contact": "evaded",
+  "answers": [
+   "Charge"
+  ],
+  "forms": [
+   "Counter",
+   "Evasive",
+   "Teleport"
+  ],
+  "steps": [
+   "slip 0.5",
+   "blink behind",
+   "strike Hook 0.98",
+   "L2:strike Knee 0.65",
+   "strike SnapKick 1.63 hurt=Launch lift=2 finisher"
+  ],
+  "element": "School",
+  "school": "phantom_step",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Phantom Smoke Answer",
+  "id": "phantom_smoke_answer",
+  "info": "The blow tears through an afterimage; the real one is already behind the attacker, striking",
+  "kind": "counter",
+  "arch": "fade"
+ },
+ {
+  "plan": "air",
+  "role": "Air",
+  "scale": "Light",
+  "accepts": [
+   "Launched"
+  ],
+  "forms": [
+   "Aerial",
+   "Teleport"
+  ],
+  "steps": [
+   "crouch 0.08",
+   "rise 2.2 0.14",
+   "strike Knee 0.48 air",
+   "strike Backfist 0.48 air",
+   "L2:strike Hook 0.39 air",
+   "strike HeelDrop 1.45 air hurt=DriveIn crater=0.84 finisher",
+   "drop 0.12",
+   "land 0.74 1.3 0.32"
+  ],
+  "element": "School",
+  "school": "phantom_step",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Echo Wraith Climb",
+  "id": "echo_wraith_climb",
+  "info": "Flickers up beside the launched foe, strikes it from one side and then the other, and heels it down into the ground",
+  "kind": "juggle",
+  "arch": "ghost_ladder"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 10.0,
+  "width": 1.6,
+  "accepts": [
+   "Thrown",
+   "Scattered"
+  ],
+  "forms": [
+   "Fast",
+   "Projectile"
+  ],
+  "steps": [
+   "crouch 0.08",
+   "shot Disc 1.01 count=3 spread=14 gap=0.08 speed=22 flight=Boomerang pierce=3 range=10.0"
+  ],
+  "element": "School",
+  "school": "phantom_step",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Specter Night Wheel",
+  "id": "specter_night_wheel",
+  "info": "Whips out 3 discs of shadow that cut through the line and come back to its hand, cutting again",
+  "kind": "projectile",
+  "arch": "shadow_disc"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 3.5,
+  "range": 10.0,
+  "need": 2,
+  "accepts": [
+   "Scattered",
+   "Thrown"
+  ],
+  "forms": [
+   "Area",
+   "Charge"
+  ],
+  "steps": [
+   "charge 0.4 Raised 2.4",
+   "blackhole 3.5 3.6 dur=1.34"
+  ],
+  "element": "Shadow",
+  "school": "phantom_step",
+  "tier": "master",
+  "worthy": true,
+  "mana": [
+   33.6,
+   56.0,
+   86.8
+  ],
+  "cooldown": [
+   9.8,
+   11.9,
+   14.0
+  ],
+  "name": "Hollow Star",
+  "id": "hollow_star",
+  "info": "Opens a sphere of nothing among the enemy: it drags them in, crushes them together and collapses with a blast",
+  "kind": "nova",
+  "arch": "void_sphere"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Heavy",
+  "reach": 6.1,
+  "accepts": [
+   "Close",
+   "Scattered"
+  ],
+  "forms": [
+   "Clone",
+   "Teleport"
+  ],
+  "steps": [
+   "blink behind",
+   "strike Knee 0.59",
+   "clones 5 Hook 0.99",
+   "blink behind",
+   "strike HeelDrop 1.39 hurt=DriveIn crater=1 finisher",
+   "rain Shadows 11 1.6 0.24 dur=0.6"
+  ],
+  "element": "School",
+  "school": "phantom_step",
+  "tier": "master",
+  "worthy": true,
+  "mana": [
+   33.6,
+   56.0,
+   86.8
+  ],
+  "cooldown": [
+   9.8,
+   11.9,
+   14.0
+  ],
+  "name": "Night Execution",
+  "id": "night_execution",
+  "info": "Appears behind the foe, its shadows strike from every side, a heel from nowhere drives it down, and blades of night fall on it",
+  "kind": "phantom",
+  "arch": "night_execution"
+ },
+ {
+  "plan": "self",
+  "role": "Area",
+  "scale": "Light",
+  "radius": 6.0,
+  "need": 3,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Clone"
+  ],
+  "steps": [
+   "legion Knee 2.86 max=7"
+  ],
+  "element": "School",
+  "school": "phantom_step",
+  "tier": "master",
+  "worthy": false,
+  "mana": [
+   33.6,
+   56.0,
+   86.8
+  ],
+  "cooldown": [
+   9.8,
+   11.9,
+   14.0
+  ],
+  "name": "Specter Legion",
+  "id": "specter_legion",
+  "info": "Splits into a legion of shadows that fall on every enemy around at once",
+  "kind": "legion",
+  "arch": "legion"
+ },
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Light",
+  "reach": 6.1,
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Kick",
+   "Rising",
+   "Teleport"
+  ],
+  "steps": [
+   "blink behind",
+   "strike Knee 0.82",
+   "strike SnapKick 2.46 hurt=Launch lift=2.95 finisher",
+   "leaves Launched"
+  ],
+  "element": "Shadow",
+  "school": "phantom_step",
+  "tier": "master",
+  "worthy": false,
+  "mana": [
+   24.0,
+   40.0,
+   62.0
+  ],
+  "cooldown": [
+   7.0,
+   8.5,
+   10.0
+  ],
+  "name": "Twilight Ghost Lift",
+  "id": "twilight_ghost_lift",
+  "info": "Appears beneath the foe's guard with a knee, and a kick from nowhere throws it into the air",
+  "kind": "launcher",
+  "arch": "ghost_lift"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 6.2,
+  "width": 0.7,
+  "accepts": [
+   "Close",
+   "Thrown"
+  ],
+  "forms": [
+   "Dash",
+   "Fast",
+   "Teleport"
+  ],
+  "steps": [
+   "crouch 0.06",
+   "dash behind",
+   "ghost lines",
+   "strike Knee 2.82 hurt=Crumple finisher",
+   "L2:hold 0.1",
+   "L3:clones 3 Backfist 0.75"
+  ],
+  "element": "School",
+  "school": "phantom_step",
+  "tier": "master",
+  "worthy": false,
+  "mana": [
+   24.0,
+   40.0,
+   62.0
+  ],
+  "cooldown": [
+   7.0,
+   8.5,
+   10.0
+  ],
+  "name": "Hollow Mirage Pass",
+  "id": "hollow_mirage_pass",
+  "info": "Drifts straight through the foe like smoke; only on the other side does the knee it left behind land",
+  "kind": "rush",
+  "arch": "mirage_pass"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 3.8,
+  "range": 10.0,
+  "need": 2,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Teleport"
+  ],
+  "steps": [
+   "blink point",
+   "hold 0.15 tremble",
+   "rain Shadows 24 3.8 1.09 dur=1.24"
+  ],
+  "element": "School",
+  "school": "phantom_step",
+  "tier": "grandmaster",
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Rain of Shadows",
+  "id": "rain_of_shadows",
+  "info": "Steps into the middle of the enemy and the dark opens over them: blades of shadow rain down on every one",
+  "kind": "rain",
+  "arch": "shadow_rain"
+ },
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Heavy",
+  "reach": 6.4,
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Aerial",
+   "Clone",
+   "Rising",
+   "Teleport"
+  ],
+  "steps": [
+   "blink behind",
+   "strike Jab 0.4",
+   "strike Hook 0.51",
+   "strike SnapKick 0.76 hurt=Juggle lift=2.8",
+   "rise 2.4 0.12",
+   "flurry 9 0.91 Knee Backfist dur=0.35",
+   "strike HeelDrop 1.52 air hurt=DriveIn crater=1.23 finisher",
+   "drop 0.12",
+   "land 0.98 1.6 0.51",
+   "clones 5 Hook 0.51"
+  ],
+  "element": "School",
+  "school": "phantom_step",
+  "tier": "grandmaster",
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Vanishing Route",
+  "id": "vanishing_route",
+  "info": "The phantom's road: from behind, a kick into the air, a storm of blows from nowhere, a heel into a crater and its shadows round it",
+  "kind": "launcher",
+  "arch": "route"
+ },
+ {
+  "plan": "self",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 6.0,
+  "need": 3,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Clone"
+  ],
+  "steps": [
+   "legion Hook 2.31 max=10",
+   "blackhole 3.2 2.08 dur=0.9"
+  ],
+  "element": "School",
+  "school": "phantom_step",
+  "tier": "grandmaster",
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Thousand Shadows Collapse",
+  "id": "thousand_shadows_collapse",
+  "info": "Splits into a legion of shadows that fall on every enemy at once, then gathers them all into one point of darkness",
+  "kind": "legion",
+  "arch": "shadow_legion"
+ },
+ {
+  "plan": "counter",
+  "role": "Defense",
+  "scale": "Light",
+  "contact": "evaded",
+  "answers": [
+   "Charge"
+  ],
+  "forms": [
+   "Counter",
+   "Evasive",
+   "Teleport"
+  ],
+  "steps": [
+   "slip 0.5",
+   "blink behind",
+   "strike Hook 1.43",
+   "L2:strike Knee 0.95",
+   "strike SnapKick 2.38 hurt=Launch lift=2 finisher"
+  ],
+  "element": "School",
+  "school": "phantom_step",
+  "tier": "grandmaster",
+  "worthy": false,
+  "mana": [
+   36.0,
+   58.0,
+   90.0
+  ],
+  "cooldown": [
+   9.0,
+   11.0,
+   13.0
+  ],
+  "name": "Twilight Fade",
+  "id": "twilight_fade",
+  "info": "The blow tears through an afterimage; the real one is already behind the attacker, striking",
+  "kind": "counter",
+  "arch": "fade"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 6.6,
+  "width": 0.7,
+  "accepts": [
+   "Close",
+   "Thrown"
+  ],
+  "forms": [
+   "Dash",
+   "Fast",
+   "Teleport"
+  ],
+  "steps": [
+   "crouch 0.06",
+   "dash behind",
+   "ghost lines",
+   "strike Knee 3.48 hurt=Crumple finisher",
+   "L2:hold 0.1",
+   "L3:clones 3 Backfist 0.93"
+  ],
+  "element": "Shadow",
+  "school": "phantom_step",
+  "tier": "grandmaster",
+  "worthy": false,
+  "mana": [
+   36.0,
+   58.0,
+   90.0
+  ],
+  "cooldown": [
+   9.0,
+   11.0,
+   13.0
+  ],
+  "name": "Shade Smoke Through",
+  "id": "shade_smoke_through",
+  "info": "Drifts straight through the foe like smoke; only on the other side does the knee it left behind land",
+  "kind": "rush",
+  "arch": "mirage_pass"
+ },
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Ultimate",
+  "reach": 6.7,
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Aerial",
+   "Clone",
+   "Rising",
+   "Teleport"
+  ],
+  "steps": [
+   "cinematic",
+   "blink behind",
+   "strike Jab 0.46",
+   "strike Hook 0.57",
+   "strike SnapKick 0.86 hurt=Juggle lift=2.95",
+   "rise 2.55 0.12",
+   "flurry 10 1.03 Knee Backfist dur=0.35",
+   "strike HeelDrop 1.72 air hurt=DriveIn crater=1.35 finisher",
+   "drop 0.12",
+   "land 1.1 1.75 0.57",
+   "clones 5 Hook 0.57",
+   "hold 0.08",
+   "blackhole 3 2.0 dur=1",
+   "rain Shadows 18 3.4 0.34 dur=0.9"
+  ],
+  "element": "Shadow",
+  "school": "phantom_step",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Endless Night",
+  "id": "endless_night",
+  "info": "The phantom's road: from behind, a kick into the air, a storm of blows from nowhere, a heel into a crater and its shadows round it; then the dark itself opens and swallows the crater",
+  "kind": "launcher",
+  "arch": "route"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Ultimate",
+  "radius": 4.1,
+  "range": 10.0,
+  "need": 2,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Teleport"
+  ],
+  "steps": [
+   "cinematic",
+   "blink point",
+   "hold 0.15 tremble",
+   "rain Shadows 27 4.1 1.31 dur=1.3"
+  ],
+  "element": "School",
+  "school": "phantom_step",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Night Blades",
+  "id": "night_blades",
+  "info": "Steps into the middle of the enemy and the dark opens over them: blades of shadow rain down on every one",
+  "kind": "rain",
+  "arch": "shadow_rain"
+ },
+ {
+  "plan": "self",
+  "role": "Area",
+  "scale": "Ultimate",
+  "radius": 6.0,
+  "need": 3,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Clone"
+  ],
+  "steps": [
+   "cinematic",
+   "legion Hook 2.84 max=11",
+   "blackhole 3.4 2.56 dur=0.9"
+  ],
+  "element": "School",
+  "school": "phantom_step",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Shadow Legion",
+  "id": "shadow_legion",
+  "info": "Splits into a legion of shadows that fall on every enemy at once, then gathers them all into one point of darkness",
+  "kind": "legion",
+  "arch": "shadow_legion"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Ultimate",
+  "reach": 6.7,
+  "accepts": [
+   "Close",
+   "Scattered"
+  ],
+  "forms": [
+   "Clone",
+   "Teleport"
+  ],
+  "steps": [
+   "cinematic",
+   "blink behind",
+   "strike Knee 0.82",
+   "clones 5 Hook 1.37",
+   "blink behind",
+   "strike HeelDrop 1.92 hurt=DriveIn crater=1 finisher",
+   "rain Shadows 13 1.6 0.33 dur=0.6"
+  ],
+  "element": "Shadow",
+  "school": "phantom_step",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Shade Sentence",
+  "id": "shade_sentence",
+  "info": "Appears behind the foe, its shadows strike from every side, a heel from nowhere drives it down, and blades of night fall on it",
+  "kind": "phantom",
+  "arch": "night_execution"
+ },
+ {
+  "plan": "self",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 6.0,
+  "need": 3,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Clone"
+  ],
+  "steps": [
+   "legion Knee 4.23 max=9",
+   "blackhole 3.0 1.81 dur=0.8"
+  ],
+  "element": "School",
+  "school": "phantom_step",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   77.0,
+   119.0,
+   182.0
+  ],
+  "cooldown": [
+   16.8,
+   21.0,
+   25.2
+  ],
+  "name": "Shade Legion",
+  "id": "shade_legion",
+  "info": "Splits into a legion of shadows that fall on every enemy around at once",
+  "kind": "legion",
+  "arch": "legion"
+ }
+]

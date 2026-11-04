@@ -1,0 +1,1189 @@
+[
+ {
+  "plan": "counter",
+  "role": "Defense",
+  "scale": "Light",
+  "contact": "parried",
+  "answers": [
+   "Punch"
+  ],
+  "forms": [
+   "Counter",
+   "Guard",
+   "Ki",
+   "Palm"
+  ],
+  "steps": [
+   "guard 0.25 hex",
+   "strike Palm 1.13 hurt=Reel push=2.2 finisher"
+  ],
+  "element": "Ki",
+  "school": "ki_arts",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Prism Repulse",
+  "id": "prism_repulse",
+  "info": "A hexagon of light takes the blow, and the palm behind it sends the attacker sliding away",
+  "kind": "counter",
+  "arch": "repulse"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 9.0,
+  "width": 1.4,
+  "accepts": [
+   "Thrown",
+   "Scattered"
+  ],
+  "forms": [
+   "Evasive",
+   "Ki",
+   "Projectile"
+  ],
+  "steps": [
+   "backhop 0.8",
+   "shot Orb 0.6 count=3 spread=14 gap=0.1 speed=18 size=0.9"
+  ],
+  "element": "School",
+  "school": "ki_arts",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Dragon Orb Volley",
+  "id": "dragon_orb_volley",
+  "info": "Floats back out of reach and throws 3 orbs of ki as it lands, each bursting like a shell",
+  "kind": "projectile",
+  "arch": "orb_volley"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 10.0,
+  "width": 1.0,
+  "accepts": [
+   "Thrown",
+   "Launched",
+   "Scattered"
+  ],
+  "forms": [
+   "Fast",
+   "Ki",
+   "Projectile"
+  ],
+  "steps": [
+   "charge 0.14 Palms 1.0",
+   "shot Bullet 0.49 count=3 spread=6 gap=0.06 speed=24"
+  ],
+  "element": "Ki",
+  "school": "ki_arts",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Starlight Finger Stars",
+  "id": "starlight_finger_stars",
+  "info": "Fingers flick out 3 beads of ki faster than arrows, one after another at the foe",
+  "kind": "projectile",
+  "arch": "spirit_shot"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "accepts": [
+   "Close"
+  ],
+  "forms": [
+   "Ki",
+   "Palm"
+  ],
+  "steps": [
+   "step",
+   "strike Palm 0.3",
+   "strike Palm 0.36",
+   "L2:strike Palm 0.3",
+   "strike Palm 1.0 hurt=Reel push=2.0 finisher area=0.6 areamult=0.4"
+  ],
+  "element": "School",
+  "school": "ki_arts",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Prism Lotus Palms",
+  "id": "prism_lotus_palms",
+  "info": "Palm after palm into the chest, and the last one bursts with ki and sends the foe sliding away",
+  "kind": "combo",
+  "arch": "palms"
+ },
+ {
+  "plan": "air",
+  "role": "Air",
+  "scale": "Light",
+  "accepts": [
+   "Launched"
+  ],
+  "forms": [
+   "Aerial",
+   "Ki",
+   "Palm"
+  ],
+  "steps": [
+   "crouch 0.08",
+   "rise 2.0 0.16",
+   "strike Palm 0.49 air",
+   "strike Palm 0.49 air",
+   "L2:shot Bullet 0.32 count=3 spread=8 gap=0.05 speed=26",
+   "strike Palm 1.22 air hurt=DriveIn crater=0.72 finisher",
+   "drop 0.12",
+   "land 0.62 1.15 0.27"
+  ],
+  "element": "School",
+  "school": "ki_arts",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Radiant Halo Drop",
+  "id": "radiant_halo_drop",
+  "info": "Rises after the launched foe, palms it twice in the air and drives it back down with a palm of light that cracks the ground",
+  "kind": "juggle",
+  "arch": "heaven_palm"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 11.0,
+  "width": 0.8,
+  "accepts": [
+   "Thrown",
+   "Launched",
+   "Scattered"
+  ],
+  "forms": [
+   "Ki",
+   "Projectile",
+   "Straight"
+  ],
+  "steps": [
+   "charge 0.28 Raised 1.45",
+   "shot Spear 2.27 speed=28 range=11.0 size=1.12 pierce=2 impact=Pin"
+  ],
+  "element": "School",
+  "school": "ki_arts",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Starlight Light Spear",
+  "id": "starlight_light_spear",
+  "info": "Draws a spear of light out of the air and hurls it: it runs the foe through and pins it to the ground",
+  "kind": "projectile",
+  "arch": "light_spear"
+ },
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Light",
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Ki",
+   "Palm",
+   "Rising"
+  ],
+  "steps": [
+   "step",
+   "strike Palm 0.49",
+   "strike Palm 1.48 hurt=Launch lift=2.45 finisher",
+   "leaves Launched"
+  ],
+  "element": "Ki",
+  "school": "ki_arts",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Starlight Rising Light",
+  "id": "starlight_rising_light",
+  "info": "A palm to the chest, then a palm from below that lifts the foe into the air on a pillar of ki",
+  "kind": "launcher",
+  "arch": "uplift"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Light",
+  "radius": 6.0,
+  "range": 10.0,
+  "need": 2,
+  "accepts": [
+   "Scattered",
+   "Thrown",
+   "Launched"
+  ],
+  "forms": [
+   "Ki",
+   "Projectile"
+  ],
+  "steps": [
+   "charge 0.28 Raised 1.45",
+   "shot Orb 0.66 count=4 spread=40 gap=0.08 speed=15 flight=Homing size=0.98"
+  ],
+  "element": "School",
+  "school": "ki_arts",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   14.0,
+   23.8,
+   37.8
+  ],
+  "cooldown": [
+   7.0,
+   8.4,
+   9.8
+  ],
+  "name": "Halo Seeker Stars",
+  "id": "halo_seeker_stars",
+  "info": "A halo of 4 orbs wheels over its raised hand, then scatters, each curving away to hunt down a foe and burst on it",
+  "kind": "projectile",
+  "arch": "seeker"
+ },
+ {
+  "plan": "self",
+  "role": "Area",
+  "scale": "Light",
+  "radius": 2.5,
+  "need": 2,
+  "accepts": [
+   "Close"
+  ],
+  "forms": [
+   "Area",
+   "Charge",
+   "Ki"
+  ],
+  "steps": [
+   "charge 0.33 Stance 1.8",
+   "dome 2.5 2.26"
+  ],
+  "element": "School",
+  "school": "ki_arts",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   14.0,
+   23.8,
+   37.8
+  ],
+  "cooldown": [
+   7.0,
+   8.4,
+   9.8
+  ],
+  "name": "Dragon Nova",
+  "id": "dragon_nova",
+  "info": "Curls round its own light, then bursts open: a dome of ki flings the whole crowd away",
+  "kind": "nova",
+  "arch": "nova"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 13.0,
+  "width": 0.9,
+  "accepts": [
+   "Thrown",
+   "Scattered",
+   "Launched"
+  ],
+  "forms": [
+   "Beam",
+   "Charge",
+   "Ki"
+  ],
+  "steps": [
+   "charge 0.5 Hip 2.6",
+   "beam 12.0 5 0.58 3.52"
+  ],
+  "element": "School",
+  "school": "ki_arts",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Astral Spirit Cannon",
+  "id": "astral_spirit_cannon",
+  "info": "Gathers a sun of ki at the hip, then a beam tears a trench through everything in line",
+  "kind": "beam",
+  "arch": "wave"
+ },
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Light",
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Ki",
+   "Palm",
+   "Rising"
+  ],
+  "steps": [
+   "step",
+   "strike Palm 0.63",
+   "strike Palm 1.9 hurt=Launch lift=2.7 finisher",
+   "shot Orb 0.48 speed=20 size=0.9 range=4",
+   "leaves Launched"
+  ],
+  "element": "School",
+  "school": "ki_arts",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Starlight Uplift",
+  "id": "starlight_uplift",
+  "info": "A palm to the chest, then a palm from below that lifts the foe into the air on a pillar of ki",
+  "kind": "launcher",
+  "arch": "uplift"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 10.0,
+  "width": 1.0,
+  "accepts": [
+   "Thrown",
+   "Launched",
+   "Scattered"
+  ],
+  "forms": [
+   "Fast",
+   "Ki",
+   "Projectile"
+  ],
+  "steps": [
+   "charge 0.2 Palms 1.24",
+   "shot Bullet 0.79 count=5 spread=6 gap=0.06 speed=28"
+  ],
+  "element": "Ki",
+  "school": "ki_arts",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Astral Spirit Shot",
+  "id": "astral_spirit_shot",
+  "info": "Fingers flick out 5 beads of ki faster than arrows, one after another at the foe",
+  "kind": "projectile",
+  "arch": "spirit_shot"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 9.0,
+  "width": 1.4,
+  "accepts": [
+   "Thrown",
+   "Scattered"
+  ],
+  "forms": [
+   "Evasive",
+   "Ki",
+   "Projectile"
+  ],
+  "steps": [
+   "backhop 1.0",
+   "shot Orb 0.99 count=4 spread=14 gap=0.1 speed=22 size=0.9"
+  ],
+  "element": "School",
+  "school": "ki_arts",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Radiant Scatter Shot",
+  "id": "radiant_scatter_shot",
+  "info": "Floats back out of reach and throws 4 orbs of ki as it lands, each bursting like a shell",
+  "kind": "projectile",
+  "arch": "orb_volley"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 12.0,
+  "width": 0.8,
+  "accepts": [
+   "Thrown",
+   "Launched",
+   "Scattered"
+  ],
+  "forms": [
+   "Ki",
+   "Projectile",
+   "Straight"
+  ],
+  "steps": [
+   "charge 0.31 Raised 1.6",
+   "shot Spear 2.91 speed=30 range=12.0 size=1.24 pierce=3 impact=Pin"
+  ],
+  "element": "School",
+  "school": "ki_arts",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Starlight Sun Javelin",
+  "id": "starlight_sun_javelin",
+  "info": "Draws a spear of light out of the air and hurls it: it runs the foe through and pins it to the ground",
+  "kind": "projectile",
+  "arch": "light_spear"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Heavy",
+  "len": 14.0,
+  "width": 1.0,
+  "accepts": [
+   "Thrown",
+   "Scattered"
+  ],
+  "forms": [
+   "Beam",
+   "Ki"
+  ],
+  "steps": [
+   "charge 0.3 Palms 2.4",
+   "skybeam 1.2 0.61 dur=0.6 scatter=3",
+   "L2:skybeam 1.2 0.61 dur=0.6 scatter=3",
+   "beam 14.0 6 0.55 2.45"
+  ],
+  "element": "Ki",
+  "school": "ki_arts",
+  "tier": "master",
+  "worthy": true,
+  "mana": [
+   33.6,
+   56.0,
+   86.8
+  ],
+  "cooldown": [
+   9.8,
+   11.9,
+   14.0
+  ],
+  "name": "Clap of Dawn",
+  "id": "clap_of_dawn",
+  "info": "Claps its palms: pillars of light fall among the enemy, and a beam of ki answers them from its hands",
+  "kind": "beam",
+  "arch": "heaven_palms"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 2.55,
+  "range": 11.0,
+  "need": 1,
+  "accepts": [
+   "Scattered",
+   "Thrown"
+  ],
+  "forms": [
+   "Area",
+   "Charge",
+   "Ki"
+  ],
+  "steps": [
+   "charge 0.52 Raised 2.75",
+   "skybeam 2.55 3.3 dur=1.05"
+  ],
+  "element": "Ki",
+  "school": "ki_arts",
+  "tier": "master",
+  "worthy": true,
+  "mana": [
+   33.6,
+   56.0,
+   86.8
+  ],
+  "cooldown": [
+   9.8,
+   11.9,
+   14.0
+  ],
+  "name": "Sky Lance",
+  "id": "sky_lance",
+  "info": "Raises a hand: a ring of light marks the foe, and a pillar of light falls on it out of a clear sky",
+  "kind": "beam",
+  "arch": "heaven_pillar"
+ },
+ {
+  "plan": "self",
+  "role": "Area",
+  "scale": "Light",
+  "radius": 3.1,
+  "need": 2,
+  "accepts": [
+   "Close"
+  ],
+  "forms": [
+   "Area",
+   "Charge",
+   "Ki"
+  ],
+  "steps": [
+   "charge 0.39 Stance 2.2",
+   "dome 3.1 3.26",
+   "shockwave 4.1 0.77 hurt=Knockdown push=1.2"
+  ],
+  "element": "Ki",
+  "school": "ki_arts",
+  "tier": "master",
+  "worthy": false,
+  "mana": [
+   33.6,
+   56.0,
+   86.8
+  ],
+  "cooldown": [
+   9.8,
+   11.9,
+   14.0
+  ],
+  "name": "Halo Lotus Bloom",
+  "id": "halo_lotus_bloom",
+  "info": "Curls round its own light, then bursts open: a dome of ki flings the whole crowd away",
+  "kind": "nova",
+  "arch": "nova"
+ },
+ {
+  "plan": "air",
+  "role": "Air",
+  "scale": "Light",
+  "accepts": [
+   "Launched"
+  ],
+  "forms": [
+   "Aerial",
+   "Ki",
+   "Palm"
+  ],
+  "steps": [
+   "crouch 0.08",
+   "rise 2.4 0.16",
+   "strike Palm 0.69 air",
+   "strike Palm 0.69 air",
+   "L2:shot Bullet 0.46 count=3 spread=8 gap=0.05 speed=26",
+   "strike Palm 1.72 air hurt=DriveIn crater=0.96 finisher",
+   "drop 0.12",
+   "land 0.86 1.45 0.38",
+   "dome 2.2 0.57"
+  ],
+  "element": "Ki",
+  "school": "ki_arts",
+  "tier": "master",
+  "worthy": false,
+  "mana": [
+   24.0,
+   40.0,
+   62.0
+  ],
+  "cooldown": [
+   7.0,
+   8.5,
+   10.0
+  ],
+  "name": "Prism Halo Drop",
+  "id": "prism_halo_drop",
+  "info": "Rises after the launched foe, palms it twice in the air and drives it back down with a palm of light that cracks the ground",
+  "kind": "juggle",
+  "arch": "heaven_palm"
+ },
+ {
+  "plan": "counter",
+  "role": "Defense",
+  "scale": "Light",
+  "contact": "parried",
+  "answers": [
+   "Punch"
+  ],
+  "forms": [
+   "Counter",
+   "Guard",
+   "Ki",
+   "Palm"
+  ],
+  "steps": [
+   "guard 0.25 hex",
+   "strike Palm 2.38 hurt=Reel push=3.1 finisher",
+   "dome 1.85 0.79"
+  ],
+  "element": "Ki",
+  "school": "ki_arts",
+  "tier": "master",
+  "worthy": false,
+  "mana": [
+   24.0,
+   40.0,
+   62.0
+  ],
+  "cooldown": [
+   7.0,
+   8.5,
+   10.0
+  ],
+  "name": "Spirit Hex Ward",
+  "id": "spirit_hex_ward",
+  "info": "A hexagon of light takes the blow, and the palm behind it sends the attacker sliding away",
+  "kind": "counter",
+  "arch": "repulse"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 3.8,
+  "range": 9.0,
+  "need": 2,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Ki",
+   "Projectile"
+  ],
+  "steps": [
+   "rise 1.4 0.2",
+   "charge 0.3 Raised 2.4",
+   "rain Light 24 3.8 1.11 dur=1.24",
+   "drop 0.14",
+   "land 0 0 0"
+  ],
+  "element": "School",
+  "school": "ki_arts",
+  "tier": "grandmaster",
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Light Rain",
+  "id": "light_rain",
+  "info": "Rises and opens its hands to the sky: columns of light fall on the enemy ranks one after another",
+  "kind": "rain",
+  "arch": "light_rain"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 4.4,
+  "range": 12.0,
+  "need": 1,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Charge",
+   "Ki"
+  ],
+  "steps": [
+   "rise 1.4 0.25",
+   "charge 1.0 Raised 4.0",
+   "meteor 4.4 4.59 size=2.8 kind=Sun",
+   "hold 1.1",
+   "drop 0.14",
+   "land 0 0 0"
+  ],
+  "element": "Ki",
+  "school": "ki_arts",
+  "tier": "grandmaster",
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Spirit Sun",
+  "id": "spirit_sun",
+  "info": "Raises both hands and gathers the light of everything around into one sun of ki, then throws it down on the enemy",
+  "kind": "nova",
+  "arch": "sun"
+ },
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Heavy",
+  "reach": 6.4,
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Aerial",
+   "Ki",
+   "Palm",
+   "Rising"
+  ],
+  "steps": [
+   "blink point",
+   "strike Palm 0.39",
+   "strike Palm 0.49",
+   "strike Palm 0.73 hurt=Juggle lift=2.8",
+   "rise 2.4 0.12",
+   "flurry 9 0.88 Palm Palm dur=0.35",
+   "strike Palm 1.46 air hurt=DriveIn crater=1.23 finisher",
+   "drop 0.12",
+   "land 0.98 1.6 0.49"
+  ],
+  "element": "Ki",
+  "school": "ki_arts",
+  "tier": "grandmaster",
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Way of Light",
+  "id": "way_of_light",
+  "info": "The way of ki: palms that lift the foe, a storm of palms in the air, and one that drives it into a crater",
+  "kind": "launcher",
+  "arch": "route"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Heavy",
+  "len": 16.0,
+  "width": 0.9,
+  "accepts": [
+   "Thrown",
+   "Scattered",
+   "Launched"
+  ],
+  "forms": [
+   "Beam",
+   "Charge",
+   "Ki"
+  ],
+  "steps": [
+   "charge 0.6 Hip 3.2",
+   "beam 15.0 6 0.66 5.27"
+  ],
+  "element": "School",
+  "school": "ki_arts",
+  "tier": "grandmaster",
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Dragon Ki Wave",
+  "id": "dragon_ki_wave",
+  "info": "Gathers a sun of ki at the hip, then a beam tears a trench through everything in line",
+  "kind": "beam",
+  "arch": "wave"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Light",
+  "radius": 6.0,
+  "range": 10.0,
+  "need": 2,
+  "accepts": [
+   "Scattered",
+   "Thrown",
+   "Launched"
+  ],
+  "forms": [
+   "Ki",
+   "Projectile"
+  ],
+  "steps": [
+   "charge 0.37 Raised 1.9",
+   "shot Orb 1.24 count=7 spread=40 gap=0.08 speed=18 flight=Homing size=1.22"
+  ],
+  "element": "Ki",
+  "school": "ki_arts",
+  "tier": "grandmaster",
+  "worthy": false,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Prism Seeker Stars",
+  "id": "prism_seeker_stars",
+  "info": "A halo of 7 orbs wheels over its raised hand, then scatters, each curving away to hunt down a foe and burst on it",
+  "kind": "projectile",
+  "arch": "seeker"
+ },
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Ultimate",
+  "reach": 6.7,
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Aerial",
+   "Ki",
+   "Palm",
+   "Rising"
+  ],
+  "steps": [
+   "cinematic",
+   "blink point",
+   "strike Palm 0.45",
+   "strike Palm 0.56",
+   "strike Palm 0.84 hurt=Juggle lift=2.95",
+   "rise 2.55 0.12",
+   "flurry 10 1.01 Palm Palm dur=0.35",
+   "strike Palm 1.68 air hurt=DriveIn crater=1.35 finisher",
+   "drop 0.12",
+   "land 1.1 1.75 0.56",
+   "hold 0.08",
+   "skybeam 2.6 1.68 dur=1",
+   "skybeam 1.4 0.84 dur=0.7 scatter=3"
+  ],
+  "element": "School",
+  "school": "ki_arts",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Lotus Road",
+  "id": "lotus_road",
+  "info": "The way of ki: palms that lift the foe, a storm of palms in the air, and one that drives it into a crater; then a pillar of light falls on the crater out of the sky",
+  "kind": "launcher",
+  "arch": "route"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Ultimate",
+  "radius": 4.1,
+  "range": 9.0,
+  "need": 2,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Ki",
+   "Projectile"
+  ],
+  "steps": [
+   "cinematic",
+   "rise 1.5 0.2",
+   "charge 0.3 Raised 2.6",
+   "rain Light 27 4.1 1.31 dur=1.3",
+   "drop 0.14",
+   "land 0 0 0"
+  ],
+  "element": "School",
+  "school": "ki_arts",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Spirit Rain",
+  "id": "spirit_rain",
+  "info": "Rises and opens its hands to the sky: columns of light fall on the enemy ranks one after another",
+  "kind": "rain",
+  "arch": "light_rain"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Ultimate",
+  "radius": 4.8,
+  "range": 12.0,
+  "need": 1,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Charge",
+   "Ki"
+  ],
+  "steps": [
+   "cinematic",
+   "rise 1.4 0.25",
+   "charge 1.05 Raised 4.3",
+   "meteor 4.8 5.74 size=3.1 kind=Sun",
+   "hold 1.1",
+   "drop 0.14",
+   "land 0 0 0"
+  ],
+  "element": "School",
+  "school": "ki_arts",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Second Sun",
+  "id": "second_sun",
+  "info": "Raises both hands and gathers the light of everything around into one sun of ki, then throws it down on the enemy",
+  "kind": "nova",
+  "arch": "sun"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Ultimate",
+  "radius": 3.05,
+  "range": 11.0,
+  "need": 1,
+  "accepts": [
+   "Scattered",
+   "Thrown"
+  ],
+  "forms": [
+   "Area",
+   "Charge",
+   "Ki"
+  ],
+  "steps": [
+   "cinematic",
+   "charge 0.6 Raised 3.25",
+   "skybeam 3.05 4.87 dur=1.15",
+   "skybeam 1.4 1.52 dur=0.7 scatter=3"
+  ],
+  "element": "School",
+  "school": "ki_arts",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Heaven's Pillar",
+  "id": "heavens_pillar",
+  "info": "Raises a hand: a ring of light marks the foe, and a pillar of light falls on it out of a clear sky",
+  "kind": "beam",
+  "arch": "heaven_pillar"
+ },
+ {
+  "plan": "air",
+  "role": "Air",
+  "scale": "Light",
+  "accepts": [
+   "Launched"
+  ],
+  "forms": [
+   "Aerial",
+   "Ki",
+   "Palm"
+  ],
+  "steps": [
+   "crouch 0.08",
+   "rise 2.8 0.16",
+   "strike Palm 1.06 air",
+   "strike Palm 1.06 air",
+   "L2:shot Bullet 0.71 count=3 spread=8 gap=0.05 speed=26",
+   "strike Palm 2.65 air hurt=DriveIn crater=1.2 finisher",
+   "drop 0.12",
+   "land 1.1 1.75 0.59",
+   "dome 2.6 0.88"
+  ],
+  "element": "Ki",
+  "school": "ki_arts",
+  "tier": "god",
+  "worthy": false,
+  "mana": [
+   55.0,
+   85.0,
+   130.0
+  ],
+  "cooldown": [
+   12.0,
+   15.0,
+   18.0
+  ],
+  "name": "Astral Heaven Palm",
+  "id": "astral_heaven_palm",
+  "info": "Rises after the launched foe, palms it twice in the air and drives it back down with a palm of light that cracks the ground",
+  "kind": "juggle",
+  "arch": "heaven_palm"
+ }
+]

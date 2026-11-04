@@ -1,0 +1,1195 @@
+[
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Light",
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Punch",
+   "Rising"
+  ],
+  "steps": [
+   "step",
+   "strike Body 0.38",
+   "strike Uppercut 1.14 hurt=Launch lift=2.2 finisher",
+   "leaves Launched"
+  ],
+  "element": "Fire",
+  "school": "iron_fist",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Crimson Dragon Uppercut",
+  "id": "crimson_dragon_uppercut",
+  "info": "A body blow, then a rising uppercut that throws the foe high",
+  "kind": "launcher",
+  "arch": "rising_dragon"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "accepts": [
+   "Close"
+  ],
+  "forms": [
+   "Fast",
+   "Punch",
+   "Straight"
+  ],
+  "steps": [
+   "step",
+   "strike Jab 0.3",
+   "strike Cross 0.4",
+   "L2:strike Hook 0.3",
+   "strike Cross 1.01 hurt=Reel push=1.6 finisher",
+   "shot Fist 0.5 speed=24 range=4.0 size=0.8 pierce=2 push=1.2"
+  ],
+  "element": "Fire",
+  "school": "iron_fist",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Bull One-Two Burst",
+  "id": "bull_one_two_burst",
+  "info": "A jab, a cross, a hook, then a straight so hard its pressure keeps going: a fist of air flies on and hits whoever stands behind",
+  "kind": "combo",
+  "arch": "one_two"
+ },
+ {
+  "plan": "counter",
+  "role": "Defense",
+  "scale": "Light",
+  "contact": "evaded",
+  "answers": [
+   "Punch",
+   "Straight"
+  ],
+  "forms": [
+   "Counter",
+   "Punch"
+  ],
+  "steps": [
+   "slip -0.5",
+   "strike Cross 0.67",
+   "L2:strike Hook 0.38",
+   "strike Uppercut 0.95 hurt=Launch lift=2.0 finisher"
+  ],
+  "element": "School",
+  "school": "iron_fist",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Crimson Inside Answer",
+  "id": "crimson_inside_answer",
+  "info": "Slips the attack by a hair and answers inside it: a cross, a hook and an uppercut",
+  "kind": "counter",
+  "arch": "return_cross"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 6.0,
+  "width": 0.8,
+  "accepts": [
+   "Thrown",
+   "Scattered"
+  ],
+  "forms": [
+   "Dash",
+   "Punch",
+   "Straight"
+  ],
+  "steps": [
+   "run",
+   "ghost lines",
+   "strike Body 0.59 hurt=Fold daze=0.8",
+   "strike Uppercut 1.19 hurt=Launch lift=2.0 finisher area=0.8 areamult=0.4"
+  ],
+  "element": "Fire",
+  "school": "iron_fist",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Crimson Bull Rush",
+  "id": "crimson_bull_rush",
+  "info": "Charges in head down, a body blow that folds the foe, and an uppercut that lifts it off the ground",
+  "kind": "rush",
+  "arch": "bull_rush"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "reach": 4.5,
+  "accepts": [
+   "Close"
+  ],
+  "forms": [
+   "Flurry",
+   "Punch"
+  ],
+  "steps": [
+   "dash",
+   "flurry 11 1.44 Jab Cross dur=0.5",
+   "strike Cross 1.05 hurt=Reel push=2.1 finisher area=0.72 areamult=0.4"
+  ],
+  "element": "School",
+  "school": "iron_fist",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Furnace Machine Gun Fists",
+  "id": "furnace_machine_gun_fists",
+  "info": "Buries the foe under fists too fast to count, then one straight that sends it flying",
+  "kind": "barrage",
+  "arch": "gatling"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 10.0,
+  "width": 0.9,
+  "accepts": [
+   "Thrown",
+   "Launched",
+   "Scattered"
+  ],
+  "forms": [
+   "Projectile",
+   "Punch",
+   "Straight"
+  ],
+  "steps": [
+   "charge 0.21 Fist 1.35",
+   "shot Fist 2.24 speed=22 range=10.0 size=1.25 push=1.4 pierce=2 hurt=Reel"
+  ],
+  "element": "School",
+  "school": "iron_fist",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Knuckle Pressure Shot",
+  "id": "knuckle_pressure_shot",
+  "info": "Cocks the fist and punches the air itself: a fist of pressure flies down the line and blows through anyone in it",
+  "kind": "projectile",
+  "arch": "air_cannon"
+ },
+ {
+  "plan": "air",
+  "role": "Air",
+  "scale": "Light",
+  "accepts": [
+   "Launched"
+  ],
+  "forms": [
+   "Aerial",
+   "Punch"
+  ],
+  "steps": [
+   "crouch 0.08",
+   "rise 2.0 0.16",
+   "strike Cross 0.47 air",
+   "strike Hook 0.47 air",
+   "L2:flurry 5 0.52 Jab Cross dur=0.3",
+   "strike Hook 1.18 air hurt=DriveIn crater=0.72 finisher",
+   "drop 0.12",
+   "land 0.62 1.15 0.31"
+  ],
+  "element": "Fire",
+  "school": "iron_fist",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Knuckle Cloud Breaker",
+  "id": "knuckle_cloud_breaker",
+  "info": "Leaps after the launched foe, works it over in the air and hammers it back down into a crater",
+  "kind": "juggle",
+  "arch": "sky_hammer"
+ },
+ {
+  "plan": "self",
+  "role": "Area",
+  "scale": "Light",
+  "radius": 2.7,
+  "need": 2,
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Area",
+   "Ground",
+   "Punch"
+  ],
+  "steps": [
+   "crouch 0.14",
+   "charge 0.18 Fist 1.15",
+   "strike Body 0.79 crater=0.72",
+   "shockwave 2.7 1.45 hurt=Knockdown push=1"
+  ],
+  "element": "School",
+  "school": "iron_fist",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   14.0,
+   23.8,
+   37.8
+  ],
+  "cooldown": [
+   7.0,
+   8.4,
+   9.8
+  ],
+  "name": "Crimson Fault Fist",
+  "id": "crimson_fault_fist",
+  "info": "Drives its fist into the earth: rings of force race out and throw everyone around off their feet",
+  "kind": "eruption",
+  "arch": "ground_fist"
+ },
+ {
+  "plan": "counter",
+  "role": "Defense",
+  "scale": "Light",
+  "contact": "evaded",
+  "answers": [
+   "Dash"
+  ],
+  "forms": [
+   "Counter",
+   "Punch"
+  ],
+  "steps": [
+   "slip 0.5",
+   "strike Cross 0.93",
+   "L2:strike Hook 0.53",
+   "strike Uppercut 1.33 hurt=Launch lift=2.2 finisher"
+  ],
+  "element": "School",
+  "school": "iron_fist",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Blazing Inside Answer",
+  "id": "blazing_inside_answer",
+  "info": "Slips the attack by a hair and answers inside it: a cross, a hook and an uppercut",
+  "kind": "counter",
+  "arch": "return_cross"
+ },
+ {
+  "plan": "self",
+  "role": "Area",
+  "scale": "Light",
+  "radius": 3.1,
+  "need": 2,
+  "accepts": [
+   "Close"
+  ],
+  "forms": [
+   "Area",
+   "Flurry",
+   "Punch"
+  ],
+  "steps": [
+   "charge 0.26 Stance 1.7",
+   "spin 1 0.25",
+   "cone 2.7 180 3.1 push=1.6 dur=0.5"
+  ],
+  "element": "School",
+  "school": "iron_fist",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   22.4,
+   39.2,
+   61.6
+  ],
+  "cooldown": [
+   8.4,
+   9.8,
+   11.2
+  ],
+  "name": "Crimson Thousand Arm Wheel",
+  "id": "crimson_thousand_arm_wheel",
+  "info": "Surrounded, it spins and punches in every direction at once: a ring of fists blasts everyone around it away",
+  "kind": "nova",
+  "arch": "fist_hurricane"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 4.7,
+  "width": 1.8,
+  "accepts": [
+   "Close",
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Flurry",
+   "Punch"
+  ],
+  "steps": [
+   "charge 0.26 Fist 1.6",
+   "cone 2.9 36 4.5 push=1.4 dur=0.55"
+  ],
+  "element": "School",
+  "school": "iron_fist",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Brass Avalanche of Fists",
+  "id": "brass_avalanche_of_fists",
+  "info": "Punches so fast a wall of fists fills the air in front of it, driving back everyone in it",
+  "kind": "beam",
+  "arch": "fist_wall"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 7.5,
+  "width": 0.9,
+  "accepts": [
+   "Thrown",
+   "Scattered"
+  ],
+  "forms": [
+   "Dash",
+   "Punch",
+   "Straight"
+  ],
+  "steps": [
+   "charge 0.26 Fist 1.8",
+   "dash",
+   "ghost lines",
+   "strike Cross 2.62 hurt=Launch lift=1.4 push=3.4 finisher area=1 areamult=0.45",
+   "shockwave 2.6 0.66"
+  ],
+  "element": "Fire",
+  "school": "iron_fist",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Crimson Comet Punch",
+  "id": "crimson_comet_punch",
+  "info": "A burning streak fist first across the field, one straight that blasts the foe away and a shockwave behind it",
+  "kind": "rush",
+  "arch": "comet_punch"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "reach": 4.8,
+  "accepts": [
+   "Close"
+  ],
+  "forms": [
+   "Flurry",
+   "Punch"
+  ],
+  "steps": [
+   "dash",
+   "flurry 14 1.82 Jab Cross dur=0.55",
+   "strike Cross 1.32 hurt=Reel push=2.4 finisher area=0.84 areamult=0.4",
+   "shockwave 2.4 0.5 hurt=Knockdown push=1"
+  ],
+  "element": "School",
+  "school": "iron_fist",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Brass Fist Storm",
+  "id": "brass_fist_storm",
+  "info": "Buries the foe under fists too fast to count, then one straight that sends it flying",
+  "kind": "barrage",
+  "arch": "gatling"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "accepts": [
+   "Close"
+  ],
+  "forms": [
+   "Fast",
+   "Punch",
+   "Straight"
+  ],
+  "steps": [
+   "step",
+   "strike Jab 0.52",
+   "strike Cross 0.69",
+   "L2:strike Hook 0.52",
+   "strike Cross 1.74 hurt=Reel push=2.1 finisher area=0.8 areamult=0.4",
+   "shot Fist 0.87 speed=24 range=5.0 size=1.0 pierce=2 push=1.2"
+  ],
+  "element": "School",
+  "school": "iron_fist",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Iron Straight Line",
+  "id": "iron_straight_line",
+  "info": "A jab, a cross, a hook, then a straight so hard its pressure keeps going: a fist of air flies on and hits whoever stands behind",
+  "kind": "combo",
+  "arch": "one_two"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 3.65,
+  "range": 9.0,
+  "need": 2,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Flurry",
+   "Punch"
+  ],
+  "steps": [
+   "rise 1.5 0.2",
+   "hold 0.12 tremble",
+   "rain Fists 26 3.65 0.76 dur=1.14",
+   "drop 0.14",
+   "land 0 0 0"
+  ],
+  "element": "School",
+  "school": "iron_fist",
+  "tier": "master",
+  "worthy": true,
+  "mana": [
+   33.6,
+   56.0,
+   86.8
+  ],
+  "cooldown": [
+   9.8,
+   11.9,
+   14.0
+  ],
+  "name": "Barrage from Heaven",
+  "id": "barrage_from_heaven",
+  "info": "Leaps over the enemy and punches the sky: fists of pressure rain down on everyone below, each one a crater",
+  "kind": "rain",
+  "arch": "fist_rain"
+ },
+ {
+  "plan": "air",
+  "role": "Air",
+  "scale": "Light",
+  "accepts": [
+   "Launched"
+  ],
+  "forms": [
+   "Aerial",
+   "Punch"
+  ],
+  "steps": [
+   "crouch 0.08",
+   "rise 2.4 0.16",
+   "strike Cross 0.72 air",
+   "strike Hook 0.72 air",
+   "L2:flurry 7 0.8 Jab Cross dur=0.3",
+   "strike Hook 1.79 air hurt=DriveIn crater=0.96 finisher",
+   "drop 0.12",
+   "land 0.86 1.45 0.48",
+   "shockwave 3.1 0.6 hurt=Knockdown"
+  ],
+  "element": "Fire",
+  "school": "iron_fist",
+  "tier": "master",
+  "worthy": false,
+  "mana": [
+   24.0,
+   40.0,
+   62.0
+  ],
+  "cooldown": [
+   7.0,
+   8.5,
+   10.0
+  ],
+  "name": "Crimson Sky Hammer",
+  "id": "crimson_sky_hammer",
+  "info": "Leaps after the launched foe, works it over in the air and hammers it back down into a crater",
+  "kind": "juggle",
+  "arch": "sky_hammer"
+ },
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Light",
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Punch",
+   "Rising"
+  ],
+  "steps": [
+   "step",
+   "strike Body 0.82",
+   "strike Uppercut 1.44 hurt=Juggle lift=2.4",
+   "rise 1.85 0.1",
+   "strike Uppercut 1.85 air hurt=Launch lift=3.15 finisher",
+   "drop 0.14",
+   "land 0.4 0.8 0",
+   "leaves Launched"
+  ],
+  "element": "School",
+  "school": "iron_fist",
+  "tier": "master",
+  "worthy": false,
+  "mana": [
+   24.0,
+   40.0,
+   62.0
+  ],
+  "cooldown": [
+   7.0,
+   8.5,
+   10.0
+  ],
+  "name": "Knuckle Sky Uppercut",
+  "id": "knuckle_sky_uppercut",
+  "info": "A body blow, then an uppercut that rises with the foe, and a second rising fist in the air that throws it into the clouds",
+  "kind": "launcher",
+  "arch": "rising_dragon"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 5.15,
+  "width": 1.8,
+  "accepts": [
+   "Close",
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Flurry",
+   "Punch"
+  ],
+  "steps": [
+   "charge 0.29 Fist 1.8",
+   "cone 3.74 39 4.95 push=1.55 dur=0.6"
+  ],
+  "element": "School",
+  "school": "iron_fist",
+  "tier": "master",
+  "worthy": false,
+  "mana": [
+   24.0,
+   40.0,
+   62.0
+  ],
+  "cooldown": [
+   7.0,
+   8.5,
+   10.0
+  ],
+  "name": "Scarlet Avalanche of Fists",
+  "id": "scarlet_avalanche_of_fists",
+  "info": "Punches so fast a wall of fists fills the air in front of it, driving back everyone in it",
+  "kind": "beam",
+  "arch": "fist_wall"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 8.0,
+  "width": 0.9,
+  "accepts": [
+   "Thrown",
+   "Scattered"
+  ],
+  "forms": [
+   "Dash",
+   "Punch",
+   "Straight"
+  ],
+  "steps": [
+   "charge 0.29 Fist 2.0",
+   "dash",
+   "ghost lines",
+   "strike Cross 3.14 hurt=Launch lift=1.4 push=3.8 finisher area=1 areamult=0.45",
+   "shockwave 2.9 0.79"
+  ],
+  "element": "School",
+  "school": "iron_fist",
+  "tier": "master",
+  "worthy": false,
+  "mana": [
+   24.0,
+   40.0,
+   62.0
+  ],
+  "cooldown": [
+   7.0,
+   8.5,
+   10.0
+  ],
+  "name": "Brass Comet Punch",
+  "id": "brass_comet_punch",
+  "info": "A burning streak fist first across the field, one straight that blasts the foe away and a shockwave behind it",
+  "kind": "rush",
+  "arch": "comet_punch"
+ },
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Heavy",
+  "reach": 5.4,
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Aerial",
+   "Flurry",
+   "Punch",
+   "Rising"
+  ],
+  "steps": [
+   "dash",
+   "strike Jab 0.38",
+   "strike Cross 0.47",
+   "strike Body 0.47",
+   "strike Uppercut 0.71 hurt=Juggle lift=2.6",
+   "rise 2.3 0.12",
+   "flurry 10 0.85 Jab Cross dur=0.35",
+   "strike Hook 1.42 air hurt=DriveIn crater=1.23 finisher",
+   "drop 0.12",
+   "land 0.98 1.6 0.47"
+  ],
+  "element": "School",
+  "school": "iron_fist",
+  "tier": "grandmaster",
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Final Combination",
+  "id": "final_combination",
+  "info": "The whole road of fists: jab, cross, body, an uppercut into the air, a storm of fists up there, and a hook that drives the foe into a crater",
+  "kind": "launcher",
+  "arch": "iron_route"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 4.2,
+  "range": 11.0,
+  "need": 1,
+  "accepts": [
+   "Scattered",
+   "Thrown"
+  ],
+  "forms": [
+   "Area",
+   "Charge",
+   "Punch"
+  ],
+  "steps": [
+   "charge 0.65 Fist 3.2",
+   "strike Uppercut 0.23",
+   "meteor 4.2 4.38 size=2.6 kind=Fist",
+   "hold 1.0"
+  ],
+  "element": "School",
+  "school": "iron_fist",
+  "tier": "grandmaster",
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Godfist Descent",
+  "id": "godfist_descent",
+  "info": "Punches straight up at the sky; a heartbeat later a fist the size of a hill comes down on the enemy and leaves its print in the earth",
+  "kind": "slam",
+  "arch": "sky_fist"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 4.0,
+  "range": 9.0,
+  "need": 2,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Flurry",
+   "Punch"
+  ],
+  "steps": [
+   "rise 1.6 0.2",
+   "hold 0.12 tremble",
+   "rain Fists 30 4.0 1.0 dur=1.22",
+   "drop 0.14",
+   "land 0 0 0"
+  ],
+  "element": "School",
+  "school": "iron_fist",
+  "tier": "grandmaster",
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Downpour of Fists",
+  "id": "downpour_of_fists",
+  "info": "Leaps over the enemy and punches the sky: fists of pressure rain down on everyone below, each one a crater",
+  "kind": "rain",
+  "arch": "fist_rain"
+ },
+ {
+  "plan": "self",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 3.6,
+  "need": 2,
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Area",
+   "Ground",
+   "Punch"
+  ],
+  "steps": [
+   "crouch 0.14",
+   "charge 0.27 Fist 1.6",
+   "strike Body 1.48 crater=1.08",
+   "shockwave 3.6 2.71 hurt=Knockdown push=1",
+   "quake 4.6 1.48 cracks=10"
+  ],
+  "element": "School",
+  "school": "iron_fist",
+  "tier": "grandmaster",
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Scarlet Earth Knuckle",
+  "id": "scarlet_earth_knuckle",
+  "info": "Drives its fist into the earth: rings of force race out and throw everyone around off their feet",
+  "kind": "eruption",
+  "arch": "ground_fist"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 13.0,
+  "width": 1.1,
+  "accepts": [
+   "Thrown",
+   "Launched",
+   "Scattered"
+  ],
+  "forms": [
+   "Projectile",
+   "Punch",
+   "Straight"
+  ],
+  "steps": [
+   "charge 0.3 Fist 1.8",
+   "shot Fist 1.75 speed=28 range=13.0 size=1.7 push=2.0 pierce=5 hurt=Reel count=3 spread=9 gap=0.08"
+  ],
+  "element": "School",
+  "school": "iron_fist",
+  "tier": "grandmaster",
+  "worthy": false,
+  "mana": [
+   36.0,
+   58.0,
+   90.0
+  ],
+  "cooldown": [
+   9.0,
+   11.0,
+   13.0
+  ],
+  "name": "Hammer Fist Bullet",
+  "id": "hammer_fist_bullet",
+  "info": "Three punches at the air in a heartbeat: three fists of pressure fan out down the line, blowing through everyone in them",
+  "kind": "projectile",
+  "arch": "air_cannon"
+ },
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Ultimate",
+  "reach": 5.7,
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Aerial",
+   "Flurry",
+   "Punch",
+   "Rising"
+  ],
+  "steps": [
+   "cinematic",
+   "dash",
+   "strike Jab 0.44",
+   "strike Cross 0.55",
+   "strike Body 0.55",
+   "strike Uppercut 0.82 hurt=Juggle lift=2.75",
+   "rise 2.45 0.12",
+   "flurry 11 0.98 Jab Cross dur=0.35",
+   "strike Hook 1.64 air hurt=DriveIn crater=1.35 finisher",
+   "drop 0.12",
+   "land 1.1 1.75 0.55",
+   "hold 0.08",
+   "meteor 3.6 2.73 size=2.4 kind=Fist",
+   "hold 0.9"
+  ],
+  "element": "School",
+  "school": "iron_fist",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Iron Road",
+  "id": "iron_road",
+  "info": "The whole road of fists: jab, cross, body, an uppercut into the air, a storm of fists up there, and a hook that drives the foe into a crater; then a fist from the sky lands on the crater",
+  "kind": "launcher",
+  "arch": "iron_route"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Ultimate",
+  "radius": 4.35,
+  "range": 9.0,
+  "need": 2,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Flurry",
+   "Punch"
+  ],
+  "steps": [
+   "cinematic",
+   "rise 1.7 0.2",
+   "hold 0.12 tremble",
+   "rain Fists 34 4.35 1.18 dur=1.3",
+   "drop 0.14",
+   "land 0 0 0"
+  ],
+  "element": "School",
+  "school": "iron_fist",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Fist Rain",
+  "id": "fist_rain",
+  "info": "Leaps over the enemy and punches the sky: fists of pressure rain down on everyone below, each one a crater",
+  "kind": "rain",
+  "arch": "fist_rain"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Ultimate",
+  "radius": 4.6,
+  "range": 11.0,
+  "need": 1,
+  "accepts": [
+   "Scattered",
+   "Thrown"
+  ],
+  "forms": [
+   "Area",
+   "Charge",
+   "Punch"
+  ],
+  "steps": [
+   "cinematic",
+   "charge 0.7 Fist 3.5",
+   "strike Uppercut 0.3",
+   "meteor 4.6 5.64 size=2.9 kind=Fist",
+   "hold 1.0",
+   "shockwave 5.5 1.19 hurt=Knockdown push=1.4"
+  ],
+  "element": "Fire",
+  "school": "iron_fist",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Sky Splitter Fist",
+  "id": "sky_splitter_fist",
+  "info": "Punches straight up at the sky; a heartbeat later a fist the size of a hill comes down on the enemy and leaves its print in the earth",
+  "kind": "slam",
+  "arch": "sky_fist"
+ },
+ {
+  "plan": "self",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 4.15,
+  "need": 2,
+  "accepts": [
+   "Close"
+  ],
+  "forms": [
+   "Area",
+   "Flurry",
+   "Punch"
+  ],
+  "steps": [
+   "charge 0.35 Stance 2.3",
+   "spin 1 0.25",
+   "cone 4.73 180 4.15 push=2.05 dur=0.5",
+   "rain Fists 20 4.5 0.71 dur=0.7"
+  ],
+  "element": "Fire",
+  "school": "iron_fist",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   77.0,
+   119.0,
+   182.0
+  ],
+  "cooldown": [
+   16.8,
+   21.0,
+   25.2
+  ],
+  "name": "Iron Ring of Fists",
+  "id": "iron_ring_of_fists",
+  "info": "Surrounded, it spins and punches in every direction at once: a ring of fists blasts everyone around it away",
+  "kind": "nova",
+  "arch": "fist_hurricane"
+ },
+ {
+  "plan": "air",
+  "role": "Air",
+  "scale": "Light",
+  "accepts": [
+   "Launched"
+  ],
+  "forms": [
+   "Aerial",
+   "Punch"
+  ],
+  "steps": [
+   "crouch 0.08",
+   "rise 2.8 0.16",
+   "strike Cross 1.09 air",
+   "strike Hook 1.09 air",
+   "L2:flurry 9 1.22 Jab Cross dur=0.3",
+   "strike Hook 2.74 air hurt=DriveIn crater=1.2 finisher",
+   "drop 0.12",
+   "land 1.1 1.75 0.73",
+   "shockwave 3.7 0.91 hurt=Knockdown"
+  ],
+  "element": "Fire",
+  "school": "iron_fist",
+  "tier": "god",
+  "worthy": false,
+  "mana": [
+   55.0,
+   85.0,
+   130.0
+  ],
+  "cooldown": [
+   12.0,
+   15.0,
+   18.0
+  ],
+  "name": "Titan Hammer Fall",
+  "id": "titan_hammer_fall",
+  "info": "Leaps after the launched foe, works it over in the air and hammers it back down into a crater",
+  "kind": "juggle",
+  "arch": "sky_hammer"
+ }
+]

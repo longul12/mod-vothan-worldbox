@@ -1,0 +1,1201 @@
+[
+ {
+  "plan": "counter",
+  "role": "Defense",
+  "scale": "Light",
+  "contact": "parried",
+  "answers": [
+   "Blade",
+   "Strike"
+  ],
+  "forms": [
+   "Blade",
+   "Counter",
+   "Guard"
+  ],
+  "steps": [
+   "guard 0.2",
+   "strike DrawCut 0.7",
+   "L2:strike Thrust 0.4",
+   "strike DiagSlash 1.0 hurt=Crumple finisher"
+  ],
+  "element": "School",
+  "school": "thousand_blades",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Falling Petal Turning Blade",
+  "id": "falling_petal_turning_blade",
+  "info": "Turns the blow aside on the flat of the blade and draws through the attacker before it can recover",
+  "kind": "counter",
+  "arch": "return_cut"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "accepts": [
+   "Close"
+  ],
+  "forms": [
+   "Blade",
+   "Fast"
+  ],
+  "steps": [
+   "step",
+   "strike Slash 0.28",
+   "strike DiagSlash 0.34",
+   "L2:strike Thrust 0.28",
+   "strike DrawCut 0.94 hurt=Crumple finisher"
+  ],
+  "element": "School",
+  "school": "thousand_blades",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Falling Petal Flowing Cuts",
+  "id": "falling_petal_flowing_cuts",
+  "info": "A slash, a diagonal cut, a thrust, and one last draw that drops the foe in a heap",
+  "kind": "combo",
+  "arch": "cut_flow"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 9.0,
+  "width": 0.9,
+  "accepts": [
+   "Thrown",
+   "Launched",
+   "Scattered"
+  ],
+  "forms": [
+   "Blade",
+   "Projectile"
+  ],
+  "steps": [
+   "strike Cleave 0.2",
+   "shot SwordWave 1.59 speed=22 range=9.0 size=1.1 pierce=3"
+  ],
+  "element": "Steel",
+  "school": "thousand_blades",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Silver Cross Wave",
+  "id": "silver_cross_wave",
+  "info": "One great swing looses a crescent of steel light that flies on and cuts through everyone in its path",
+  "kind": "projectile",
+  "arch": "crescent"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 5.0,
+  "width": 0.7,
+  "accepts": [
+   "Close",
+   "Thrown"
+  ],
+  "forms": [
+   "Blade",
+   "Dash",
+   "Fast"
+  ],
+  "steps": [
+   "crouch 0.1",
+   "dash behind",
+   "ghost lines",
+   "strike DrawCut 1.42 hurt=Crumple finisher",
+   "L2:hold 0.12",
+   "L2:strike Slash 0.38"
+  ],
+  "element": "Steel",
+  "school": "thousand_blades",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Heron Swallow Draw",
+  "id": "heron_swallow_draw",
+  "info": "Sinks into the draw, and is already behind the foe with the blade drawn: the cut only opens as it sheathes",
+  "kind": "rush",
+  "arch": "iai"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "reach": 4.5,
+  "accepts": [
+   "Close"
+  ],
+  "forms": [
+   "Blade",
+   "Flurry"
+  ],
+  "steps": [
+   "dash",
+   "flurry 9 1.27 Slash DiagSlash dur=0.49",
+   "strike SpinCut 1.01 hurt=Spin push=1.8 finisher area=0.9 areamult=0.4"
+  ],
+  "element": "School",
+  "school": "thousand_blades",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Heron Petal Storm",
+  "id": "heron_petal_storm",
+  "info": "A storm of cuts too fast to see, ended by a spinning cut that throws the foe away in a ring of steel",
+  "kind": "barrage",
+  "arch": "blade_storm"
+ },
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Light",
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Blade",
+   "Rising"
+  ],
+  "steps": [
+   "step",
+   "strike Slash 0.52",
+   "strike RisingSlash 1.57 hurt=Launch lift=2.45 finisher",
+   "leaves Launched"
+  ],
+  "element": "School",
+  "school": "thousand_blades",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Ghost Steel Updraft Cut",
+  "id": "ghost_steel_updraft_cut",
+  "info": "A slash to open the guard, then a cut from the ground to the sky that throws the foe high",
+  "kind": "launcher",
+  "arch": "rising_moon"
+ },
+ {
+  "plan": "air",
+  "role": "Air",
+  "scale": "Light",
+  "accepts": [
+   "Launched"
+  ],
+  "forms": [
+   "Aerial",
+   "Blade"
+  ],
+  "steps": [
+   "crouch 0.08",
+   "rise 2.0 0.14",
+   "strike Slash 0.4 air",
+   "strike DiagSlash 0.4 air",
+   "L2:strike SpinCut 0.32 air",
+   "strike Cleave 1.19 air hurt=DriveIn crater=0.72 finisher",
+   "drop 0.12",
+   "land 0.62 1.15 0.26"
+  ],
+  "element": "Steel",
+  "school": "thousand_blades",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Dawn Cloud Cutter",
+  "id": "dawn_cloud_cutter",
+  "info": "Follows the launched foe up and cuts it three times in the air, then cleaves it back down into the ground",
+  "kind": "juggle",
+  "arch": "sky_cuts"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 5.4,
+  "width": 0.7,
+  "accepts": [
+   "Close",
+   "Thrown"
+  ],
+  "forms": [
+   "Blade",
+   "Dash",
+   "Fast"
+  ],
+  "steps": [
+   "crouch 0.1",
+   "dash behind",
+   "ghost lines",
+   "strike DrawCut 1.88 hurt=Crumple finisher",
+   "L2:hold 0.12",
+   "L2:strike Slash 0.5"
+  ],
+  "element": "School",
+  "school": "thousand_blades",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Ghost Steel Swallow Draw",
+  "id": "ghost_steel_swallow_draw",
+  "info": "Sinks into the draw, and is already behind the foe with the blade drawn: the cut only opens as it sheathes",
+  "kind": "rush",
+  "arch": "iai"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 10.0,
+  "width": 0.9,
+  "accepts": [
+   "Thrown",
+   "Launched",
+   "Scattered"
+  ],
+  "forms": [
+   "Blade",
+   "Projectile"
+  ],
+  "steps": [
+   "strike Cleave 0.26",
+   "shot SwordWave 2.09 speed=24 range=10.0 size=1.22 pierce=4"
+  ],
+  "element": "School",
+  "school": "thousand_blades",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Heron Crescent Edge",
+  "id": "heron_crescent_edge",
+  "info": "One great swing looses a crescent of steel light that flies on and cuts through everyone in its path",
+  "kind": "projectile",
+  "arch": "crescent"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 11.0,
+  "width": 2.4,
+  "accepts": [
+   "Scattered",
+   "Thrown"
+  ],
+  "forms": [
+   "Aerial",
+   "Blade",
+   "Projectile"
+  ],
+  "steps": [
+   "crouch 0.1",
+   "rise 2.7 0.22",
+   "hold 0.1",
+   "shot SwordWave 0.82 count=5 spread=8 gap=0.07 speed=28 range=12.0 size=1.2 pierce=3",
+   "drop 0.14",
+   "land 0.4 0.8 0"
+  ],
+  "element": "School",
+  "school": "thousand_blades",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Swallow Sky Rending Waves",
+  "id": "swallow_sky_rending_waves",
+  "info": "Springs high and, hanging over the enemy, swings 5 times: crescents of steel rain down on them from above",
+  "kind": "rain",
+  "arch": "falling_crescents"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "reach": 5.8,
+  "accepts": [
+   "Close",
+   "Thrown"
+  ],
+  "forms": [
+   "Blade",
+   "Dash",
+   "Fast"
+  ],
+  "steps": [
+   "crouch 0.06",
+   "dash behind",
+   "strike DrawCut 0.94",
+   "dash behind",
+   "ghost lines",
+   "strike DiagSlash 1.57 hurt=Crumple finisher"
+  ],
+  "element": "Steel",
+  "school": "thousand_blades",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Mirror Cross Flash",
+  "id": "mirror_cross_flash",
+  "info": "Passes through the foe once, turns, and passes through again: the two cuts open on it at once in a burning X",
+  "kind": "rush",
+  "arch": "cross_flash"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Light",
+  "radius": 3.2,
+  "range": 9.0,
+  "need": 2,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Blade",
+   "Projectile"
+  ],
+  "steps": [
+   "rise 1.2 0.2",
+   "hold 0.15 tremble",
+   "rain Swords 18 3.2 0.76 dur=1.12",
+   "drop 0.14",
+   "land 0 0 0"
+  ],
+  "element": "School",
+  "school": "thousand_blades",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   22.4,
+   39.2,
+   61.6
+  ],
+  "cooldown": [
+   8.4,
+   9.8,
+   11.2
+  ],
+  "name": "Crescent Sword Rain",
+  "id": "crescent_sword_rain",
+  "info": "Raises the blade and a squall of swords of light falls on the enemy ranks, left standing in the ground where they struck",
+  "kind": "rain",
+  "arch": "sword_rain"
+ },
+ {
+  "plan": "counter",
+  "role": "Defense",
+  "scale": "Light",
+  "contact": "parried",
+  "answers": [
+   "Blade",
+   "Strike"
+  ],
+  "forms": [
+   "Blade",
+   "Counter",
+   "Guard"
+  ],
+  "steps": [
+   "guard 0.2",
+   "strike DrawCut 1.12",
+   "L2:strike Thrust 0.64",
+   "strike DiagSlash 1.6 hurt=Crumple finisher"
+  ],
+  "element": "School",
+  "school": "thousand_blades",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Swallow Turning Blade",
+  "id": "swallow_turning_blade",
+  "info": "Turns the blow aside on the flat of the blade and draws through the attacker before it can recover",
+  "kind": "counter",
+  "arch": "return_cut"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "accepts": [
+   "Close"
+  ],
+  "forms": [
+   "Blade",
+   "Fast"
+  ],
+  "steps": [
+   "step",
+   "strike Slash 0.52",
+   "strike DiagSlash 0.63",
+   "L2:strike Thrust 0.52",
+   "strike DrawCut 1.74 hurt=Crumple finisher area=0.8 areamult=0.4"
+  ],
+  "element": "School",
+  "school": "thousand_blades",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Ghost Steel Flowing Cuts",
+  "id": "ghost_steel_flowing_cuts",
+  "info": "A slash, a diagonal cut, a thrust, and one last draw that drops the foe in a heap",
+  "kind": "combo",
+  "arch": "cut_flow"
+ },
+ {
+  "plan": "self",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 3.3,
+  "need": 2,
+  "accepts": [
+   "Close"
+  ],
+  "forms": [
+   "Area",
+   "Blade"
+  ],
+  "steps": [
+   "crouch 0.1",
+   "strike SpinCut 0.57",
+   "domain 3.3 2.64 dur=1.24"
+  ],
+  "element": "Steel",
+  "school": "thousand_blades",
+  "tier": "master",
+  "worthy": true,
+  "mana": [
+   33.6,
+   56.0,
+   86.8
+  ],
+  "cooldown": [
+   9.8,
+   11.9,
+   14.0
+  ],
+  "name": "Shrine of Cuts",
+  "id": "shrine_of_cuts",
+  "info": "Draws a circle with its blade: inside it cuts appear out of nothing, faster and faster, until everything inside is cut at once",
+  "kind": "nova",
+  "arch": "blade_domain"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Heavy",
+  "reach": 6.1,
+  "accepts": [
+   "Close",
+   "Thrown"
+  ],
+  "forms": [
+   "Blade",
+   "Dash",
+   "Fast"
+  ],
+  "steps": [
+   "dash behind",
+   "strike DrawCut 0.79",
+   "dash behind",
+   "strike SpinCut 0.79",
+   "dash behind",
+   "strike DiagSlash 0.99 hurt=Crumple finisher",
+   "domain 2.6 1.39 dur=0.8"
+  ],
+  "element": "School",
+  "school": "thousand_blades",
+  "tier": "master",
+  "worthy": true,
+  "mana": [
+   33.6,
+   56.0,
+   86.8
+  ],
+  "cooldown": [
+   9.8,
+   11.9,
+   14.0
+  ],
+  "name": "Thousand Crossings",
+  "id": "thousand_crossings",
+  "info": "Cuts through the foe three times in three flashes from three sides; as it falls, the air round it fills with cuts",
+  "kind": "rush",
+  "arch": "flash_thousand"
+ },
+ {
+  "plan": "air",
+  "role": "Air",
+  "scale": "Light",
+  "accepts": [
+   "Launched"
+  ],
+  "forms": [
+   "Aerial",
+   "Blade"
+  ],
+  "steps": [
+   "crouch 0.08",
+   "rise 2.4 0.14",
+   "strike Slash 0.59 air",
+   "strike DiagSlash 0.59 air",
+   "L2:strike SpinCut 0.47 air",
+   "strike Cleave 1.76 air hurt=DriveIn crater=0.96 finisher",
+   "drop 0.12",
+   "land 0.86 1.45 0.39",
+   "domain 2.05 0.78 dur=0.6"
+  ],
+  "element": "Steel",
+  "school": "thousand_blades",
+  "tier": "master",
+  "worthy": false,
+  "mana": [
+   24.0,
+   40.0,
+   62.0
+  ],
+  "cooldown": [
+   7.0,
+   8.5,
+   10.0
+  ],
+  "name": "Mirror Cloud Cutter",
+  "id": "mirror_cloud_cutter",
+  "info": "Follows the launched foe up and cuts it three times in the air, then cleaves it back down into the ground",
+  "kind": "juggle",
+  "arch": "sky_cuts"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 3.5,
+  "range": 9.0,
+  "need": 2,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Blade",
+   "Projectile"
+  ],
+  "steps": [
+   "rise 1.3 0.2",
+   "hold 0.15 tremble",
+   "rain Swords 21 3.5 0.93 dur=1.18",
+   "drop 0.14",
+   "land 0 0 0"
+  ],
+  "element": "School",
+  "school": "thousand_blades",
+  "tier": "master",
+  "worthy": true,
+  "mana": [
+   33.6,
+   56.0,
+   86.8
+  ],
+  "cooldown": [
+   9.8,
+   11.9,
+   14.0
+  ],
+  "name": "Swallow Sword Rain",
+  "id": "swallow_sword_rain",
+  "info": "Raises the blade and a squall of swords of light falls on the enemy ranks, left standing in the ground where they struck",
+  "kind": "rain",
+  "arch": "sword_rain"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 12.0,
+  "width": 2.4,
+  "accepts": [
+   "Scattered",
+   "Thrown"
+  ],
+  "forms": [
+   "Aerial",
+   "Blade",
+   "Projectile"
+  ],
+  "steps": [
+   "crouch 0.1",
+   "rise 2.95 0.22",
+   "hold 0.1",
+   "shot SwordWave 0.95 count=6 spread=8 gap=0.07 speed=30 range=13.0 size=1.3 pierce=3",
+   "drop 0.14",
+   "land 0.4 0.8 0"
+  ],
+  "element": "School",
+  "school": "thousand_blades",
+  "tier": "master",
+  "worthy": false,
+  "mana": [
+   24.0,
+   40.0,
+   62.0
+  ],
+  "cooldown": [
+   7.0,
+   8.5,
+   10.0
+  ],
+  "name": "Moonlit Falling Crescents",
+  "id": "moonlit_falling_crescents",
+  "info": "Springs high and, hanging over the enemy, swings 6 times: crescents of steel rain down on them from above",
+  "kind": "rain",
+  "arch": "falling_crescents"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 4.0,
+  "range": 10.0,
+  "need": 2,
+  "accepts": [
+   "Scattered",
+   "Thrown"
+  ],
+  "forms": [
+   "Area",
+   "Blade",
+   "Projectile"
+  ],
+  "steps": [
+   "guard 0.2",
+   "gate 16 0.82 range=14.0 kind=LightSword"
+  ],
+  "element": "School",
+  "school": "thousand_blades",
+  "tier": "grandmaster",
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Armory",
+  "id": "armory",
+  "info": "Ripples open in the air behind it and swords of light slide out of them, then fly one after another, each pinning a foe to the ground",
+  "kind": "projectile",
+  "arch": "sword_gate"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Heavy",
+  "len": 12.0,
+  "width": 1.2,
+  "accepts": [
+   "Scattered",
+   "Thrown"
+  ],
+  "forms": [
+   "Blade",
+   "Line",
+   "Projectile"
+  ],
+  "steps": [
+   "charge 0.47 Hip 2.4",
+   "strike Cleave 0.23",
+   "trench 11.2 0.8 2.08 speed=24 cut",
+   "shot SwordWave 2.08 size=2.2 pierce=6 speed=26 range=13.0"
+  ],
+  "element": "School",
+  "school": "thousand_blades",
+  "tier": "grandmaster",
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Earthsplitting Edge",
+  "id": "earthsplitting_edge",
+  "info": "One draw from the hip: a line of white light is cut across the land, the ground opens along it, and a wave of steel runs down the cut",
+  "kind": "beam",
+  "arch": "heaven_cleaver"
+ },
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Heavy",
+  "reach": 5.4,
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Aerial",
+   "Blade",
+   "Flurry",
+   "Rising"
+  ],
+  "steps": [
+   "dash",
+   "strike Slash 0.4",
+   "strike DiagSlash 0.51",
+   "strike RisingSlash 0.76 hurt=Juggle lift=2.8",
+   "rise 2.4 0.12",
+   "flurry 9 0.91 Slash DiagSlash dur=0.35",
+   "strike Cleave 1.52 air hurt=DriveIn crater=1.23 finisher",
+   "drop 0.12",
+   "land 0.98 1.6 0.51"
+  ],
+  "element": "Steel",
+  "school": "thousand_blades",
+  "tier": "grandmaster",
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Way of the Sword",
+  "id": "way_of_the_sword",
+  "info": "The sword's road: cuts that open the guard, a rising cut into the air, a storm of cuts up there, and a cleave that drives the foe into a crater",
+  "kind": "launcher",
+  "arch": "route"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "reach": 6.4,
+  "accepts": [
+   "Close",
+   "Thrown"
+  ],
+  "forms": [
+   "Blade",
+   "Dash",
+   "Fast"
+  ],
+  "steps": [
+   "crouch 0.06",
+   "dash behind",
+   "strike DrawCut 1.49",
+   "dash behind",
+   "ghost lines",
+   "strike DiagSlash 2.49 hurt=Crumple finisher",
+   "domain 2.6 1.24 dur=0.7"
+  ],
+  "element": "School",
+  "school": "thousand_blades",
+  "tier": "grandmaster",
+  "worthy": false,
+  "mana": [
+   36.0,
+   58.0,
+   90.0
+  ],
+  "cooldown": [
+   9.0,
+   11.0,
+   13.0
+  ],
+  "name": "Dawn Cross Flash",
+  "id": "dawn_cross_flash",
+  "info": "Passes through the foe once, turns, and passes through again: the two cuts open on it at once in a burning X",
+  "kind": "rush",
+  "arch": "cross_flash"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "reach": 5.4,
+  "accepts": [
+   "Close"
+  ],
+  "forms": [
+   "Blade",
+   "Flurry"
+  ],
+  "steps": [
+   "dash",
+   "flurry 15 2.28 Slash DiagSlash dur=0.61",
+   "strike SpinCut 1.82 hurt=Spin push=2.4 finisher area=1.2 areamult=0.4",
+   "domain 2.4 0.91 dur=0.6"
+  ],
+  "element": "School",
+  "school": "thousand_blades",
+  "tier": "grandmaster",
+  "worthy": false,
+  "mana": [
+   36.0,
+   58.0,
+   90.0
+  ],
+  "cooldown": [
+   9.0,
+   11.0,
+   13.0
+  ],
+  "name": "Ghost Steel Blade Storm",
+  "id": "ghost_steel_blade_storm",
+  "info": "A storm of cuts too fast to see, ended by a spinning cut that throws the foe away in a ring of steel",
+  "kind": "barrage",
+  "arch": "blade_storm"
+ },
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Ultimate",
+  "reach": 5.7,
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Aerial",
+   "Blade",
+   "Flurry",
+   "Rising"
+  ],
+  "steps": [
+   "cinematic",
+   "dash",
+   "strike Slash 0.44",
+   "strike DiagSlash 0.55",
+   "strike RisingSlash 0.82 hurt=Juggle lift=2.95",
+   "rise 2.55 0.12",
+   "flurry 10 0.99 Slash DiagSlash dur=0.35",
+   "strike Cleave 1.64 air hurt=DriveIn crater=1.35 finisher",
+   "drop 0.12",
+   "land 1.1 1.75 0.55",
+   "hold 0.08",
+   "domain 3 1.64 dur=1",
+   "meteor 3.6 2.19 size=2.4 kind=Sword",
+   "hold 0.9"
+  ],
+  "element": "Steel",
+  "school": "thousand_blades",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Endless Edge",
+  "id": "endless_edge",
+  "info": "The sword's road: cuts that open the guard, a rising cut into the air, a storm of cuts up there, and a cleave that drives the foe into a crater; then the air round it fills with cuts and a tower of a sword falls from the sky onto the crater",
+  "kind": "launcher",
+  "arch": "route"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Ultimate",
+  "radius": 4.6,
+  "range": 11.0,
+  "need": 1,
+  "accepts": [
+   "Scattered",
+   "Thrown"
+  ],
+  "forms": [
+   "Area",
+   "Blade",
+   "Charge"
+  ],
+  "steps": [
+   "cinematic",
+   "charge 0.7 Raised 3.5",
+   "meteor 4.6 5.49 size=3.0 kind=Sword",
+   "hold 1.0",
+   "rain Swords 24 5 0.49 dur=1"
+  ],
+  "element": "School",
+  "school": "thousand_blades",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Celestial Blade Descent",
+  "id": "celestial_blade_descent",
+  "info": "Raises its blade to the sky and a sword the size of a tower falls point first onto the enemy, cutting a great cross into the land",
+  "kind": "slam",
+  "arch": "tower_blade"
+ },
+ {
+  "plan": "self",
+  "role": "Area",
+  "scale": "Ultimate",
+  "radius": 3.9,
+  "need": 2,
+  "accepts": [
+   "Close"
+  ],
+  "forms": [
+   "Area",
+   "Blade"
+  ],
+  "steps": [
+   "cinematic",
+   "crouch 0.1",
+   "strike SpinCut 0.82",
+   "domain 3.9 3.84 dur=1.4"
+  ],
+  "element": "School",
+  "school": "thousand_blades",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Circle of Ten Thousand",
+  "id": "circle_of_ten_thousand",
+  "info": "Draws a circle with its blade: inside it cuts appear out of nothing, faster and faster, until everything inside is cut at once",
+  "kind": "nova",
+  "arch": "blade_domain"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Ultimate",
+  "reach": 6.7,
+  "accepts": [
+   "Close",
+   "Thrown"
+  ],
+  "forms": [
+   "Blade",
+   "Dash",
+   "Fast"
+  ],
+  "steps": [
+   "cinematic",
+   "dash behind",
+   "strike DrawCut 1.18",
+   "dash behind",
+   "strike SpinCut 1.18",
+   "dash behind",
+   "strike DiagSlash 1.47 hurt=Crumple finisher",
+   "domain 3.0 2.06 dur=0.8"
+  ],
+  "element": "Steel",
+  "school": "thousand_blades",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Flash of a Thousand",
+  "id": "flash_of_a_thousand",
+  "info": "Cuts through the foe three times in three flashes from three sides; as it falls, the air round it fills with cuts",
+  "kind": "rush",
+  "arch": "flash_thousand"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Heavy",
+  "len": 14.0,
+  "width": 2.4,
+  "accepts": [
+   "Scattered",
+   "Thrown"
+  ],
+  "forms": [
+   "Aerial",
+   "Blade",
+   "Projectile"
+  ],
+  "steps": [
+   "crouch 0.1",
+   "rise 3.45 0.22",
+   "hold 0.1",
+   "shot SwordWave 1.41 count=8 spread=8 gap=0.07 speed=34 range=15.0 size=1.5 pierce=3",
+   "drop 0.14",
+   "land 0.4 0.8 0"
+  ],
+  "element": "Steel",
+  "school": "thousand_blades",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   77.0,
+   119.0,
+   182.0
+  ],
+  "cooldown": [
+   16.8,
+   21.0,
+   25.2
+  ],
+  "name": "Falling Petal Sky Rending Waves",
+  "id": "falling_petal_sky_rending_waves",
+  "info": "Springs high and, hanging over the enemy, swings 8 times: crescents of steel rain down on them from above",
+  "kind": "rain",
+  "arch": "falling_crescents"
+ }
+]

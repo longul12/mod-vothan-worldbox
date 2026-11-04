@@ -1,0 +1,1290 @@
+[
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Light",
+  "reach": 3.2,
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Ground",
+   "Hunt",
+   "Rising"
+  ],
+  "steps": [
+   "crouch 0.12",
+   "strike Stomp 0.4",
+   "pillar 1.19 height=1.6 lift=2.2 spike",
+   "L2:hold 0.1",
+   "leaves Launched"
+  ],
+  "element": "School",
+  "school": "hunters_way",
+  "tier": "novice",
+  "prey": [
+   "Flyer"
+  ],
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Iron Jaw Spike Trap",
+  "id": "iron_jaw_spike_trap",
+  "info": "Springs a trap hidden in the ground: a sharpened stake bursts up under the quarry and throws it into the air",
+  "kind": "eruption",
+  "arch": "stake_trap"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 10.0,
+  "width": 0.8,
+  "accepts": [
+   "Thrown",
+   "Launched",
+   "Scattered"
+  ],
+  "forms": [
+   "Hunt",
+   "Projectile",
+   "Straight"
+  ],
+  "steps": [
+   "crouch 0.1",
+   "shot Javelin 1.75 speed=24 range=10.0 size=1.0 pierce=0 impact=Pin"
+  ],
+  "element": "School",
+  "school": "hunters_way",
+  "tier": "novice",
+  "prey": [
+   "Swarm"
+  ],
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Trapper's Javelin",
+  "id": "trappers_javelin",
+  "info": "Hurls a javelin that runs the quarry through and pins it to the ground where it lands",
+  "kind": "projectile",
+  "arch": "javelin"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "reach": 4.2,
+  "accepts": [
+   "Down",
+   "Launched"
+  ],
+  "forms": [
+   "Aerial",
+   "Hunt",
+   "Overhead"
+  ],
+  "steps": [
+   "run",
+   "crouch 0.1",
+   "rise 1.8 0.2",
+   "hold 0.06",
+   "strike Thrust 1.64 air hurt=DriveIn crater=0.5 finisher",
+   "drop 0.12",
+   "land 0.5 1.0 0.31"
+  ],
+  "element": "School",
+  "school": "hunters_way",
+  "tier": "novice",
+  "prey": [
+   "Titan",
+   "Brute"
+  ],
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Exorcist Hawk Dive",
+  "id": "exorcist_hawk_dive",
+  "info": "Runs at the quarry, springs over it like a hawk and comes down spear first, pinning it into the ground",
+  "kind": "juggle",
+  "arch": "pounce"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 10.0,
+  "width": 1.4,
+  "accepts": [
+   "Thrown",
+   "Scattered"
+  ],
+  "forms": [
+   "Evasive",
+   "Hunt",
+   "Projectile"
+  ],
+  "steps": [
+   "backhop 0.8",
+   "shot Arrow 0.48 count=3 spread=10 gap=0.07 speed=26 range=10.0"
+  ],
+  "element": "School",
+  "school": "hunters_way",
+  "tier": "novice",
+  "prey": [
+   "Caster"
+  ],
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Hunter's Hawk Darts",
+  "id": "hunters_hawk_darts",
+  "info": "Springs back out of reach and flings 3 hunting darts before its feet touch the ground",
+  "kind": "projectile",
+  "arch": "arrow_volley"
+ },
+ {
+  "plan": "counter",
+  "role": "Defense",
+  "scale": "Light",
+  "contact": "evaded",
+  "answers": [
+   "Charge"
+  ],
+  "forms": [
+   "Counter",
+   "Hunt",
+   "Low"
+  ],
+  "steps": [
+   "backhop 0.6",
+   "strike Sweep 0.78 hurt=Knockdown",
+   "strike Stomp 1.42 hurt=DriveIn crater=0.47 finisher"
+  ],
+  "element": "School",
+  "school": "hunters_way",
+  "tier": "adept",
+  "prey": [
+   "Flyer"
+  ],
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Trapper's Pit Trap",
+  "id": "trappers_pit_trap",
+  "info": "Lets the attack spring the snare: a sweep takes the legs and the heel comes down on the fallen quarry",
+  "kind": "counter",
+  "arch": "snare"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "accepts": [
+   "Close"
+  ],
+  "forms": [
+   "Fast",
+   "Hunt",
+   "Straight"
+  ],
+  "steps": [
+   "step",
+   "strike Thrust 0.38",
+   "strike Thrust 0.46",
+   "L2:strike SideKick 0.38",
+   "strike Thrust 1.27 hurt=Reel push=2.05 finisher area=0.8 areamult=0.4"
+  ],
+  "element": "School",
+  "school": "hunters_way",
+  "tier": "adept",
+  "prey": [
+   "Titan",
+   "Brute"
+  ],
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Giant Spear Drill",
+  "id": "giant_spear_drill",
+  "info": "Two quick jabs of the spear, a kick to break the stance, and a long thrust that hurls the quarry back",
+  "kind": "combo",
+  "arch": "spear_drill"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 9.0,
+  "width": 0.8,
+  "accepts": [
+   "Thrown",
+   "Scattered"
+  ],
+  "forms": [
+   "Dash",
+   "Hunt",
+   "Projectile"
+  ],
+  "steps": [
+   "shot Harpoon 0.76 speed=24 range=9.0",
+   "dash",
+   "strike Thrust 1.52 hurt=Reel push=2.25 finisher"
+  ],
+  "element": "Steel",
+  "school": "hunters_way",
+  "tier": "adept",
+  "prey": [
+   "Titan",
+   "Brute"
+  ],
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Beast Reel In",
+  "id": "beast_reel_in",
+  "info": "A harpoon on a chain bites into the quarry; the hunter comes down the chain after it and runs it through",
+  "kind": "rush",
+  "arch": "harpoon"
+ },
+ {
+  "plan": "air",
+  "role": "Air",
+  "scale": "Light",
+  "accepts": [
+   "Launched"
+  ],
+  "forms": [
+   "Aerial",
+   "Hunt"
+  ],
+  "steps": [
+   "crouch 0.08",
+   "rise 2.0 0.16",
+   "strike Thrust 0.44 air",
+   "strike SideKick 0.37 air",
+   "L2:strike Thrust 0.29 air",
+   "strike Thrust 1.1 air hurt=DriveIn crater=0.72 finisher",
+   "drop 0.12",
+   "land 0.62 1.15 0.24"
+  ],
+  "element": "Steel",
+  "school": "hunters_way",
+  "tier": "adept",
+  "prey": [
+   "Undead"
+  ],
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Hunter's Hawk Drop",
+  "id": "hunters_hawk_drop",
+  "info": "Leaps after the airborne quarry, spears it twice on the way up and drives it down into the ground with the third",
+  "kind": "juggle",
+  "arch": "hawk_drop"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 10.0,
+  "width": 1.4,
+  "accepts": [
+   "Thrown",
+   "Scattered"
+  ],
+  "forms": [
+   "Evasive",
+   "Hunt",
+   "Projectile"
+  ],
+  "steps": [
+   "backhop 0.9",
+   "shot Arrow 0.62 count=4 spread=10 gap=0.07 speed=28 range=11.0"
+  ],
+  "element": "Steel",
+  "school": "hunters_way",
+  "tier": "adept",
+  "prey": [
+   "Caster"
+  ],
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Iron Jaw Retreating Darts",
+  "id": "iron_jaw_retreating_darts",
+  "info": "Springs back out of reach and flings 4 hunting darts before its feet touch the ground",
+  "kind": "projectile",
+  "arch": "arrow_volley"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Light",
+  "radius": 3.2,
+  "range": 11.0,
+  "need": 2,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Hunt",
+   "Projectile"
+  ],
+  "steps": [
+   "crouch 0.12",
+   "hold 0.1",
+   "rain Arrows 24 3.2 0.62 dur=1.02"
+  ],
+  "element": "School",
+  "school": "hunters_way",
+  "tier": "expert",
+  "prey": [
+   "Flyer"
+  ],
+  "worthy": false,
+  "mana": [
+   22.4,
+   39.2,
+   61.6
+  ],
+  "cooldown": [
+   8.4,
+   9.8,
+   11.2
+  ],
+  "name": "Hawk Hail of Darts",
+  "id": "hawk_hail_of_darts",
+  "info": "Flings fistful after fistful of darts high into the sky: a moment later they hail down on the pack and stand in the ground",
+  "kind": "rain",
+  "arch": "arrow_rain"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "reach": 4.8,
+  "accepts": [
+   "Down",
+   "Launched"
+  ],
+  "forms": [
+   "Aerial",
+   "Hunt",
+   "Overhead"
+  ],
+  "steps": [
+   "run",
+   "crouch 0.1",
+   "rise 2.1 0.2",
+   "hold 0.06",
+   "strike Thrust 2.63 air hurt=DriveIn crater=0.74 finisher",
+   "drop 0.12",
+   "land 0.74 1.3 0.49"
+  ],
+  "element": "Steel",
+  "school": "hunters_way",
+  "tier": "expert",
+  "prey": [
+   "Undead"
+  ],
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Exorcist Pounce",
+  "id": "exorcist_pounce",
+  "info": "Runs at the quarry, springs over it like a hawk and comes down spear first, pinning it into the ground",
+  "kind": "juggle",
+  "arch": "pounce"
+ },
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Light",
+  "reach": 3.2,
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Ground",
+   "Hunt",
+   "Rising"
+  ],
+  "steps": [
+   "crouch 0.12",
+   "strike Stomp 0.65",
+   "pillar 1.95 height=2.0 lift=2.6 spike",
+   "L2:hold 0.1",
+   "leaves Launched"
+  ],
+  "element": "School",
+  "school": "hunters_way",
+  "tier": "expert",
+  "prey": [
+   "Flyer"
+  ],
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Iron Jaw Stake Trap",
+  "id": "iron_jaw_stake_trap",
+  "info": "Springs a trap hidden in the ground: a sharpened stake bursts up under the quarry and throws it into the air",
+  "kind": "eruption",
+  "arch": "stake_trap"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "accepts": [
+   "Close"
+  ],
+  "forms": [
+   "Fast",
+   "Hunt",
+   "Straight"
+  ],
+  "steps": [
+   "step",
+   "strike Thrust 0.5",
+   "strike Thrust 0.6",
+   "L2:strike SideKick 0.5",
+   "strike Thrust 1.68 hurt=Reel push=2.3 finisher area=0.8 areamult=0.4"
+  ],
+  "element": "School",
+  "school": "hunters_way",
+  "tier": "expert",
+  "prey": [
+   "Titan",
+   "Brute"
+  ],
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Wyrm Boar Thrusts",
+  "id": "wyrm_boar_thrusts",
+  "info": "Two quick jabs of the spear, a kick to break the stance, and a long thrust that hurls the quarry back",
+  "kind": "combo",
+  "arch": "spear_drill"
+ },
+ {
+  "plan": "counter",
+  "role": "Defense",
+  "scale": "Light",
+  "contact": "evaded",
+  "answers": [
+   "Charge"
+  ],
+  "forms": [
+   "Counter",
+   "Hunt",
+   "Low"
+  ],
+  "steps": [
+   "backhop 0.6",
+   "strike Sweep 1.04 hurt=Knockdown",
+   "strike Stomp 1.9 hurt=DriveIn crater=0.59 finisher"
+  ],
+  "element": "School",
+  "school": "hunters_way",
+  "tier": "expert",
+  "prey": [
+   "Undead"
+  ],
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Grave Snare",
+  "id": "grave_snare",
+  "info": "Lets the attack spring the snare: a sweep takes the legs and the heel comes down on the fallen quarry",
+  "kind": "counter",
+  "arch": "snare"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 4.0,
+  "range": 10.0,
+  "need": 2,
+  "accepts": [
+   "Scattered",
+   "Thrown"
+  ],
+  "forms": [
+   "Area",
+   "Hunt",
+   "Projectile"
+  ],
+  "steps": [
+   "crouch 0.12",
+   "gate 13 0.83 range=13.0 kind=Javelin"
+  ],
+  "element": "School",
+  "school": "hunters_way",
+  "tier": "master",
+  "prey": [
+   "Dragon"
+  ],
+  "worthy": true,
+  "mana": [
+   33.6,
+   56.0,
+   86.8
+  ],
+  "cooldown": [
+   9.8,
+   11.9,
+   14.0
+  ],
+  "name": "Spear Gate",
+  "id": "spear_gate",
+  "info": "Javelins hang in the air behind the hunter, one for every quarry, and fly one after another, pinning each to the ground",
+  "kind": "projectile",
+  "arch": "javelin_gate"
+ },
+ {
+  "plan": "self",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 4.1,
+  "need": 2,
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Area",
+   "Ground",
+   "Hunt"
+  ],
+  "steps": [
+   "crouch 0.16",
+   "strike Stomp 0.6",
+   "quake 4.1 1.21 cracks=8",
+   "pillar 1.81 height=2.2 lift=2.8 spike",
+   "leaves Launched"
+  ],
+  "element": "School",
+  "school": "hunters_way",
+  "tier": "master",
+  "prey": [
+   "Dragon"
+  ],
+  "worthy": true,
+  "mana": [
+   33.6,
+   56.0,
+   86.8
+  ],
+  "cooldown": [
+   9.8,
+   11.9,
+   14.0
+  ],
+  "name": "Trap Garden",
+  "id": "trap_garden",
+  "info": "Every trap it set goes off at once: the ground splits and stakes burst up under the pack",
+  "kind": "eruption",
+  "arch": "spike_field"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 13.0,
+  "width": 0.8,
+  "accepts": [
+   "Thrown",
+   "Launched",
+   "Scattered"
+  ],
+  "forms": [
+   "Hunt",
+   "Projectile",
+   "Straight"
+  ],
+  "steps": [
+   "crouch 0.1",
+   "shot Javelin 3.3 speed=30 range=13.0 size=1.3 pierce=3 impact=Pin"
+  ],
+  "element": "School",
+  "school": "hunters_way",
+  "tier": "master",
+  "prey": [
+   "Flyer"
+  ],
+  "worthy": false,
+  "mana": [
+   24.0,
+   40.0,
+   62.0
+  ],
+  "cooldown": [
+   7.0,
+   8.5,
+   10.0
+  ],
+  "name": "Wyrm Javelin",
+  "id": "wyrm_javelin",
+  "info": "Hurls a javelin that runs the quarry through and pins it to the ground where it lands",
+  "kind": "projectile",
+  "arch": "javelin"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 11.0,
+  "width": 0.8,
+  "accepts": [
+   "Thrown",
+   "Scattered"
+  ],
+  "forms": [
+   "Dash",
+   "Hunt",
+   "Projectile"
+  ],
+  "steps": [
+   "shot Harpoon 1.16 speed=24 range=11.0",
+   "dash",
+   "strike SideKick 0.58",
+   "strike Thrust 2.32 hurt=Reel push=2.75 finisher"
+  ],
+  "element": "School",
+  "school": "hunters_way",
+  "tier": "master",
+  "prey": [
+   "Flyer"
+  ],
+  "worthy": false,
+  "mana": [
+   24.0,
+   40.0,
+   62.0
+  ],
+  "cooldown": [
+   7.0,
+   8.5,
+   10.0
+  ],
+  "name": "Hawk Harpoon",
+  "id": "hawk_harpoon",
+  "info": "A harpoon on a chain bites into the quarry; the hunter comes down the chain after it and runs it through",
+  "kind": "rush",
+  "arch": "harpoon"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 3.5,
+  "range": 11.0,
+  "need": 2,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Hunt",
+   "Projectile"
+  ],
+  "steps": [
+   "crouch 0.12",
+   "hold 0.1",
+   "rain Arrows 28 3.5 0.71 dur=1.08"
+  ],
+  "element": "School",
+  "school": "hunters_way",
+  "tier": "master",
+  "prey": [
+   "Flyer"
+  ],
+  "worthy": true,
+  "mana": [
+   33.6,
+   56.0,
+   86.8
+  ],
+  "cooldown": [
+   9.8,
+   11.9,
+   14.0
+  ],
+  "name": "Trapper's Needle Storm",
+  "id": "trappers_needle_storm",
+  "info": "Flings fistful after fistful of darts high into the sky: a moment later they hail down on the pack and stand in the ground",
+  "kind": "rain",
+  "arch": "arrow_rain"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Heavy",
+  "len": 10.0,
+  "width": 0.8,
+  "accepts": [
+   "Thrown",
+   "Scattered"
+  ],
+  "forms": [
+   "Dash",
+   "Hunt",
+   "Projectile"
+  ],
+  "steps": [
+   "shot Harpoon 1.63 speed=26 impact=Pin",
+   "dash",
+   "strike Thrust 2.56 hurt=DriveIn crater=1 finisher"
+  ],
+  "element": "School",
+  "school": "hunters_way",
+  "tier": "grandmaster",
+  "prey": [
+   "Flyer"
+  ],
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Harpoon Kill",
+  "id": "harpoon_kill",
+  "info": "A harpoon pins the quarry to the ground, and before it can tear free the hunter is on it with the killing thrust",
+  "kind": "rush",
+  "arch": "harpoon_kill"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 4.2,
+  "range": 10.0,
+  "need": 2,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Hunt",
+   "Projectile"
+  ],
+  "steps": [
+   "rise 1.2 0.2",
+   "hold 0.15 tremble",
+   "rain Spears 26 4.2 1.11 dur=1.2",
+   "drop 0.14",
+   "land 0 0 0"
+  ],
+  "element": "School",
+  "school": "hunters_way",
+  "tier": "grandmaster",
+  "prey": [
+   "Fiend"
+  ],
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Rain of Javelins",
+  "id": "rain_of_javelins",
+  "info": "Hurls a storm of javelins into the sky: they come down on the pack like rain and stand in the ground among the bodies",
+  "kind": "rain",
+  "arch": "spear_storm"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 4.2,
+  "range": 12.0,
+  "need": 1,
+  "accepts": [
+   "Scattered",
+   "Thrown"
+  ],
+  "forms": [
+   "Area",
+   "Hunt",
+   "Projectile"
+  ],
+  "steps": [
+   "crouch 0.15",
+   "strike Thrust 0.24",
+   "hold 0.3",
+   "meteor 4.2 4.62 size=2.7 kind=Spear",
+   "hold 1.0"
+  ],
+  "element": "Steel",
+  "school": "hunters_way",
+  "tier": "grandmaster",
+  "prey": [
+   "Beast"
+  ],
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Heaven's Javelin",
+  "id": "heavens_javelin",
+  "info": "Hurls its spear straight up out of sight; it comes back down as a spear the size of a tower and nails the quarry to the earth",
+  "kind": "slam",
+  "arch": "heaven_javelin"
+ },
+ {
+  "plan": "air",
+  "role": "Air",
+  "scale": "Light",
+  "accepts": [
+   "Launched"
+  ],
+  "forms": [
+   "Aerial",
+   "Hunt"
+  ],
+  "steps": [
+   "crouch 0.08",
+   "rise 2.6 0.16",
+   "strike Thrust 0.88 air",
+   "strike SideKick 0.73 air",
+   "L2:strike Thrust 0.59 air",
+   "strike Thrust 2.2 air hurt=DriveIn crater=1.08 finisher",
+   "drop 0.12",
+   "land 0.98 1.6 0.49",
+   "pillar 0.49 height=1.6 lift=1.6 spike"
+  ],
+  "element": "Steel",
+  "school": "hunters_way",
+  "tier": "grandmaster",
+  "prey": [
+   "Titan",
+   "Brute"
+  ],
+  "worthy": false,
+  "mana": [
+   36.0,
+   58.0,
+   90.0
+  ],
+  "cooldown": [
+   9.0,
+   11.0,
+   13.0
+  ],
+  "name": "Grave Hawk Drop",
+  "id": "grave_hawk_drop",
+  "info": "Leaps after the airborne quarry, spears it twice on the way up and drives it down into the ground with the third",
+  "kind": "juggle",
+  "arch": "hawk_drop"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "reach": 5.4,
+  "accepts": [
+   "Down",
+   "Launched"
+  ],
+  "forms": [
+   "Aerial",
+   "Hunt",
+   "Overhead"
+  ],
+  "steps": [
+   "run",
+   "crouch 0.1",
+   "rise 2.4 0.2",
+   "hold 0.06",
+   "strike Thrust 3.78 air hurt=DriveIn crater=0.98 finisher",
+   "drop 0.12",
+   "land 0.98 1.6 0.71"
+  ],
+  "element": "School",
+  "school": "hunters_way",
+  "tier": "grandmaster",
+  "prey": [
+   "Beast"
+  ],
+  "worthy": false,
+  "mana": [
+   36.0,
+   58.0,
+   90.0
+  ],
+  "cooldown": [
+   9.0,
+   11.0,
+   13.0
+  ],
+  "name": "Grave Hawk Dive",
+  "id": "grave_hawk_dive",
+  "info": "Runs at the quarry, springs over it like a hawk and comes down spear first, pinning it into the ground",
+  "kind": "juggle",
+  "arch": "pounce"
+ },
+ {
+  "plan": "line",
+  "role": "Launcher",
+  "scale": "Ultimate",
+  "len": 8.0,
+  "width": 0.8,
+  "accepts": [
+   "Thrown",
+   "Scattered"
+  ],
+  "forms": [
+   "Aerial",
+   "Hunt",
+   "Projectile",
+   "Rising"
+  ],
+  "steps": [
+   "cinematic",
+   "shot Harpoon 0.56 speed=24 range=8",
+   "dash",
+   "strike Thrust 0.56",
+   "strike RisingSlash 0.84 hurt=Juggle lift=2.95",
+   "rise 2.55 0.12",
+   "flurry 10 1.0 Thrust SideKick dur=0.35",
+   "strike Thrust 1.67 air hurt=DriveIn crater=1.35 finisher",
+   "drop 0.12",
+   "land 1.1 1.75 0.56",
+   "hold 0.08",
+   "rain Spears 20 3.6 0.45 dur=1",
+   "meteor 3.4 2.23 size=2.2 kind=Spear",
+   "hold 1"
+  ],
+  "element": "School",
+  "school": "hunters_way",
+  "tier": "god",
+  "prey": [
+   "Undead"
+  ],
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Great Hunt",
+  "id": "great_hunt",
+  "info": "The whole hunt: a harpoon, a charge down its chain, the spear under the quarry's chin, a flurry of thrusts in the air and one that nails it into a crater; then javelins and a spear from the heavens come down on it",
+  "kind": "launcher",
+  "arch": "route"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Ultimate",
+  "radius": 4.0,
+  "range": 10.0,
+  "need": 2,
+  "accepts": [
+   "Scattered",
+   "Thrown"
+  ],
+  "forms": [
+   "Area",
+   "Hunt",
+   "Projectile"
+  ],
+  "steps": [
+   "cinematic",
+   "crouch 0.12",
+   "gate 17 1.09 range=15.0 kind=Javelin"
+  ],
+  "element": "School",
+  "school": "hunters_way",
+  "tier": "god",
+  "prey": [
+   "Caster"
+  ],
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Javelin Gate",
+  "id": "javelin_gate",
+  "info": "Javelins hang in the air behind the hunter, one for every quarry, and fly one after another, pinning each to the ground",
+  "kind": "projectile",
+  "arch": "javelin_gate"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Ultimate",
+  "radius": 4.5,
+  "range": 10.0,
+  "need": 2,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Hunt",
+   "Projectile"
+  ],
+  "steps": [
+   "cinematic",
+   "rise 1.2 0.2",
+   "hold 0.15 tremble",
+   "rain Spears 29 4.5 1.26 dur=1.2",
+   "drop 0.14",
+   "land 0 0 0"
+  ],
+  "element": "School",
+  "school": "hunters_way",
+  "tier": "god",
+  "prey": [
+   "Fiend"
+  ],
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Spear Storm",
+  "id": "spear_storm",
+  "info": "Hurls a storm of javelins into the sky: they come down on the pack like rain and stand in the ground among the bodies",
+  "kind": "rain",
+  "arch": "spear_storm"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Ultimate",
+  "radius": 4.6,
+  "range": 12.0,
+  "need": 1,
+  "accepts": [
+   "Scattered",
+   "Thrown"
+  ],
+  "forms": [
+   "Area",
+   "Hunt",
+   "Projectile"
+  ],
+  "steps": [
+   "cinematic",
+   "crouch 0.15",
+   "strike Thrust 0.3",
+   "hold 0.3",
+   "meteor 4.6 5.61 size=3.0 kind=Spear",
+   "hold 1.0",
+   "rain Spears 16 4.5 0.47 dur=0.9"
+  ],
+  "element": "School",
+  "school": "hunters_way",
+  "tier": "god",
+  "prey": [
+   "Dragon"
+  ],
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Spear of the Firmament",
+  "id": "spear_of_the_firmament",
+  "info": "Hurls its spear straight up out of sight; it comes back down as a spear the size of a tower and nails the quarry to the earth",
+  "kind": "slam",
+  "arch": "heaven_javelin"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 13.0,
+  "width": 0.8,
+  "accepts": [
+   "Thrown",
+   "Scattered"
+  ],
+  "forms": [
+   "Dash",
+   "Hunt",
+   "Projectile"
+  ],
+  "steps": [
+   "shot Harpoon 1.84 speed=24 range=13.0",
+   "dash",
+   "strike SideKick 0.92",
+   "strike Thrust 3.68 hurt=Reel push=3.25 finisher"
+  ],
+  "element": "Steel",
+  "school": "hunters_way",
+  "tier": "god",
+  "prey": [
+   "Dragon"
+  ],
+  "worthy": false,
+  "mana": [
+   55.0,
+   85.0,
+   130.0
+  ],
+  "cooldown": [
+   12.0,
+   15.0,
+   18.0
+  ],
+  "name": "Iron Jaw Harpoon",
+  "id": "iron_jaw_harpoon",
+  "info": "A harpoon on a chain bites into the quarry; the hunter comes down the chain after it and runs it through",
+  "kind": "rush",
+  "arch": "harpoon"
+ }
+]

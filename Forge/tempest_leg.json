@@ -1,0 +1,1197 @@
+[
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "accepts": [
+   "Close"
+  ],
+  "forms": [
+   "Fast",
+   "Kick"
+  ],
+  "steps": [
+   "step",
+   "strike SnapKick 0.29",
+   "strike Roundhouse 0.38",
+   "L2:strike SideKick 0.29",
+   "strike SpinKick 0.95 hurt=Spin push=1.3 finisher"
+  ],
+  "element": "Wind",
+  "school": "tempest_leg",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Skyward Wind Kicks",
+  "id": "skyward_wind_kicks",
+  "info": "A snap kick, a roundhouse, a side kick, and a spinning heel that whirls the foe off its feet",
+  "kind": "combo",
+  "arch": "kicks"
+ },
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Light",
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Kick",
+   "Rising"
+  ],
+  "steps": [
+   "step",
+   "strike SnapKick 0.39",
+   "strike SpinKick 1.16 hurt=Launch lift=2.3 finisher",
+   "leaves Launched"
+  ],
+  "element": "School",
+  "school": "tempest_leg",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Whirling Updraft",
+  "id": "whirling_updraft",
+  "info": "A snap kick to open it, then a spinning kick from below on a gust of wind that throws the foe high",
+  "kind": "launcher",
+  "arch": "updraft"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 9.0,
+  "width": 0.8,
+  "accepts": [
+   "Thrown",
+   "Launched",
+   "Scattered"
+  ],
+  "forms": [
+   "Kick",
+   "Projectile"
+  ],
+  "steps": [
+   "spin 1 0.2",
+   "shot WindBlade 1.62 speed=22 range=9.0 size=1.1 pierce=2"
+  ],
+  "element": "Wind",
+  "school": "tempest_leg",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Gale Air Slash",
+  "id": "gale_air_slash",
+  "info": "A spinning kick cuts the air itself: a crescent of wind flies down the line and slices through everyone in it",
+  "kind": "projectile",
+  "arch": "air_slash"
+ },
+ {
+  "plan": "counter",
+  "role": "Defense",
+  "scale": "Light",
+  "contact": "evaded",
+  "answers": [
+   "Low"
+  ],
+  "forms": [
+   "Counter",
+   "Evasive",
+   "Kick"
+  ],
+  "steps": [
+   "backhop 0.6",
+   "strike SnapKick 0.56",
+   "L2:strike Roundhouse 0.38",
+   "strike SpinKick 1.03 hurt=Spin push=1.4 finisher"
+  ],
+  "element": "Wind",
+  "school": "tempest_leg",
+  "tier": "novice",
+  "worthy": false,
+  "mana": [
+   6.0,
+   10.0,
+   15.0
+  ],
+  "cooldown": [
+   4.0,
+   5.0,
+   6.0
+  ],
+  "name": "Storm Wind Counter",
+  "id": "storm_wind_counter",
+  "info": "Hops back from the attack light as a feather and answers with a snap kick and a spinning heel",
+  "kind": "counter",
+  "arch": "hop_counter"
+ },
+ {
+  "plan": "self",
+  "role": "Area",
+  "scale": "Light",
+  "radius": 2.5,
+  "need": 2,
+  "accepts": [
+   "Close",
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Kick",
+   "Spin"
+  ],
+  "steps": [
+   "spin 2 0.3",
+   "tornado 2.5 2.33 1.1 2.8"
+  ],
+  "element": "Wind",
+  "school": "tempest_leg",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   14.0,
+   23.8,
+   37.8
+  ],
+  "cooldown": [
+   7.0,
+   8.4,
+   9.8
+  ],
+  "name": "Zephyr Twister",
+  "id": "zephyr_twister",
+  "info": "Spins on one heel faster and faster until a cyclone stands around it, dragging in everyone near and flinging them away",
+  "kind": "nova",
+  "arch": "cyclone"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 9.0,
+  "width": 1.4,
+  "accepts": [
+   "Thrown",
+   "Scattered"
+  ],
+  "forms": [
+   "Evasive",
+   "Kick",
+   "Projectile"
+  ],
+  "steps": [
+   "backhop 0.9",
+   "shot WindBlade 0.74 count=3 spread=12 gap=0.08 speed=22 pierce=2"
+  ],
+  "element": "School",
+  "school": "tempest_leg",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Whirling Crescent Scatter",
+  "id": "whirling_crescent_scatter",
+  "info": "Springs back out of reach and kicks 3 crescents of wind at the enemy as it lands",
+  "kind": "projectile",
+  "arch": "wind_volley"
+ },
+ {
+  "plan": "air",
+  "role": "Air",
+  "scale": "Light",
+  "accepts": [
+   "Launched"
+  ],
+  "forms": [
+   "Aerial",
+   "Kick"
+  ],
+  "steps": [
+   "crouch 0.08",
+   "rise 2.0 0.14",
+   "strike SnapKick 0.39 air",
+   "strike Roundhouse 0.39 air",
+   "rise 0.9 0.1",
+   "strike SpinKick 0.39 air",
+   "L2:strike SnapKick 0.26 air",
+   "strike AxeKick 1.04 air hurt=DriveIn crater=0.77 finisher",
+   "drop 0.12",
+   "land 0.62 1.15 0.26"
+  ],
+  "element": "School",
+  "school": "tempest_leg",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Cyclone Cloud Stair",
+  "id": "cyclone_cloud_stair",
+  "info": "Climbs the launched foe kick by kick like a staircase of wind, higher and higher, then axe-kicks it down into a crater",
+  "kind": "juggle",
+  "arch": "cloud_stair"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "reach": 4.5,
+  "accepts": [
+   "Down",
+   "Launched"
+  ],
+  "forms": [
+   "Aerial",
+   "Kick",
+   "Overhead"
+  ],
+  "steps": [
+   "dash",
+   "crouch 0.08",
+   "rise 2.2 0.2",
+   "hold 0.06",
+   "strike HeelDrop 2.14 air hurt=DriveIn crater=0.67 finisher",
+   "drop 0.12",
+   "land 0.62 1.15 0.48"
+  ],
+  "element": "Wind",
+  "school": "tempest_leg",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Thunderclap Talon Dive",
+  "id": "thunderclap_talon_dive",
+  "info": "Springs high over the foe and falls heel first on its head, driving it into the ground",
+  "kind": "juggle",
+  "arch": "falcon_drop"
+ },
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Light",
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Kick",
+   "Rising"
+  ],
+  "steps": [
+   "step",
+   "strike SnapKick 0.54",
+   "strike SpinKick 1.62 hurt=Launch lift=2.55 finisher",
+   "leaves Launched"
+  ],
+  "element": "School",
+  "school": "tempest_leg",
+  "tier": "adept",
+  "worthy": false,
+  "mana": [
+   10.0,
+   17.0,
+   27.0
+  ],
+  "cooldown": [
+   5.0,
+   6.0,
+   7.0
+  ],
+  "name": "Hurricane Updraft",
+  "id": "hurricane_updraft",
+  "info": "A snap kick to open it, then a spinning kick from below on a gust of wind that throws the foe high",
+  "kind": "launcher",
+  "arch": "updraft"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 4.7,
+  "width": 1.8,
+  "accepts": [
+   "Close",
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Kick"
+  ],
+  "steps": [
+   "spin 1 0.2",
+   "cone 3.04 38 4.7 push=1.3 blades dur=0.5"
+  ],
+  "element": "School",
+  "school": "tempest_leg",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Hurricane Razor Wind",
+  "id": "hurricane_razor_wind",
+  "info": "A sweeping kick throws out a fan of wind crescents that cuts through everyone in front",
+  "kind": "beam",
+  "arch": "gale_fan"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 5.8,
+  "width": 0.7,
+  "accepts": [
+   "Close",
+   "Thrown"
+  ],
+  "forms": [
+   "Dash",
+   "Fast",
+   "Kick"
+  ],
+  "element": "Lightning",
+  "steps": [
+   "crouch 0.05",
+   "dash behind",
+   "ghost lines",
+   "strike SideKick 2.42 hurt=Reel push=2.3 finisher",
+   "lightning 2 0.8 0.87 dur=0.25"
+  ],
+  "school": "tempest_leg",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Zephyr Lightning Step",
+  "id": "zephyr_lightning_step",
+  "info": "Crosses the gap as a flash of lightning and kicks through the foe; the thunder lands on it a heartbeat later",
+  "kind": "rush",
+  "arch": "lightning_step"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "reach": 4.8,
+  "accepts": [
+   "Close"
+  ],
+  "forms": [
+   "Fast",
+   "Flurry",
+   "Kick"
+  ],
+  "steps": [
+   "dash",
+   "circle 2.8",
+   "flurry 7 1.49 SnapKick Roundhouse dur=0.45",
+   "circle 1.6",
+   "strike SpinKick 1.33 hurt=Spin push=1.6 finisher area=1 areamult=0.4",
+   "tornado 2.0 0.66 0.6 2.5"
+  ],
+  "element": "Wind",
+  "school": "tempest_leg",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Zephyr Gale Waltz",
+  "id": "zephyr_gale_waltz",
+  "info": "Dances round the foe in a ring of wind, kicking from every side, and the dance becomes a whirlwind that throws it away",
+  "kind": "barrage",
+  "arch": "storm_dance"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 11.0,
+  "width": 1.6,
+  "accepts": [
+   "Thrown",
+   "Launched",
+   "Scattered"
+  ],
+  "forms": [
+   "Kick",
+   "Projectile"
+  ],
+  "steps": [
+   "spin 1 0.24",
+   "shot WindBlade 1.12 speed=26 range=11.0 size=1.4 pierce=4 count=3 spread=12 gap=0.07"
+  ],
+  "element": "School",
+  "school": "tempest_leg",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Falcon Wind Crescent",
+  "id": "falcon_wind_crescent",
+  "info": "Three kicks in one spin: three crescents of wind fan out, slicing through the enemy line",
+  "kind": "projectile",
+  "arch": "air_slash"
+ },
+ {
+  "plan": "counter",
+  "role": "Defense",
+  "scale": "Light",
+  "contact": "evaded",
+  "answers": [
+   "Low"
+  ],
+  "forms": [
+   "Counter",
+   "Evasive",
+   "Kick"
+  ],
+  "steps": [
+   "backhop 0.6",
+   "strike SnapKick 1.02",
+   "L2:strike Roundhouse 0.68",
+   "strike SpinKick 1.87 hurt=Spin push=1.8 finisher"
+  ],
+  "element": "School",
+  "school": "tempest_leg",
+  "tier": "expert",
+  "worthy": false,
+  "mana": [
+   16.0,
+   28.0,
+   44.0
+  ],
+  "cooldown": [
+   6.0,
+   7.0,
+   8.0
+  ],
+  "name": "Hurricane Wind Counter",
+  "id": "hurricane_wind_counter",
+  "info": "Hops back from the attack light as a feather and answers with a snap kick and a spinning heel",
+  "kind": "counter",
+  "arch": "hop_counter"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Heavy",
+  "len": 6.2,
+  "width": 2.0,
+  "accepts": [
+   "Close",
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Kick"
+  ],
+  "steps": [
+   "spin 2 0.3",
+   "cone 1.9 50 6.2 push=2 blades",
+   "tornado 3.0 1.9 1.4 4"
+  ],
+  "element": "School",
+  "school": "tempest_leg",
+  "tier": "master",
+  "worthy": true,
+  "mana": [
+   33.6,
+   56.0,
+   86.8
+  ],
+  "cooldown": [
+   9.8,
+   11.9,
+   14.0
+  ],
+  "name": "Gale Blade Storm",
+  "id": "gale_blade_storm",
+  "info": "A spinning kick throws out a fan of wind blades, and the wind it stirred becomes a cyclone that swallows the survivors",
+  "kind": "beam",
+  "arch": "gale_blades"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 4.5,
+  "range": 9.0,
+  "need": 2,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Aerial",
+   "Area",
+   "Kick"
+  ],
+  "element": "Lightning",
+  "steps": [
+   "rise 1.2 0.2",
+   "hold 0.15 tremble",
+   "lightning 8 4.5 0.62 dur=1",
+   "drop 0.14",
+   "land 0.6 1.2 0.58",
+   "shockwave 3.7 0.77"
+  ],
+  "school": "tempest_leg",
+  "tier": "master",
+  "worthy": true,
+  "mana": [
+   33.6,
+   56.0,
+   86.8
+  ],
+  "cooldown": [
+   9.8,
+   11.9,
+   14.0
+  ],
+  "name": "Thunder Kicks",
+  "id": "thunder_kicks",
+  "info": "Leaps into the storm and kicks the clouds: lightning answers, striking every enemy below, and it comes down on a thunderclap",
+  "kind": "rain",
+  "arch": "thunder_kicks"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Light",
+  "reach": 5.1,
+  "accepts": [
+   "Down",
+   "Launched"
+  ],
+  "forms": [
+   "Aerial",
+   "Kick",
+   "Overhead"
+  ],
+  "steps": [
+   "dash",
+   "crouch 0.08",
+   "rise 2.6 0.2",
+   "hold 0.06",
+   "strike HeelDrop 3.19 air hurt=DriveIn crater=0.91 finisher",
+   "drop 0.12",
+   "land 0.86 1.45 0.72",
+   "shockwave 2.55 0.6"
+  ],
+  "element": "School",
+  "school": "tempest_leg",
+  "tier": "master",
+  "worthy": false,
+  "mana": [
+   24.0,
+   40.0,
+   62.0
+  ],
+  "cooldown": [
+   7.0,
+   8.5,
+   10.0
+  ],
+  "name": "Falcon Talon Dive",
+  "id": "falcon_talon_dive",
+  "info": "Springs high over the foe and falls heel first on its head, driving it into the ground",
+  "kind": "juggle",
+  "arch": "falcon_drop"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 5.15,
+  "width": 1.8,
+  "accepts": [
+   "Close",
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Kick"
+  ],
+  "steps": [
+   "spin 1 0.2",
+   "cone 3.65 41 5.15 push=1.45 blades dur=0.55"
+  ],
+  "element": "Wind",
+  "school": "tempest_leg",
+  "tier": "master",
+  "worthy": false,
+  "mana": [
+   24.0,
+   40.0,
+   62.0
+  ],
+  "cooldown": [
+   7.0,
+   8.5,
+   10.0
+  ],
+  "name": "Gale Razor Wind",
+  "id": "gale_razor_wind",
+  "info": "A sweeping kick throws out a fan of wind crescents that cuts through everyone in front",
+  "kind": "beam",
+  "arch": "gale_fan"
+ },
+ {
+  "plan": "line",
+  "role": "Line",
+  "scale": "Light",
+  "len": 6.2,
+  "width": 0.7,
+  "accepts": [
+   "Close",
+   "Thrown"
+  ],
+  "forms": [
+   "Dash",
+   "Fast",
+   "Kick"
+  ],
+  "element": "Lightning",
+  "steps": [
+   "crouch 0.05",
+   "dash behind",
+   "ghost lines",
+   "strike SideKick 2.94 hurt=Reel push=2.55 finisher",
+   "lightning 2 0.8 1.05 dur=0.25"
+  ],
+  "school": "tempest_leg",
+  "tier": "master",
+  "worthy": false,
+  "mana": [
+   24.0,
+   40.0,
+   62.0
+  ],
+  "cooldown": [
+   7.0,
+   8.5,
+   10.0
+  ],
+  "name": "Zephyr Bolt Pass",
+  "id": "zephyr_bolt_pass",
+  "info": "Crosses the gap as a flash of lightning and kicks through the foe; the thunder lands on it a heartbeat later",
+  "kind": "rush",
+  "arch": "lightning_step"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Heavy",
+  "accepts": [
+   "Down",
+   "Launched"
+  ],
+  "forms": [
+   "Aerial",
+   "Kick",
+   "Overhead"
+  ],
+  "steps": [
+   "crouch 0.12",
+   "rise 4.2 0.3",
+   "hold 0.15 tremble",
+   "strike AxeKick 2.87 air hurt=DriveIn crater=2.0 finisher",
+   "drop 0.1",
+   "land 2.0 3.2 1.19",
+   "shockwave 4.8 0.72"
+  ],
+  "element": "Wind",
+  "school": "tempest_leg",
+  "tier": "grandmaster",
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Falling Star Kick",
+  "id": "falling_star_kick",
+  "info": "Leaps out of sight, hangs a heartbeat among the clouds, and comes down heel first like a falling star",
+  "kind": "slam",
+  "arch": "star_kick"
+ },
+ {
+  "plan": "self",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 4.6,
+  "need": 3,
+  "accepts": [
+   "Close",
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Kick",
+   "Spin"
+  ],
+  "steps": [
+   "spin 3 0.4",
+   "tornado 4.6 2.96 1.4 5.2",
+   "lightning 8 4.8 0.69 dur=1.2"
+  ],
+  "element": "School",
+  "school": "tempest_leg",
+  "tier": "grandmaster",
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Eye of the Storm",
+  "id": "eye_of_the_storm",
+  "info": "Becomes the eye of a typhoon: the storm round it swallows the crowd, lightning flashing in its walls",
+  "kind": "nova",
+  "arch": "storm_eye"
+ },
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Heavy",
+  "reach": 5.4,
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Aerial",
+   "Flurry",
+   "Kick",
+   "Rising"
+  ],
+  "steps": [
+   "dash",
+   "strike SnapKick 0.36",
+   "strike Roundhouse 0.45",
+   "strike SpinKick 0.68 hurt=Juggle lift=2.8",
+   "rise 2.4 0.12",
+   "flurry 9 0.82 SnapKick Roundhouse dur=0.35",
+   "rise 0.8 0.08",
+   "strike AxeKick 1.36 air hurt=DriveIn crater=1.23 finisher",
+   "drop 0.12",
+   "land 0.98 1.6 0.45"
+  ],
+  "element": "Wind",
+  "school": "tempest_leg",
+  "tier": "grandmaster",
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Sky Gale Route",
+  "id": "sky_gale_route",
+  "info": "The tempest's road: kicks that launch the foe, a storm of kicks climbing after it, and an axe kick that drives it into a crater",
+  "kind": "launcher",
+  "arch": "route"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Heavy",
+  "reach": 5.4,
+  "accepts": [
+   "Close"
+  ],
+  "forms": [
+   "Fast",
+   "Flurry",
+   "Kick"
+  ],
+  "steps": [
+   "dash",
+   "circle 3.2",
+   "flurry 9 2.24 SnapKick Roundhouse dur=0.45",
+   "circle 1.6",
+   "strike SpinKick 1.99 hurt=Spin push=1.6 finisher area=1 areamult=0.4",
+   "tornado 2.4 1.0 0.6 2.5"
+  ],
+  "element": "School",
+  "school": "tempest_leg",
+  "tier": "grandmaster",
+  "worthy": true,
+  "mana": [
+   50.4,
+   81.2,
+   126.0
+  ],
+  "cooldown": [
+   12.6,
+   15.4,
+   18.2
+  ],
+  "name": "Crescent Gale Waltz",
+  "id": "crescent_gale_waltz",
+  "info": "Dances round the foe in a ring of wind, kicking from every side, and the dance becomes a whirlwind that throws it away",
+  "kind": "barrage",
+  "arch": "storm_dance"
+ },
+ {
+  "plan": "air",
+  "role": "Air",
+  "scale": "Light",
+  "accepts": [
+   "Launched"
+  ],
+  "forms": [
+   "Aerial",
+   "Kick"
+  ],
+  "steps": [
+   "crouch 0.08",
+   "rise 2.6 0.14",
+   "strike SnapKick 0.76 air",
+   "strike Roundhouse 0.76 air",
+   "rise 1.2 0.1",
+   "strike SpinKick 0.76 air",
+   "L2:strike SnapKick 0.51 air",
+   "strike AxeKick 2.03 air hurt=DriveIn crater=1.13 finisher",
+   "drop 0.12",
+   "land 0.98 1.6 0.51",
+   "tornado 2.4 0.76 0.6 2"
+  ],
+  "element": "Wind",
+  "school": "tempest_leg",
+  "tier": "grandmaster",
+  "worthy": false,
+  "mana": [
+   36.0,
+   58.0,
+   90.0
+  ],
+  "cooldown": [
+   9.0,
+   11.0,
+   13.0
+  ],
+  "name": "Zephyr Cloud Stair",
+  "id": "zephyr_cloud_stair",
+  "info": "Climbs the launched foe kick by kick like a staircase of wind, higher and higher, then axe-kicks it down into a crater",
+  "kind": "juggle",
+  "arch": "cloud_stair"
+ },
+ {
+  "plan": "melee",
+  "role": "Launcher",
+  "scale": "Ultimate",
+  "reach": 5.7,
+  "accepts": [
+   "Close",
+   "Down"
+  ],
+  "forms": [
+   "Aerial",
+   "Flurry",
+   "Kick",
+   "Rising"
+  ],
+  "steps": [
+   "cinematic",
+   "dash",
+   "strike SnapKick 0.48",
+   "strike Roundhouse 0.6",
+   "strike SpinKick 0.9 hurt=Juggle lift=2.95",
+   "rise 2.55 0.12",
+   "flurry 10 1.08 SnapKick Roundhouse dur=0.35",
+   "rise 0.8 0.08",
+   "strike AxeKick 1.81 air hurt=DriveIn crater=1.35 finisher",
+   "drop 0.12",
+   "land 1.1 1.75 0.6",
+   "hold 0.08",
+   "tornado 3.4 1.81 1.2 4",
+   "lightning 6 3.6 0.6 dur=0.9"
+  ],
+  "element": "School",
+  "school": "tempest_leg",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Tempest Road",
+  "id": "tempest_road",
+  "info": "The tempest's road: kicks that launch the foe, a storm of kicks climbing after it, and an axe kick that drives it into a crater; then a typhoon full of lightning rises where it fell",
+  "kind": "launcher",
+  "arch": "route"
+ },
+ {
+  "plan": "melee",
+  "role": "Single",
+  "scale": "Ultimate",
+  "accepts": [
+   "Down",
+   "Launched"
+  ],
+  "forms": [
+   "Aerial",
+   "Kick",
+   "Overhead"
+  ],
+  "steps": [
+   "cinematic",
+   "crouch 0.12",
+   "rise 4.4 0.3",
+   "hold 0.15 tremble",
+   "strike AxeKick 3.38 air hurt=DriveIn crater=2.1 finisher",
+   "drop 0.1",
+   "land 2.1 3.35 1.41",
+   "shockwave 5.1 0.84",
+   "lightning 6 4 0.68 dur=0.6"
+  ],
+  "element": "School",
+  "school": "tempest_leg",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Comet Heel",
+  "id": "comet_heel",
+  "info": "Leaps out of sight, hangs a heartbeat among the clouds, and comes down heel first like a falling star",
+  "kind": "slam",
+  "arch": "star_kick"
+ },
+ {
+  "plan": "area",
+  "role": "Area",
+  "scale": "Ultimate",
+  "radius": 5.1,
+  "range": 9.0,
+  "need": 2,
+  "accepts": [
+   "Scattered"
+  ],
+  "forms": [
+   "Aerial",
+   "Area",
+   "Kick"
+  ],
+  "element": "Lightning",
+  "steps": [
+   "cinematic",
+   "rise 1.2 0.2",
+   "hold 0.15 tremble",
+   "lightning 10 5.1 0.96 dur=1",
+   "drop 0.14",
+   "land 0.6 1.2 0.9",
+   "shockwave 4.3 1.2"
+  ],
+  "school": "tempest_leg",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Thunderhead",
+  "id": "thunderhead",
+  "info": "Leaps into the storm and kicks the clouds: lightning answers, striking every enemy below, and it comes down on a thunderclap",
+  "kind": "rain",
+  "arch": "thunder_kicks"
+ },
+ {
+  "plan": "self",
+  "role": "Area",
+  "scale": "Ultimate",
+  "radius": 4.9,
+  "need": 3,
+  "accepts": [
+   "Close",
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Kick",
+   "Spin"
+  ],
+  "steps": [
+   "cinematic",
+   "spin 3 0.4",
+   "tornado 4.9 3.38 1.4 5.5",
+   "lightning 9 5.1 0.79 dur=1.2"
+  ],
+  "element": "School",
+  "school": "tempest_leg",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   165.0,
+   255.0,
+   390.0
+  ],
+  "cooldown": [
+   36.0,
+   45.0,
+   54.0
+  ],
+  "name": "Typhoon",
+  "id": "typhoon",
+  "info": "Becomes the eye of a typhoon: the storm round it swallows the crowd, lightning flashing in its walls",
+  "kind": "nova",
+  "arch": "storm_eye"
+ },
+ {
+  "plan": "self",
+  "role": "Area",
+  "scale": "Heavy",
+  "radius": 3.7,
+  "need": 2,
+  "accepts": [
+   "Close",
+   "Scattered"
+  ],
+  "forms": [
+   "Area",
+   "Kick",
+   "Spin"
+  ],
+  "steps": [
+   "spin 2 0.38",
+   "tornado 3.7 4.67 1.5 4.0",
+   "lightning 4 3.7 0.66 dur=0.6"
+  ],
+  "element": "Wind",
+  "school": "tempest_leg",
+  "tier": "god",
+  "worthy": true,
+  "mana": [
+   77.0,
+   119.0,
+   182.0
+  ],
+  "cooldown": [
+   16.8,
+   21.0,
+   25.2
+  ],
+  "name": "Crescent Hurricane Spin",
+  "id": "crescent_hurricane_spin",
+  "info": "Spins on one heel faster and faster until a cyclone stands around it, dragging in everyone near and flinging them away; lightning cracks out of the storm",
+  "kind": "nova",
+  "arch": "cyclone"
+ }
+]
