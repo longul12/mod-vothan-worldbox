@@ -56,7 +56,7 @@ if ($CheckSettings) {
         $testAssembly=[Reflection.Assembly]::Load($stream.ToArray())
         $testAssembly.GetType('Sakuga.HuyenNguyetChecks').GetMethod('Run').Invoke($null,@($PSScriptRoot)) | Out-Null
     } finally {$stream.Dispose()}
-    'Huyen Nguyet checks passed: stable school IDs, unique recipes, six forms accepted by real Forge parser, costs and icon.'
+    'Huyen Nguyet checks passed: stable school IDs, unique recipes, 6 novice + 6 adept forms accepted by real Forge parser, two-pass blade budget, crowd/counter roles, costs and icon.'
      $modRoot=$PSScriptRoot
     $rules=[IO.File]::ReadAllText((Join-Path $modRoot 'Code/TribulationRules.cs'))
     $checks=@'

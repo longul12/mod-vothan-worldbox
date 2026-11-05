@@ -2,6 +2,10 @@
 
 Mốc đầu tiên đưa lên Git: **1.1.0**.
 
+## 1.1.2 — Huyền Nguyệt, bước 2
+
+Thêm 6 thế Adept, nâng tổng số lên 12: liên hoàn chưởng, nguyệt nhận liên tiếp/quay về, lướt truy kích, quét hình quạt và đỡ phản công. Giữ AI/cấp I–III/hồi chiêu của engine. Nguyệt nhận Boomerang tính ngân sách hai chiều bay, không tăng sát thương mỗi lượt quá mức. Tạm trao phái thủ công; chưa chuyển kỹ năng CWP, chưa có thế Expert trở lên. Kiểm tra offline bằng Forge thật đã đạt; chưa xác nhận gameplay trực tiếp.
+
 ## 1.1.1 — Huyền Nguyệt, bước 1
 
 Thêm phái thứ tám và 6 thế Novice bằng Forge, có cấp I–III, màu bạc lam, icon trăng khuyết. Tạm trao thủ công, chưa chọn ngẫu nhiên cho NPC. Giữ ID bảy phái cũ. Kiểm tra biên dịch và bộ đọc Forge thật đã đạt; chưa chơi thử. Chưa chuyển Nguyệt Khuyết từ CWP. Xem [lộ trình 7 bước](HUYEN_NGUYET_ROADMAP_VI.md).

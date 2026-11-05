@@ -10,7 +10,7 @@ namespace Sakuga
         {
             if((int)School.HuntersWay!=7 || (int)School.HuyenNguyet!=8 || Schools.Count!=8)
                 throw new Exception("Existing school IDs changed");
-            var ids=new HashSet<string>();int count=0;
+            var ids=new HashSet<string>();int count=0,novice=0,adept=0;bool returning=false,fan=false,counter=false;
             foreach(string file in Directory.GetFiles(Path.Combine(root,"Forge"),"*.json"))
             {
                 var recipes=JsonConvert.DeserializeObject<List<Recipe>>(File.ReadAllText(file));
@@ -20,15 +20,28 @@ namespace Sakuga
                     if(recipe.school!="huyen_nguyet")continue;
                     count++;
                     var tech=new ForgedTechnique(recipe,root); // Real parser checks enums and every opcode.
-                    if(tech.School!=School.HuyenNguyet || tech.Entry!=Tier.Novice)
+                    if(tech.School!=School.HuyenNguyet || (tech.Entry!=Tier.Novice && tech.Entry!=Tier.Adept))
                         throw new Exception("Wrong moon school/entry");
+                    if(tech.Entry==Tier.Novice)novice++;else adept++;
                     if(tech.Icon!="ui/Icons/sakuga/iconSchoolHuyenNguyet")throw new Exception("Missing school icon fallback");
                     for(int i=0;i<3;i++)
-                        if(recipe.mana[i]<=0 || recipe.cooldown[i]<4 || recipe.cooldown[i]>9)
+                        if(recipe.mana[i]<=0 || recipe.cooldown[i]<4 || recipe.cooldown[i]>10)
                             throw new Exception("Invalid preview costs");
+                    if(recipe.id=="hn_hoi_hoan_nguyet_nhan")
+                    {
+                        foreach(string line in recipe.steps)if(line.Contains("flight=Boomerang"))
+                        {
+                            var step=ForgeStep.Parse(line);
+                            if(step.A(1,0)>0.9f || step.K("pierce",0)>3)throw new Exception("Returning blade exceeds two-pass budget");
+                            returning=true;
+                        }
+                    }
+                    if(recipe.id=="hn_ban_nguyet_hoanh_tao")fan=recipe.plan=="self" && recipe.need==2;
+                    if(recipe.id=="hn_nguyet_kinh_phan_kich")counter=tech.Reactive && recipe.contact=="parried";
                 }
             }
-            if(count!=6)throw new Exception("Expected six introductory moon forms");
+            if(count!=12 || novice!=6 || adept!=6)throw new Exception("Expected six novice and six adept forms");
+            if(!returning || !fan || !counter)throw new Exception("Missing returning blade, crowd sweep or reactive guard");
             if(!File.Exists(Path.Combine(root,"GameResources/ui/Icons/sakuga/iconSchoolHuyenNguyet.png")))
                 throw new Exception("Moon icon missing");
         }

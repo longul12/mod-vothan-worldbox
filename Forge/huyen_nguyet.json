@@ -46,5 +46,53 @@
     "contact":"evaded","answers":["Punch"],"forms":["Counter","Evasive","Ki","Palm"],"worthy":false,
     "mana":[6,10,15],"cooldown":[6,7,8],
     "steps":["slip 1","ghost lines","strike Palm 0.85 hurt=Reel push=1.5","L2:strike Palm 0.2","recover 0.15"]
+  },
+  {
+    "id":"hn_song_nguyet_chuong","name":"Song Nguyệt Chưởng",
+    "info":"Hai chưởng liên tiếp, chưởng sau đẩy văng đối thủ để nối nguyệt nhận. Cấp II–III thêm chưởng bồi trước đòn kết.",
+    "school":"huyen_nguyet","tier":"adept","plan":"melee","role":"Single","scale":"Light","element":"School",
+    "forms":["Ki","Palm"],"accepts":["Close","Down"],"worthy":false,
+    "mana":[10,17,27],"cooldown":[5,6,7],
+    "steps":["step","strike Palm 0.65","L2:strike Palm 0.2","L3:strike Palm 0.15","strike Palm 1.0 hurt=Reel push=3 finisher","leaves Scattered"]
+  },
+  {
+    "id":"hn_lien_hoan_nguyet_nhan","name":"Liên Hoàn Nguyệt Nhận",
+    "info":"Ba nguyệt nhận phóng nối tiếp theo một hướng. Cấp II–III thêm nhát bồi; mỗi nguyệt nhận chỉ xuyên ít mục tiêu.",
+    "school":"huyen_nguyet","tier":"adept","plan":"line","role":"Line","scale":"Light","element":"School",
+    "forms":["Ki","Projectile","Straight"],"accepts":["Thrown","Launched","Scattered"],"worthy":false,"len":10,"width":0.9,
+    "mana":[12,20,30],"cooldown":[6,7,8],
+    "steps":["charge 0.22 Palms 1.0","shot SwordWave 0.52 count=3 gap=0.12 speed=23 range=10 size=0.8 pierce=1","L2:shot SwordWave 0.15 speed=23 range=10 size=0.7 pierce=1","L3:shot SwordWave 0.12 speed=23 range=10 size=0.7 pierce=1"]
+  },
+  {
+    "id":"hn_hoi_hoan_nguyet_nhan","name":"Hồi Hoàn Nguyệt Nhận",
+    "info":"Một nguyệt nhận bay ra rồi quay về bằng quỹ đạo Boomerang của Võ Thần. Có thể trúng một lần mỗi chiều bay; cấp II–III thêm chém gần trước lúc phóng.",
+    "school":"huyen_nguyet","tier":"adept","plan":"line","role":"Line","scale":"Light","element":"School",
+    "forms":["Ki","Projectile"],"accepts":["Thrown","Scattered"],"worthy":false,"len":9,"width":1.1,
+    "mana":[12,20,30],"cooldown":[7,8,9],
+    "steps":["charge 0.2 Palms 0.9","L2:strike Slash 0.16","L3:strike DiagSlash 0.12","shot SwordWave 0.85 flight=Boomerang speed=18 range=9 size=1.0 pierce=3","recover 0.2"]
+  },
+  {
+    "id":"hn_dap_nguyet_truy_phong","name":"Đạp Nguyệt Truy Phong",
+    "info":"Lướt xuyên đến sau lưng đối thủ, để lại dư ảnh rồi đánh chưởng. Là di chuyển chiến đấu, không dịch chuyển xuyên bản đồ hay miễn thương kéo dài.",
+    "school":"huyen_nguyet","tier":"adept","plan":"line","role":"Mobility","scale":"Light","element":"School",
+    "forms":["Dash","Fast","Ki","Palm"],"accepts":["Close","Thrown"],"worthy":false,"len":5,"width":0.7,
+    "mana":[10,17,27],"cooldown":[6,7,8],
+    "steps":["crouch 0.1","dash behind","ghost lines","strike Palm 1.25 hurt=Reel push=1.0","L2:strike Palm 0.2","L3:strike Palm 0.15","leaves Close"]
+  },
+  {
+    "id":"hn_ban_nguyet_hoanh_tao","name":"Bán Nguyệt Hoành Tảo",
+    "info":"Quét nguyệt lực hình quạt trước mặt để phá thế bị vây. Vùng đánh rộng hơn ở cấp cao, không gây sát thương sau lưng.",
+    "school":"huyen_nguyet","tier":"adept","plan":"self","role":"Area","scale":"Light","element":"School",
+    "forms":["Area","Blade","Ki"],"accepts":["Close","Scattered"],"worthy":false,"radius":3,"need":2,
+    "mana":[14,23,35],"cooldown":[7,8,9],
+    "steps":["charge 0.25 Stance 1.0","cone 1.55 85 3 blades","leaves Scattered","recover 0.2"]
+  },
+  {
+    "id":"hn_nguyet_kinh_phan_kich","name":"Nguyệt Kính Phản Kích",
+    "info":"Dựng nguyệt kính đỡ đòn gần rồi phát chưởng và nguyệt nhận đánh trả. Không phản xạ mọi projectile và không tạo khiên vĩnh viễn.",
+    "school":"huyen_nguyet","tier":"adept","plan":"counter","role":"Defense","scale":"Light","element":"School",
+    "contact":"parried","answers":["Punch","Blade"],"forms":["Counter","Guard","Ki","Palm"],"worthy":false,
+    "mana":[12,20,30],"cooldown":[8,9,10],
+    "steps":["guard 0.25 hex","strike Palm 0.8 hurt=Reel push=2","shot SwordWave 0.45 speed=20 range=7 size=0.8 pierce=1","L2:shot SwordWave 0.12 speed=20 range=7 size=0.7 pierce=1","L3:strike Palm 0.12","recover 0.2"]
   }
 ]
