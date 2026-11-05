@@ -52,9 +52,9 @@ namespace Sakuga
             return KeepDo(m => Areas.Add(new MeteorHazard(m, m.SpotOr(at), r, mult, size, kind)));
         }
 
-        public ChoreoMove BlackHole(float r, float mult, float dur = 1.2f, Func<ChoreoMove, Vector2> at = null)
+        public ChoreoMove BlackHole(float r, float mult, float dur = 1.2f, Func<ChoreoMove, Vector2> at = null, bool terrain = true)
         {
-            return KeepDo(m => Areas.Add(new BlackHoleHazard(m, m.SpotOr(at), r, mult, dur)));
+            return KeepDo(m => Areas.Add(new BlackHoleHazard(m, m.SpotOr(at), r, mult, dur, terrain)));
         }
 
         /// <summary>The earth split along its facing; 'cut': a blade's cut instead (a line of light that opens the ground).</summary>
@@ -63,9 +63,9 @@ namespace Sakuga
             return KeepDo(m => Areas.Add(new TrenchHazard(m, m.Pose.Ground + m.Dir * 0.6f * m.Kk, m.Dir, len, width, mult, speed, cut)));
         }
 
-        public ChoreoMove SkyBeam(float r, float mult, float dur = 0.9f, Func<ChoreoMove, Vector2> at = null)
+        public ChoreoMove SkyBeam(float r, float mult, float dur = 0.9f, Func<ChoreoMove, Vector2> at = null, bool terrain = true)
         {
-            return KeepDo(m => Areas.Add(new SkyBeamHazard(m, m.SpotOr(at), r, mult, dur)));
+            return KeepDo(m => Areas.Add(new SkyBeamHazard(m, m.SpotOr(at), r, mult, dur, terrain)));
         }
 
         public ChoreoMove Lightning(int count, float r, float mult, float dur = 0.9f, Func<ChoreoMove, Vector2> at = null)
@@ -652,14 +652,16 @@ namespace Sakuga
 
     internal sealed class BlackHoleHazard : Hazard
     {
+        private readonly bool _terrain;
         private readonly Vector2 _at, _core;
         private readonly float _r, _mult, _dur;
         private Particle _ball, _rim;
         private bool _pulled, _blown;
         private float _moteT;
 
-        public BlackHoleHazard(ChoreoMove m, Vector2 at, float r, float mult, float dur) : base(m)
+        public BlackHoleHazard(ChoreoMove m, Vector2 at, float r, float mult, float dur, bool terrain = true) : base(m)
         {
+            _terrain=terrain;
             _at = at;
             _r = r * Mathf.Lerp(1f, K, 0.5f);
             _mult = mult;
@@ -773,8 +775,11 @@ namespace Sakuga
                 Spec.Rocks(_at, Px, 12, 80f, K);
             }
             Choreo.Sound("event:/SFX/EXPLOSIONS/ExplosionForce", Combat.TileAt(_at));
-            Ruin.Blast(A, _at, _r * 0.55f, Scale, null, false);
-            Ruin.Quake(A, _at, Scale, 1.4f, K);
+            if(_terrain)
+            {
+                Ruin.Blast(A, _at, _r * 0.55f, Scale, null, false);
+                Ruin.Quake(A, _at, Scale, 1.4f, K);
+            }
             HitIds.Clear();
             Choreo.Foes(A, _at, _r * 0.9f, Near, true);
             for (int i = 0; i < Near.Count; i++)
@@ -902,12 +907,14 @@ namespace Sakuga
 
     internal sealed class SkyBeamHazard : Hazard
     {
+        private readonly bool _terrain;
         private readonly Vector2 _at;
         private readonly float _r, _mult, _dur, _warn;
         private int _waves;
 
         public SkyBeamHazard(Actor a, Move by, Hue hue, Scale scale, Vector2 at, float r, float mult, float dur) : base(a, by, hue, scale)
         {
+            _terrain=true;
             _at = at;
             _r = r * Mathf.Lerp(1f, K, 0.5f);
             _mult = mult;
@@ -916,8 +923,9 @@ namespace Sakuga
             Choreo.Sound("event:/SFX/POWERS/DivineLight", Combat.TileAt(at));
         }
 
-        public SkyBeamHazard(ChoreoMove m, Vector2 at, float r, float mult, float dur) : base(m)
+        public SkyBeamHazard(ChoreoMove m, Vector2 at, float r, float mult, float dur, bool terrain = true) : base(m)
         {
+            _terrain=terrain;
             _at = at;
             _r = r * Mathf.Lerp(1f, K, 0.5f);
             _mult = mult;
@@ -969,8 +977,11 @@ namespace Sakuga
                         Kit.Crater(_at, Px * K, Combat.TileAt(_at), true, 7f, false, Hue.Edge);
                     }
                     Choreo.Sound("event:/SFX/EXPLOSIONS/ExplosionLightningStrike", Combat.TileAt(_at));
-                    Ruin.Blast(A, _at, _r, Scale, null, true);
-                    Ruin.Quake(A, _at, Scale, 1.3f, K);
+                    if(_terrain)
+                    {
+                        Ruin.Blast(A, _at, _r, Scale, null, true);
+                        Ruin.Quake(A, _at, Scale, 1.3f, K);
+                    }
                 }
                 Choreo.Foes(A, _at, _r, Near);
                 for (int i = 0; i < Near.Count; i++)

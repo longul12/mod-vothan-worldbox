@@ -10,7 +10,7 @@ Ngày bắt đầu: 2026-11-05. Đây là phần mở rộng trong Võ Thần; g
 | 2 | 6 thế Adept, kiểm tra phản ứng và chuỗi cận chiến/tầm xa | Đã viết; kiểm tra offline, chưa thử game |
 | 3 | 6 thế Expert, hất tung, nguyệt nhận, phân ảnh và hộ thể | Đã viết; kiểm tra offline, chưa thử game |
 | 4 | 6 thế Master, chuyển Nguyệt Khuyết từ CWP sang động tác Võ Thần | Đã viết; kiểm tra offline, chưa thử game |
-| 5 | 6 thế Grandmaster, trận pháp và biến thể kiếm khí | Chưa làm |
+| 5 | 6 thế Grandmaster, phân ảnh và biến thể kiếm khí/vùng đánh | Đã viết; kiểm tra offline, chưa thử game |
 | 6 | 6 thế God, mặt trăng giáng xuống và tuyệt kỹ riêng | Chưa làm |
 | 7 | Cân bằng toàn phái, học tự nhiên, giao diện, save/load và thử tải | Chưa làm |
 
@@ -51,15 +51,21 @@ Mỗi bước cần biên dịch, kiểm tra công thức và ID, sau đó thử
 - Nguyệt Khuyết native dùng sprite crescent 26/9 trắng bạc, dư ảnh 0,07 giây; tốc độ 16, tầm 12, xuyên tối đa 8 địch, giảm 10% mỗi mục tiêu sàn 65%. Cấp I–III: hệ số 1,4/1,7/2,0, mana 24/36/52; hồi tối thiểu 10/12/14 giây thế giới từ lúc bắt đầu (bị ngắt vẫn tốn). Native Brain có thể áp dụng hồi chiêu dài hơn. Đồng hồ khác fallback CWP cũ.
 - Chỉ Nguyệt Khuyết bật cờ LunarCrescent và falloff của ShotSpec; mọi projectile cũ giữ mặc định không suy giảm. Kiếm khí có thể bị phản/cản theo engine và vùng đánh chịu hệ số hình thể. Dùng chung pool hiệu ứng native.
 - Các thế Master khác dùng mana 24–58 và hồi 8–14 giây trước hệ số engine. Nguyệt Luân hiện là hai vòng xung kích, chưa có luân bay quỹ đạo riêng. Trăng Tàn hiện là đòn nặng, chưa xuyên phần trăm giáp. Nguyệt Lạc nối Link.Launched, không đào hố.
-- Chưa có mặt trăng khổng lồ hoặc thế riêng Grandmaster/God.
+- Đã có 6 thế Grandmaster: Tam Trọng Nguyệt Khuyết, Minh Nguyệt Chiếu Không, Nguyệt Ảnh Trận, Nguyệt Luân Thiên Vũ, Kính Nguyệt Hoán Vị, Nguyệt Thực Chấn. Tổng 30 thế (29 Forge + 1 C#).
+- Grandmaster dùng mana 32–84, hồi 11–21 giây trước hệ số engine. Tam Trọng luôn ba projectile riêng (mỗi projectile xuyên tối đa 3 địch, decay 0,9/sàn 0,65), không tăng thành 5 trăng lớn khi lên cấp III. Thiên Vũ dùng luân xoay native, loạt chính tối đa 5 ở III, có thêm tối đa 2 nhát bồi nhỏ.
+- Minh Nguyệt hiện dùng cột ánh sáng có cảnh báo 0,45 giây và ba nhịp sát thương; chưa có sprite mặt trăng treo riêng. Nguyệt Ảnh Trận bao quanh một mục tiêu bằng phân ảnh, chưa là trận pháp đánh toàn vùng. Kính Nguyệt né rồi blink ra sau lưng, chưa hoán đổi hai Actor thật.
+- Nguyệt Thực dùng lực hút ngắn rồi phát nổ/hất tung. Minh Nguyệt và Nguyệt Thực đặt terrain=0 để không gọi Ruin.Blast/Quake; dấu va chạm và bụi đá còn là hiệu ứng trang trí. Các kỹ thuật cũ vẫn giữ mặc định terrain=true.
+- Forge hỗ trợ lunar/decay/floor cho projectile; mặc định giữ nguyên projectile cũ. Các chiêu mới dùng pool và vòng cập nhật native, không thêm vòng quét toàn bản đồ.
+- Chưa có mặt trăng khổng lồ hoặc thế riêng God.
 
 ## Kiểm tra trong game
 
 1. Khởi động lại game; cho NPC một cảnh giới Võ Thần rồi trao Huyền Nguyệt phái qua bảng trait.
 2. Để thử riêng, dùng NPC chỉ có một trait phái này; NPC có nhiều phái vẫn có thể chọn chiêu phái khác.
 3. Đánh thử ở gần/xa; quan sát chưởng, nguyệt nhận, lùi bước, hai phản ứng phòng thủ.
-4. Novice/Adept/Expert/Master lần lượt mở 6/12/18/24 thế. Thử Thăng Nguyệt hất tung rồi nối Nguyệt Lạc, đánh đơn xem phân ảnh, đánh nhóm xem Liên Bạo và Nguyệt Luân.
+4. Novice/Adept/Expert/Master/Grandmaster lần lượt mở 6/12/18/24/30 thế. Thử Thăng Nguyệt hất tung rồi nối Nguyệt Lạc, đánh đơn xem phân ảnh, đánh nhóm xem Liên Bạo và Nguyệt Luân. Grandmaster mở 6 thế mới ở I; God nâng lên III theo engine.
 6. Với CWP 0.16.0: trao kiếm cho NPC chưa học phái để thử quyền cấp I; trao phái và Master/Grandmaster/God để thử I/II/III. Thay kiếm phải mất quyền do kiếm cấp nhưng giữ quyền đã học. Quan sát chỉ một kiếm khí mỗi lần thi triển, hồi sau save/load không bị làm mới, và charge bị choáng vẫn ngắt được. Các bài này chưa được chạy trực tiếp trong game.
+7. Grandmaster: thử Tam Trọng đúng ba lưỡi, Chiếu Không có vòng báo trước, Nguyệt Thực kéo rồi hất địch. So sánh địa hình/nhà trước sau hai chiêu vùng mới. Theo dõi số particle, thời gian frame và tương tác đại hội trong game trước khi kết luận hiệu năng/cân bằng.
 5. Save/load, xóa trait phái, đổi world, đấu giải và bí cảnh; kiểm tra không giữ hiệu ứng hoặc cấp quyền sai.
 
 Chỉ mở chọn ngẫu nhiên và công bố bộ phái đầy đủ sau khi hoàn thiện đủ sáu bậc cùng kiểm tra gameplay.

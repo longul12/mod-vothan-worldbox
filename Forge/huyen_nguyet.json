@@ -182,5 +182,53 @@
     "forms":["Aerial","Ki","Palm"],"accepts":["Launched"],"worthy":false,
     "mana":[24,38,54],"cooldown":[8,10,12],
     "steps":["crouch 0.08","rise 2 0.16","strike Palm 0.5 air","L2:strike Palm 0.2 air","L3:strike Palm 0.15 air","strike Palm 1.4 air hurt=DriveIn crater=0 finisher","drop 0.12","land 0 0 0","leaves Down","recover 0.25"]
+  },
+  {
+    "id":"hn_tam_trong_nguyet_khuyet","name":"Tam Trọng Nguyệt Khuyết",
+    "info":"Ba vầng trăng khuyết lớn phóng nối tiếp, mỗi vầng xuyên tối đa 3 địch và giảm sát thương sau khi xuyên. Mỗi vầng có thể trúng cùng đối thủ một lần.",
+    "school":"huyen_nguyet","tier":"grandmaster","plan":"line","role":"Line","scale":"Light","element":"School",
+    "forms":["Ki","Blade","Projectile","Charge"],"accepts":["Launched","Scattered","Thrown"],"worthy":true,"len":12,"width":2.2,
+    "mana":[38,56,76],"cooldown":[14,16,18],
+    "steps":["charge 0.6 Palms 1.8","shot SwordWave 0.6 lunar=1 decay=0.9 floor=0.65 speed=16 range=12 size=2.2 pierce=2 crater=0","hold 0.14","shot SwordWave 0.55 lunar=1 decay=0.9 floor=0.65 speed=16 range=12 size=2.2 pierce=2 crater=0","hold 0.14","shot SwordWave 0.5 lunar=1 decay=0.9 floor=0.65 speed=16 range=12 size=2.2 pierce=2 crater=0","L2:cone 0.15 60 2.5 blades","L3:cone 0.1 60 2.5 blades","recover 0.4"]
+  },
+  {
+    "id":"hn_minh_nguyet_chieu_khong","name":"Minh Nguyệt Chiếu Không",
+    "info":"Đánh dấu vùng đất trước khi cột nguyệt quang giáng xuống, gây sát thương ba nhịp. Có cảnh báo và không phá địa hình; bản này chưa vẽ mặt trăng treo trên cao riêng.",
+    "school":"huyen_nguyet","tier":"grandmaster","plan":"area","role":"Area","scale":"Light","element":"School",
+    "forms":["Ki","Area","Charge"],"accepts":["Down","Scattered"],"worthy":true,"radius":2.8,"range":11,"need":2,
+    "mana":[40,60,82],"cooldown":[14,17,20],
+    "steps":["charge 0.6 Raised 1.8","skybeam 2.8 1.8 dur=0.8 terrain=0","L2:shot Orb 0.2 flight=Lob speed=14 range=11 area=1 crater=0 impact=Explode","L3:shot Orb 0.15 flight=Lob speed=14 range=11 area=1 crater=0 impact=Explode","recover 0.4"]
+  },
+  {
+    "id":"hn_nguyet_anh_tran","name":"Nguyệt Ảnh Trận",
+    "info":"Bốn dư ảnh vây quanh một mục tiêu rồi lần lượt đánh chưởng, bản thể chém kết. Sát thương phân ảnh chia theo tổng, không sinh NPC thật và chưa phải trận pháp đánh toàn vùng.",
+    "school":"huyen_nguyet","tier":"grandmaster","plan":"melee","role":"Chain","scale":"Light","element":"School",
+    "forms":["Ki","Palm","Fast"],"accepts":["Close","Down"],"worthy":true,"reach":3.5,
+    "mana":[34,52,72],"cooldown":[12,14,16],
+    "steps":["charge 0.3 Stance 1.4","ghost lines","clones 4 Palm 1.8","strike DrawCut 0.7 hurt=Crumple finisher","L2:strike Palm 0.2","L3:strike Palm 0.15","leaves Down","recover 0.35"]
+  },
+  {
+    "id":"hn_nguyet_luan_thien_vu","name":"Nguyệt Luân Thiên Vũ",
+    "info":"Phóng ba nguyệt luân xoay hình quạt. Cấp cao tăng số luân theo engine, tối đa 5 luân trong loạt chính; mỗi luân chỉ xuyên ít địch.",
+    "school":"huyen_nguyet","tier":"grandmaster","plan":"line","role":"Line","scale":"Light","element":"School",
+    "forms":["Ki","Projectile"],"accepts":["Thrown","Scattered","Launched"],"worthy":false,"len":12,"width":3,
+    "mana":[34,52,72],"cooldown":[11,13,15],
+    "steps":["charge 0.4 Raised 1.5","shot Disc 0.65 count=3 spread=22 gap=0.08 speed=20 range=12 size=1.2 pierce=1 crater=0","L2:shot Disc 0.15 speed=20 range=12 size=0.8 pierce=0 crater=0","L3:shot Disc 0.1 speed=20 range=12 size=0.8 pierce=0 crater=0","recover 0.3"]
+  },
+  {
+    "id":"hn_kinh_nguyet_hoan_vi","name":"Kính Nguyệt Hoán Vị",
+    "info":"Né đòn gần, lưu dư ảnh rồi lướt ra sau lưng kẻ tấn công để phản kích. Không tráo vị trí thật với đối thủ, không tạo miễn thương kéo dài.",
+    "school":"huyen_nguyet","tier":"grandmaster","plan":"counter","role":"Defense","scale":"Light","element":"School",
+    "contact":"evaded","answers":["Punch","Blade"],"forms":["Counter","Evasive","Ki","Palm"],"worthy":false,
+    "mana":[32,48,66],"cooldown":[11,13,15],
+    "steps":["ghost lines","blink behind 0.12","strike Palm 1.25 hurt=Reel push=2.5","L2:strike Slash 0.2","L3:strike DiagSlash 0.15","recover 0.35"]
+  },
+  {
+    "id":"hn_nguyet_thuc_chan","name":"Nguyệt Thực Chấn",
+    "info":"Nguyệt cầu tối hút địch gần trong thời gian ngắn rồi bùng xung lực hất tung. Dùng lực hút của engine, không phá đất; có tụ lực để đối thủ phản ứng.",
+    "school":"huyen_nguyet","tier":"grandmaster","plan":"area","role":"Area","scale":"Light","element":"School",
+    "forms":["Ki","Area","Charge"],"accepts":["Scattered","Thrown","Down"],"worthy":true,"radius":3.5,"range":9,"need":2,
+    "mana":[42,62,84],"cooldown":[15,18,21],
+    "steps":["charge 0.65 Raised 1.9","blackhole 3.5 1.6 dur=0.8 terrain=0","L2:shot SwordWave 0.2 speed=20 range=9 size=0.9 pierce=1 crater=0","L3:shot SwordWave 0.15 speed=20 range=9 size=0.9 pierce=1 crater=0","recover 0.45"]
   }
 ]

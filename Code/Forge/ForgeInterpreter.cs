@@ -208,6 +208,9 @@ namespace Sakuga
                             Range = s.K("range", 12f) * S,
                             Size = s.K("size", 1f) * Mathf.Sqrt(S),
                             Mult = s.A(1, 1f) * D,
+                            LunarCrescent = s.K("lunar",0)>0,
+                            PierceDecay = s.K("decay",1),
+                            PierceFloor = s.K("floor",1),
                             Hurt = Forge.Enum(s.KS("hurt", "Reel"), Sakuga.Hurt.Reel),
                             Push = s.K("push", 0.8f),
                             Pierce = (int)s.K("pierce", 0f),
@@ -255,9 +258,9 @@ namespace Sakuga
                         }
                         break;
                     case "meteor": m.Meteor(s.A(0, 3f) * S, s.A(1, 1f) * D, s.K("size", 1f) * Mathf.Sqrt(S), s.Has("self") ? (Func<ChoreoMove, Vector2>)(mm => mm.Pose.Ground + mm.Dir * 2.5f * mm.Kk) : Scatter(s), Forge.Enum(s.KS("kind", null), SkyFall.Rock)); break;
-                    case "blackhole": m.BlackHole(s.A(0, 3f) * S, s.A(1, 1f) * D, s.K("dur", 1.2f), Scatter(s)); break;
+                    case "blackhole": m.BlackHole(s.A(0, 3f) * S, s.A(1, 1f) * D, s.K("dur", 1.2f), Scatter(s), s.K("terrain",1)>0); break;
                     case "trench": m.Trench(s.A(0, 8f) * S, s.A(1, 0.8f) * Mathf.Sqrt(S), s.A(2, 1f) * D, s.K("speed", 16f), s.Has("cut")); break;
-                    case "skybeam": m.SkyBeam(s.A(0, 2f) * S, s.A(1, 1f) * D, s.K("dur", 0.9f), Scatter(s)); break;
+                    case "skybeam": m.SkyBeam(s.A(0, 2f) * S, s.A(1, 1f) * D, s.K("dur", 0.9f), Scatter(s), s.K("terrain",1)>0); break;
                     case "lightning": m.Lightning(Mathf.RoundToInt(s.A(0, 4f) * N), s.A(1, 4f) * S, s.A(2, 0.5f) * D, s.K("dur", 0.9f)); break;
                     case "gate": m.SwordGate(Mathf.RoundToInt(s.A(0, 6f) * N), s.A(1, 0.4f) * D, s.K("range", 10f) * S, Forge.Enum(s.KS("kind", null), ShotKind.LightSword)); break;
                     case "domain": m.SlashDomain(s.A(0, 3f) * S, s.A(1, 1f) * D, s.K("dur", 1.2f)); break;

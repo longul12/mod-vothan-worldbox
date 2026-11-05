@@ -2,6 +2,10 @@
 
 Mốc đầu tiên đưa lên Git: **1.1.0**.
 
+## 1.1.5 — Huyền Nguyệt, bước 5
+
+Thêm 6 thế Grandmaster, tổng 30 thế. Có ba nguyệt khuyết lớn liên tiếp, nguyệt quang giáng xuống có cảnh báo, phân ảnh một mục tiêu, nguyệt luân hình quạt, né ra sau phản kích và nguyệt thực hút/nổ. Thêm lựa chọn terrain=false cho BlackHole/SkyBeam, giữ mặc định true của mọi chiêu cũ. Forge đọc được lunar/decay/floor cho projectile. Chiêu mới không thêm vòng AI riêng, dùng tài nguyên native; chưa đo hiệu năng gameplay. Kiểm tra biên dịch và parser thật cùng giới hạn chi phí, số trăng, vùng đánh và mặc định tương thích đã đạt. Chưa có sprite mặt trăng treo riêng, hoán đổi Actor thật hoặc trận pháp nhiều mục tiêu; bước tiếp theo là 6 thế God và mặt trăng giáng xuống.
+
 ## 1.1.4 — Huyền Nguyệt, bước 4
 
 Tổng 24 thế: 23 Forge và Nguyệt Khuyết C# native. Thêm API để CWP 0.16.0 chỉ cấp quyền từ kiếm, không chạy hai bộ chiêu. Nguyệt Khuyết dùng chu trình Brain/Choreo, mana và phản projectile của engine; giữ crescent trắng lớn, dư ảnh, 8 địch và falloff 0,9/sàn 0,65. Cấp I–III hệ số 1,4/1,7/2,0; hồi tối thiểu 10/12/14 giây thế giới từ lúc bắt đầu kể cả bị ngắt. Lưu cooldown actor, nhập remaining CWP lần đầu. Năm thế Master khác bổ sung chưởng lớn, xung kích, phân ảnh và truy kích trên không. Trăng Tàn chưa có xuyên giáp phần trăm; Nguyệt Luân chưa có quỹ đạo độc lập. Biên dịch và kiểm tra offline hai mod đạt; cần thử gameplay chung.
