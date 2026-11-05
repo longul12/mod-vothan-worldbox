@@ -428,7 +428,23 @@ namespace Sakuga
             {
                 return null;
             }
-            text = text.ToUpperInvariant();
+            // This bitmap alphabet has no Vietnamese accented glyphs.
+            // Normalize before caching so title cards keep their colour/animation without '?' replacements.
+            string normalized = text.Replace('đ', 'd').Replace('Đ', 'D')
+                .Normalize(System.Text.NormalizationForm.FormD).ToUpperInvariant();
+            var plain = new System.Text.StringBuilder(normalized.Length);
+            foreach (char ch in normalized)
+            {
+                if (System.Globalization.CharUnicodeInfo.GetUnicodeCategory(ch) == System.Globalization.UnicodeCategory.NonSpacingMark)
+                    continue;
+                if (Glyphs.ContainsKey(ch)) plain.Append(ch);
+                else if (ch == '–' || ch == '—') plain.Append('-');
+                else if (ch == '…') plain.Append("...");
+                else if (ch == '’' || ch == '‘') plain.Append('\'');
+                else if (char.IsWhiteSpace(ch) || ch == '·' || ch == '•') plain.Append(' ');
+            }
+            text = plain.ToString();
+            if (string.IsNullOrWhiteSpace(text)) return null;
             string key = (outline ? "o:" : "f:") + text;
             if (_cache.TryGetValue(key, out Sprite s))
             {
