@@ -10,7 +10,7 @@ namespace Sakuga
         {
             if((int)School.HuntersWay!=7 || (int)School.HuyenNguyet!=8 || Schools.Count!=8)
                 throw new Exception("Existing school IDs changed");
-            var ids=new HashSet<string>();int count=0,novice=0,adept=0,expert=0;bool returning=false,fan=false,counter=false,launcher=false,clones=false,explosions=false;
+            var ids=new HashSet<string>();int count=0,novice=0,adept=0,expert=0,master=0;bool returning=false,fan=false,counter=false,launcher=false,clones=false,explosions=false;
             foreach(string file in Directory.GetFiles(Path.Combine(root,"Forge"),"*.json"))
             {
                 var recipes=JsonConvert.DeserializeObject<List<Recipe>>(File.ReadAllText(file));
@@ -20,12 +20,12 @@ namespace Sakuga
                     if(recipe.school!="huyen_nguyet")continue;
                     count++;
                     var tech=new ForgedTechnique(recipe,root); // Real parser checks enums and every opcode.
-                    if(tech.School!=School.HuyenNguyet || tech.Entry<Tier.Novice || tech.Entry>Tier.Expert)
+                    if(tech.School!=School.HuyenNguyet || tech.Entry<Tier.Novice || tech.Entry>Tier.Master)
                         throw new Exception("Wrong moon school/entry");
-                    if(tech.Entry==Tier.Novice)novice++;else if(tech.Entry==Tier.Adept)adept++;else expert++;
+                    if(tech.Entry==Tier.Novice)novice++;else if(tech.Entry==Tier.Adept)adept++;else if(tech.Entry==Tier.Expert)expert++;else master++;
                     if(tech.Icon!="ui/Icons/sakuga/iconSchoolHuyenNguyet")throw new Exception("Missing school icon fallback");
                     for(int i=0;i<3;i++)
-                        if(recipe.mana[i]<=0 || recipe.mana[i]>48 || recipe.cooldown[i]<4 || recipe.cooldown[i]>11)
+                        if(recipe.mana[i]<=0 || recipe.mana[i]>58 || recipe.cooldown[i]<4 || recipe.cooldown[i]>14)
                             throw new Exception("Invalid preview costs");
                     if(recipe.id=="hn_hoi_hoan_nguyet_nhan")
                     {
@@ -52,7 +52,19 @@ namespace Sakuga
                     }
                 }
             }
-            if(count!=18 || novice!=6 || adept!=6 || expert!=6)throw new Exception("Expected six forms per novice/adept/expert tier");
+            var moon=new NguyetKhuyetTech();
+            if(ids.Contains(moon.Id) || moon.Entry!=Tier.Master || moon.School!=School.HuyenNguyet)throw new Exception("Native moon identity/realm mismatch");
+            if(count!=23 || novice!=6 || adept!=6 || expert!=6 || master!=5)throw new Exception("Expected 23 recipes plus native master moon = 24 forms");
+            if(MoonSwordApi.GrantedLevel(true,0)!=1 || MoonSwordApi.GrantedLevel(true,3)!=3 || MoonSwordApi.GrantedLevel(false,0)!=0 || MoonSwordApi.GrantedLevel(false,2)!=2)
+                throw new Exception("Artifact grant stacks or erases learned ability");
+            if(MoonSwordApi.Multiplier(1)!=1.4f || MoonSwordApi.Cooldown(3)!=14f)throw new Exception("Native moon balance changed");
+            var shot=new ShotSpec {LunarCrescent=true,Pierce=7,PierceDecay=.9f,PierceFloor=.65f};
+            var copy=(ShotSpec)shot.MemberwiseCloneShot();
+            if(!copy.LunarCrescent || copy.Pierce!=7 || copy.PierceDecay!=.9f || copy.PierceFloor!=.65f)
+                throw new Exception("Native projectile copy loses moon settings");
+            var ordinary=new ShotSpec();
+            if(ordinary.LunarCrescent || ordinary.PierceDecay!=1 || ordinary.PierceFloor!=1)throw new Exception("Existing projectiles changed defaults");
+            if(!File.Exists(Path.Combine(root,"GameResources/ui/Icons/sakuga/iconHnNguyetKhuyet.png")))throw new Exception("Native moon icon missing");
             if(!launcher || !clones || !explosions)throw new Exception("Missing expert launcher, bounded clones or explosive volley");
             if(!returning || !fan || !counter)throw new Exception("Missing returning blade, crowd sweep or reactive guard");
             if(!File.Exists(Path.Combine(root,"GameResources/ui/Icons/sakuga/iconSchoolHuyenNguyet.png")))

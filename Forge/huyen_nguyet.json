@@ -142,5 +142,45 @@
     "contact":"parried","answers":["Punch","Blade"],"forms":["Counter","Guard","Ki","Area"],"worthy":false,
     "mana":[20,32,45],"cooldown":[9,10,11],
     "steps":["guard 0.35 hex","shockwave 2.5 0.85 hurt=Reel push=2.5","L2:strike Palm 0.15","L3:strike Palm 0.1","recover 0.25"]
+  },
+  {
+    "id":"hn_vong_nguyet_dai_chuong","name":"Vọng Nguyệt Đại Chưởng",
+    "info":"Tụ chưởng ảnh bạc lớn rồi phóng thẳng, đẩy bật hàng địch. Tụ lực lâu hơn chưởng thường, không phá đất.",
+    "school":"huyen_nguyet","tier":"master","plan":"line","role":"Line","scale":"Light","element":"School",
+    "forms":["Ki","Palm","Projectile","Charge"],"accepts":["Thrown","Scattered"],"worthy":false,"len":12,"width":1.8,
+    "mana":[26,40,56],"cooldown":[9,11,13],
+    "steps":["charge 0.55 Palms 1.8","shot Fist 2.0 speed=18 range=12 size=1.65 push=3.5 pierce=3 crater=0","L2:shot Fist 0.22 speed=18 range=12 size=1.1 pierce=1 crater=0","L3:shot Fist 0.16 speed=18 range=12 size=1.1 pierce=1 crater=0","recover 0.3"]
+  },
+  {
+    "id":"hn_nguyet_luan_hoi_chuyen","name":"Nguyệt Luân Hồi Chuyển",
+    "info":"Xoay người quét hai lượt nguyệt nhận quanh mình, đẩy địch ra. Bản hiện tại là hai vòng xung kích ngắn, chưa phải nguyệt luân bay quỹ đạo độc lập.",
+    "school":"huyen_nguyet","tier":"master","plan":"self","role":"Area","scale":"Light","element":"School",
+    "forms":["Ki","Area","Blade"],"accepts":["Close","Scattered"],"worthy":false,"radius":3.5,"need":2,
+    "mana":[28,42,58],"cooldown":[10,12,14],
+    "steps":["charge 0.3 Stance 1.3","spin 1 0.25","shockwave 3.5 0.85 hurt=Reel push=1.8","hold 0.18","shockwave 3.5 0.65 hurt=Reel push=2.2","L2:cone 0.2 80 3 blades","L3:cone 0.15 80 3 blades","leaves Scattered","recover 0.3"]
+  },
+  {
+    "id":"hn_nguyet_anh_lien_hoan","name":"Nguyệt Ảnh Liên Hoàn",
+    "info":"Lướt sau lưng mục tiêu rồi gọi ba dư ảnh đánh chưởng, bản thể chém kết. Tổng sát thương phân ảnh chia đều, không tạo NPC mới.",
+    "school":"huyen_nguyet","tier":"master","plan":"line","role":"Mobility","scale":"Light","element":"School",
+    "forms":["Dash","Fast","Ki","Blade"],"accepts":["Close","Thrown","Down"],"worthy":false,"len":6,"width":0.8,
+    "mana":[26,40,56],"cooldown":[9,11,13],
+    "steps":["crouch 0.12","dash behind","ghost lines","clones 3 Palm 1.35","strike Slash 0.75 hurt=Reel push=1.5","L2:strike DiagSlash 0.2","L3:strike DrawCut 0.15","leaves Close","recover 0.25"]
+  },
+  {
+    "id":"hn_trang_tan_pha_giap","name":"Trăng Tàn Phá Giáp",
+    "info":"Tụ lực rồi đánh mạnh vào giáp. Bản này dùng đòn nặng của engine, chưa bỏ qua phần trăm giáp; có thể bị ngắt trong lúc tụ lực.",
+    "school":"huyen_nguyet","tier":"master","plan":"melee","role":"Single","scale":"Light","element":"School",
+    "forms":["Ki","Palm","Charge"],"accepts":["Close","Down"],"worthy":true,"reach":2.8,
+    "mana":[24,38,54],"cooldown":[9,11,13],
+    "steps":["step","charge 0.6 Palms 1.5","strike Palm 2.35 charged hurt=Stagger power=1.5 finisher","L2:strike Palm 0.2","L3:strike Palm 0.15","recover 0.35"]
+  },
+  {
+    "id":"hn_nguyet_lac_truy_kich","name":"Nguyệt Lạc Truy Kích",
+    "info":"Theo đối thủ vừa bị hất tung, đánh chưởng trên không rồi ép xuống. Chỉ ưu tiên khi có chuỗi Launched; không tạo hố va chạm.",
+    "school":"huyen_nguyet","tier":"master","plan":"air","role":"Air","scale":"Light","element":"School",
+    "forms":["Aerial","Ki","Palm"],"accepts":["Launched"],"worthy":false,
+    "mana":[24,38,54],"cooldown":[8,10,12],
+    "steps":["crouch 0.08","rise 2 0.16","strike Palm 0.5 air","L2:strike Palm 0.2 air","L3:strike Palm 0.15 air","strike Palm 1.4 air hurt=DriveIn crater=0 finisher","drop 0.12","land 0 0 0","leaves Down","recover 0.25"]
   }
 ]

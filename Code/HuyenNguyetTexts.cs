@@ -11,7 +11,7 @@ namespace Sakuga
             {
                 LM.Add(lang,"trait_sakuga_school_huyen_nguyet","Huyền Nguyệt phái");
                 LM.Add(lang,"sakuga_school_huyen_nguyet","Huyền Nguyệt phái");
-                LM.Add(lang,"trait_sakuga_school_huyen_nguyet_info","Vận nguyệt lực thành chưởng, nguyệt nhận và thân pháp. Bản thử nghiệm có 18 thế: mỗi bậc Novice, Adept, Expert có 6 thế, cấp I–III. Tạm trao trait thủ công; chưa tự phân phái.");
+                LM.Add(lang,"trait_sakuga_school_huyen_nguyet_info","Vận nguyệt lực thành chưởng, nguyệt nhận và thân pháp. Bản thử nghiệm có 24 thế: mỗi bậc Novice đến Master có 6 thế, cấp I–III. Tạm trao trait thủ công; chưa tự phân phái.");
                 LM.Add(lang,"trait_group_sakuga_moves_huyen_nguyet","Huyền Nguyệt · Nhập môn");
                 LM.Add(lang,"trait_group_sakuga_moves_huyen_nguyet_high","Huyền Nguyệt · Cao giai");
             }

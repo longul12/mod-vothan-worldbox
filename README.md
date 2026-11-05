@@ -1,8 +1,8 @@
 # Combat Gods
 
-Nhánh phát triển Việt hóa/bổ sung **Võ Đạo Chiến Thần 1.1.3**, dựa trên mod của **Turbo**.
+Nhánh phát triển Việt hóa/bổ sung **Võ Đạo Chiến Thần 1.1.4**, dựa trên mod của **Turbo**.
 
-Huyền Nguyệt phái đang phát triển từng bước: [lộ trình và cách thử 18 thế Novice–Expert](HUYEN_NGUYET_ROADMAP_VI.md).
+Huyền Nguyệt phái đang phát triển từng bước: [lộ trình và cách thử 24 thế Novice–Master](HUYEN_NGUYET_ROADMAP_VI.md). Dùng CWP 0.16.0 cho quyền Nguyệt Khuyết từ pháp bảo.
 
 - [Tiến độ nhánh và hướng dẫn kiểm tra](PROGRESS_VI.md)
 - [Điều kiện Chân Thần và Cửu Trọng Lôi Kiếp](CHAN_THAN_VI.md)

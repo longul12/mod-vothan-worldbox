@@ -84,6 +84,9 @@ namespace Sakuga
         /// <summary>Its size (1 as designed; scales the sprite and its hit radius).</summary>
         public float Size = 1f;
         public float Mult = 1f;
+        // Opt-in falloff for a piercing projectile. Existing shots retain full damage.
+        public float PierceDecay = 1f, PierceFloor = 1f;
+        public bool LunarCrescent;
         public Hurt Hurt = Hurt.Reel;
         public float Push = 0.8f;
         /// <summary>How many enemies it passes through before it is spent (0: the first stops it).</summary>
@@ -184,7 +187,7 @@ namespace Sakuga
         private bool OwnerOk => A != null && A.Sid() == AId && A.isAlive();
 
         /// <summary>Its hit radius in tiles.</summary>
-        public float Radius => (0.3f + 0.12f * Spec.Size) * Mathf.Lerp(1f, K, 0.5f);
+        public float Radius => (Spec.LunarCrescent ? 2.2f : 0.3f + 0.12f * Spec.Size) * Mathf.Lerp(1f, K, 0.5f);
 
         // ------------------------------------------------------------ answers --
 
@@ -548,7 +551,8 @@ namespace Sakuga
             {
                 // (a class above the thrower's limits: it breaks on it, a glancing blow that only rocks it)
                 bool full = Choreo.ClassShare(A, u, By, out float cmul);
-                HitResult r = Combat.Hit(A, u, Spec.Mult * cmul, false, false, 0f, By);
+                float decay=Mathf.Max(Spec.PierceFloor,Mathf.Pow(Spec.PierceDecay,Mathf.Max(0,Hits)));
+                HitResult r = Combat.Hit(A, u, Spec.Mult * cmul * decay, false, false, 0f, By);
                 Impact im = Impact.Of(full ? Spec.Hurt : Hurt.Stagger, Dir, Spec.Push * Mathf.Lerp(1f, K, 0.5f), 0.6f + 0.4f * Spec.Size);
                 im.Owed = MeteorSlam.AtDeathsDoor(u);
                 Victims.Hurt(u, A, By, im);
@@ -945,7 +949,12 @@ namespace Sakuga
             Vector2 lastAt = last + new Vector2(0f, Z);
             if (_trailT <= 0f && (at - lastAt).sqrMagnitude > px * px * 0.25f)
             {
-                _trailT = Shots.Count > 60 ? 0.05f : 0f;
+                _trailT = Spec.LunarCrescent ? 0.07f : Shots.Count > 60 ? 0.05f : 0f;
+                if(Spec.LunarCrescent)
+                {
+                    Particle ghost=Fx.Spawn(ChoreoArt.Crescent(26,9),at,px,.24f,FxLayer.Top,9);
+                    if(ghost!=null){ghost.Rot=ang;ghost.Color(Fx.WithA(Color.white,.22f),Fx.WithA(Hue.Edge,0f));}
+                }
                 lastAt = Vector2.Lerp(lastAt, at, 0f);
                 switch (Spec.Kind)
                 {
@@ -1002,6 +1011,7 @@ namespace Sakuga
                 case ShotKind.WindBlade:
                     return new[] { ChoreoArt.Crescent(Mathf.RoundToInt(5f * s), 1) };
                 case ShotKind.SwordWave:
+                    if(Spec.LunarCrescent)return new[]{ChoreoArt.Crescent(26,9)};
                     return new[] { ChoreoArt.Crescent(Mathf.RoundToInt(8f * s), 2) };
                 case ShotKind.LightSword:
                     return new[] { ChoreoArt.LightSword(Mathf.RoundToInt(9f * s)) };
@@ -1227,6 +1237,9 @@ namespace Sakuga
                 Range = s.Range,
                 Size = s.Size,
                 Mult = s.Mult,
+                PierceDecay = s.PierceDecay,
+                PierceFloor = s.PierceFloor,
+                LunarCrescent = s.LunarCrescent,
                 Hurt = s.Hurt,
                 Push = s.Push,
                 Pierce = s.Pierce,

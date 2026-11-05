@@ -377,6 +377,7 @@ namespace Sakuga
         /// <summary>Does this unit have any Sakuga trait at all?</summary>
         public static bool AnyTrait(Actor a)
         {
+            if(MoonSwordApi.HasSource(a))return true;
             if (a == null || a.traits == null)
             {
                 return false;
@@ -425,6 +426,7 @@ namespace Sakuga
             {
                 level = Mathf.Max(level, Mathf.Min(t.MaxLevel, Settings.BareLevel));
             }
+            if(t.Id==MoonSwordApi.Id)level=MoonSwordApi.GrantedLevel(MoonSwordApi.HasSource(a),level);
             return level;
         }
 

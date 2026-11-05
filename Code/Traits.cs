@@ -316,6 +316,7 @@ namespace Sakuga
         [SakugaInit]
         private static void Describe()
         {
+            NguyetKhuyetTech.Texts();
             // (the forged and team techniques' names first: they are listed below)
             Forge.Texts();
             GatheringTexts.Texts();
