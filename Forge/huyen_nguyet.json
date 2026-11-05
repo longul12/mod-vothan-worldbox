@@ -230,5 +230,37 @@
     "forms":["Ki","Area","Charge"],"accepts":["Scattered","Thrown","Down"],"worthy":true,"radius":3.5,"range":9,"need":2,
     "mana":[42,62,84],"cooldown":[15,18,21],
     "steps":["charge 0.65 Raised 1.9","blackhole 3.5 1.6 dur=0.8 terrain=0","L2:shot SwordWave 0.2 speed=20 range=9 size=0.9 pierce=1 crater=0","L3:shot SwordWave 0.15 speed=20 range=9 size=0.9 pierce=1 crater=0","recover 0.45"]
+  },
+  {
+    "id":"hn_cuu_nguyet_lien_chau","name":"Cửu Nguyệt Liên Châu",
+    "info":"Tụ nguyệt lực rồi phóng đúng chín nguyệt cầu truy đuổi nối tiếp. Mỗi cầu có sát thương nhỏ, không tăng số lượng theo cấp; chưa dựng chín mặt trăng sau lưng.",
+    "school":"huyen_nguyet","tier":"god","plan":"line","role":"Line","scale":"Light","element":"School",
+    "forms":["Ki","Projectile","Charge"],"accepts":["Thrown","Scattered","Launched"],"worthy":true,"len":14,"width":2,
+    "mana":[55,80,110],"cooldown":[24,28,32],
+    "steps":["charge 0.8 Raised 2.2","shot Orb 0.23 count=9 fixed=1 spread=8 gap=0.12 flight=Homing speed=18 range=14 size=0.9 pierce=0 crater=0","recover 0.5"]
+  },
+  {
+    "id":"hn_nguyet_than_cu_chuong","name":"Nguyệt Thần Cự Chưởng",
+    "info":"Phóng chưởng lực khổng lồ theo đường vòng cung, nổ khi chạm mục tiêu. Dùng sprite quyền ảnh áp lực của engine; chưa có bàn tay năm ngón riêng.",
+    "school":"huyen_nguyet","tier":"god","plan":"area","role":"Area","scale":"Light","element":"School",
+    "forms":["Ki","Palm","Area","Charge"],"accepts":["Down","Scattered"],"worthy":true,"radius":3.5,"range":12,"need":2,
+    "mana":[58,84,115],"cooldown":[25,30,35],
+    "steps":["charge 0.9 Palms 2.4","shot Fist 2.4 flight=Lob speed=16 range=12 size=2.8 area=3.5 crater=0 impact=Explode push=3","L2:shot Fist 0.18 flight=Lob speed=16 range=12 size=1.2 area=1 crater=0 impact=Explode","L3:shot Fist 0.12 flight=Lob speed=16 range=12 size=1.2 area=1 crater=0 impact=Explode","recover 0.6"]
+  },
+  {
+    "id":"hn_thien_mac_nguyet_nhan","name":"Thiên Mạc Nguyệt Nhận",
+    "info":"Bay lên rồi phóng năm nguyệt nhận vòng cung xuống vùng địch, có thời gian bay để né. Cấp II–III thêm nhát bồi; không tạo hố.",
+    "school":"huyen_nguyet","tier":"god","plan":"area","role":"Area","scale":"Light","element":"School",
+    "forms":["Ki","Projectile","Aerial","Area","Charge"],"accepts":["Scattered","Thrown","Down"],"worthy":true,"radius":4,"range":12,"need":2,
+    "mana":[58,86,118],"cooldown":[26,31,36],
+    "steps":["charge 0.7 Raised 2","rise 3 0.25","shot SwordWave 0.4 count=5 fixed=1 spread=12 gap=0.1 flight=Lob speed=17 range=12 size=1.1 area=0.7 crater=0","L2:shot SwordWave 0.12 flight=Lob speed=17 range=12 size=0.8 area=0.5 crater=0","L3:shot SwordWave 0.1 flight=Lob speed=17 range=12 size=0.8 area=0.5 crater=0","drop 0.2","land 0 0 0","recover 0.5"]
+  },
+  {
+    "id":"hn_nhat_nguyet_khai_thien","name":"Nhất Nguyệt Khai Thiên",
+    "info":"Tụ lực lâu rồi phóng một vầng nguyệt khuyết cực mạnh, xuyên tối đa 8 địch và giảm sát thương sau mỗi lần xuyên. Dùng crescent lớn hiện có, không phá địa hình.",
+    "school":"huyen_nguyet","tier":"god","plan":"line","role":"Line","scale":"Light","element":"School",
+    "forms":["Ki","Blade","Projectile","Charge"],"accepts":["Scattered","Thrown","Launched"],"worthy":true,"len":16,"width":2.2,
+    "mana":[65,95,125],"cooldown":[30,36,42],
+    "steps":["charge 1.25 Palms 2.6","shot SwordWave 2.4 lunar=1 decay=0.9 floor=0.65 speed=20 range=16 size=2.2 pierce=7 crater=0","L2:cone 0.2 70 3 blades","L3:cone 0.15 70 3 blades","recover 0.7"]
   }
 ]

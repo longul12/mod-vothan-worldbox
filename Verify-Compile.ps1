@@ -56,7 +56,7 @@ if ($CheckSettings) {
         $testAssembly=[Reflection.Assembly]::Load($stream.ToArray())
         $testAssembly.GetType('Sakuga.HuyenNguyetChecks').GetMethod('Run').Invoke($null,@($PSScriptRoot)) | Out-Null
     } finally {$stream.Dispose()}
-    'Huyen Nguyet checks passed: 29 recipes + native moon = 30 forms; triple crescent, safe area budgets, preserved terrain defaults, grants, parser, costs and icons.'
+    'Huyen Nguyet checks passed: 33 recipes + 3 native techniques = 36; God budgets, procedural moon pixels, warning/fall rules, fixed nine-orb volley, legacy scaling, grants, parser and icons.'
      $modRoot=$PSScriptRoot
     $rules=[IO.File]::ReadAllText((Join-Path $modRoot 'Code/TribulationRules.cs'))
     $checks=@'

@@ -11,7 +11,7 @@ Ngày bắt đầu: 2026-11-05. Đây là phần mở rộng trong Võ Thần; g
 | 3 | 6 thế Expert, hất tung, nguyệt nhận, phân ảnh và hộ thể | Đã viết; kiểm tra offline, chưa thử game |
 | 4 | 6 thế Master, chuyển Nguyệt Khuyết từ CWP sang động tác Võ Thần | Đã viết; kiểm tra offline, chưa thử game |
 | 5 | 6 thế Grandmaster, phân ảnh và biến thể kiếm khí/vùng đánh | Đã viết; kiểm tra offline, chưa thử game |
-| 6 | 6 thế God, mặt trăng giáng xuống và tuyệt kỹ riêng | Chưa làm |
+| 6 | 6 thế God, mặt trăng giáng xuống và tuyệt kỹ riêng | Đã viết; kiểm tra offline, chưa thử game |
 | 7 | Cân bằng toàn phái, học tự nhiên, giao diện, save/load và thử tải | Chưa làm |
 
 Mỗi bước cần biên dịch, kiểm tra công thức và ID, sau đó thử trong game trước khi coi là hoàn tất gameplay. Commit riêng từng đợt. Không tuyên bố ngang sức phái gốc khi chưa đấu thử.
@@ -56,7 +56,13 @@ Mỗi bước cần biên dịch, kiểm tra công thức và ID, sau đó thử
 - Minh Nguyệt hiện dùng cột ánh sáng có cảnh báo 0,45 giây và ba nhịp sát thương; chưa có sprite mặt trăng treo riêng. Nguyệt Ảnh Trận bao quanh một mục tiêu bằng phân ảnh, chưa là trận pháp đánh toàn vùng. Kính Nguyệt né rồi blink ra sau lưng, chưa hoán đổi hai Actor thật.
 - Nguyệt Thực dùng lực hút ngắn rồi phát nổ/hất tung. Minh Nguyệt và Nguyệt Thực đặt terrain=0 để không gọi Ruin.Blast/Quake; dấu va chạm và bụi đá còn là hiệu ứng trang trí. Các kỹ thuật cũ vẫn giữ mặc định terrain=true.
 - Forge hỗ trợ lunar/decay/floor cho projectile; mặc định giữ nguyên projectile cũ. Các chiêu mới dùng pool và vòng cập nhật native, không thêm vòng quét toàn bản đồ.
-- Chưa có mặt trăng khổng lồ hoặc thế riêng God.
+- God có 6 thế: Thiên Nguyệt Trụy Thế, Cửu Nguyệt Liên Châu, Nguyệt Thần Cự Chưởng, Thiên Mạc Nguyệt Nhận, Vĩnh Dạ Minh Nguyệt và Nhất Nguyệt Khai Thiên. Tổng 36 thế: 33 Forge, 3 kỹ thuật C#.
+- Trụy Thế có sprite mặt trăng thủ tục 81×81 riêng (tạo/cache một lần), không phải thiên thạch. Sau tụ lực 1,1 giây, vùng đất báo trước 0,9 giây rồi trăng rơi 0,65 giây; điểm rơi cố định để né. Radius 5,5 ô, hệ số I–III 2,8/3,3/3,8, mana 70/100/130 và hồi cơ sở 35/45/55 giây. Không phá địa hình/nhà.
+- Vĩnh Dạ tạo mặt trăng treo trên vùng cố định radius 4,5 trong 4,4 giây, bốn nhịp gây sát thương; mỗi nhịp hồi 1% max HP làm tròn xuống cho chủ nếu còn trong vùng (tối đa 4%, không hồi đồng minh). Mana 60/90/120, hồi 45/55/65 giây trước hệ số engine.
+- Hai hazard mới dùng chung giới hạn tối đa 6 đang hoạt động, mỗi nhịp xét tối đa 64 ứng viên và 24 mục tiêu. Chủ chết/đổi dạng thì hủy. Areas.Clear thu hồi khi đổi world; particle Held kiểm tra generation trước khi cập nhật/xóa. Không thêm vòng quét toàn map.
+- Cửu Nguyệt dùng đúng 9 nguyệt cầu bay liên tiếp, chưa dựng đội hình chín mặt trăng sau lưng. Cự Chưởng dùng quyền ảnh áp lực native, chưa có bàn tay năm ngón riêng. Thiên Mạc cho nhân vật bay lên rồi phóng 5 nhận xuống (thêm tối đa 2 nhát bồi), chưa tạo cổng trên trời. Khai Thiên dùng sprite crescent lớn hiện có, hệ số cao và tụ lực lâu; chưa có sprite siêu lớn riêng.
+- God theo engine hiện có thường thi triển các thế ở III. Các mức I–II vẫn có định nghĩa cho trường hợp trao trait kỹ thuật riêng. Các số hồi/mana nêu ở đây là cơ sở trước hệ số engine.
+- Đã đủ danh sách dự kiến 36 thế, nhưng bước 7 cân bằng/gameplay, icon từng chiêu, các biến thể hình ảnh còn thiếu và học tự nhiên chưa hoàn tất. Chưa kết luận ngang sức các phái gốc.
 
 ## Kiểm tra trong game
 
@@ -66,6 +72,7 @@ Mỗi bước cần biên dịch, kiểm tra công thức và ID, sau đó thử
 4. Novice/Adept/Expert/Master/Grandmaster lần lượt mở 6/12/18/24/30 thế. Thử Thăng Nguyệt hất tung rồi nối Nguyệt Lạc, đánh đơn xem phân ảnh, đánh nhóm xem Liên Bạo và Nguyệt Luân. Grandmaster mở 6 thế mới ở I; God nâng lên III theo engine.
 6. Với CWP 0.16.0: trao kiếm cho NPC chưa học phái để thử quyền cấp I; trao phái và Master/Grandmaster/God để thử I/II/III. Thay kiếm phải mất quyền do kiếm cấp nhưng giữ quyền đã học. Quan sát chỉ một kiếm khí mỗi lần thi triển, hồi sau save/load không bị làm mới, và charge bị choáng vẫn ngắt được. Các bài này chưa được chạy trực tiếp trong game.
 7. Grandmaster: thử Tam Trọng đúng ba lưỡi, Chiếu Không có vòng báo trước, Nguyệt Thực kéo rồi hất địch. So sánh địa hình/nhà trước sau hai chiêu vùng mới. Theo dõi số particle, thời gian frame và tương tác đại hội trong game trước khi kết luận hiệu năng/cân bằng.
+8. God: thử giao chiến nhóm để planner chọn chiêu vùng. Trụy Thế phải có mặt trăng và vòng báo, chỉ đánh một lần khi chạm đất. Vĩnh Dạ phải có đúng 4 nhịp và chỉ hồi chủ khi ở trong vòng. Kiểm tra pause, owner chết/biến ghost, đổi world giữa chiêu, 6 hazard đồng thời và bảo vệ thí sinh chờ. Chưa thực hiện các bài gameplay này.
 5. Save/load, xóa trait phái, đổi world, đấu giải và bí cảnh; kiểm tra không giữ hiệu ứng hoặc cấp quyền sai.
 
 Chỉ mở chọn ngẫu nhiên và công bố bộ phái đầy đủ sau khi hoàn thiện đủ sáu bậc cùng kiểm tra gameplay.

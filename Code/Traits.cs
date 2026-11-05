@@ -317,6 +317,7 @@ namespace Sakuga
         private static void Describe()
         {
             NguyetKhuyetTech.Texts();
+            LunarGodTexts.Init();
             // (the forged and team techniques' names first: they are listed below)
             Forge.Texts();
             GatheringTexts.Texts();

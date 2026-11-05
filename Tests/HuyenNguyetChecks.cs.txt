@@ -10,7 +10,7 @@ namespace Sakuga
         {
             if((int)School.HuntersWay!=7 || (int)School.HuyenNguyet!=8 || Schools.Count!=8)
                 throw new Exception("Existing school IDs changed");
-            var ids=new HashSet<string>();int count=0,novice=0,adept=0,expert=0,master=0,grandmaster=0,moonWaves=0,safeAreas=0;bool returning=false,fan=false,counter=false,launcher=false,clones=false,explosions=false;
+            var ids=new HashSet<string>();int count=0,novice=0,adept=0,expert=0,master=0,grandmaster=0,god=0,moonWaves=0,safeAreas=0;bool returning=false,fan=false,counter=false,launcher=false,clones=false,explosions=false;
             foreach(string file in Directory.GetFiles(Path.Combine(root,"Forge"),"*.json"))
             {
                 var recipes=JsonConvert.DeserializeObject<List<Recipe>>(File.ReadAllText(file));
@@ -20,12 +20,12 @@ namespace Sakuga
                     if(recipe.school!="huyen_nguyet")continue;
                     count++;
                     var tech=new ForgedTechnique(recipe,root); // Real parser checks enums and every opcode.
-                    if(tech.School!=School.HuyenNguyet || tech.Entry<Tier.Novice || tech.Entry>Tier.Grandmaster)
+                    if(tech.School!=School.HuyenNguyet || tech.Entry<Tier.Novice || tech.Entry>Tier.God)
                         throw new Exception("Wrong moon school/entry");
-                    if(tech.Entry==Tier.Novice)novice++;else if(tech.Entry==Tier.Adept)adept++;else if(tech.Entry==Tier.Expert)expert++;else if(tech.Entry==Tier.Master)master++;else grandmaster++;
+                    if(tech.Entry==Tier.Novice)novice++;else if(tech.Entry==Tier.Adept)adept++;else if(tech.Entry==Tier.Expert)expert++;else if(tech.Entry==Tier.Master)master++;else if(tech.Entry==Tier.Grandmaster)grandmaster++;else god++;
                     if(tech.Icon!="ui/Icons/sakuga/iconSchoolHuyenNguyet")throw new Exception("Missing school icon fallback");
                     for(int i=0;i<3;i++)
-                        if(recipe.mana[i]<=0 || recipe.mana[i]>84 || recipe.cooldown[i]<4 || recipe.cooldown[i]>21)
+                        if(recipe.mana[i]<=0 || recipe.mana[i]>130 || recipe.cooldown[i]<4 || recipe.cooldown[i]>65)
                             throw new Exception("Invalid preview costs");
                     if(tech.Entry==Tier.Grandmaster)
                     {
@@ -47,6 +47,16 @@ namespace Sakuga
                             }
                             if(step.Op=="clones" && step.A(0,0)>4)throw new Exception("Too many base clones");
                             if(step.Op=="shot" && step.K("count",1)>3)throw new Exception("Too many base projectiles");
+                        }
+                    }
+                    if(tech.Entry==Tier.God)
+                    {
+                        if(recipe.cooldown[0]<24 || recipe.mana[0]<55)throw new Exception("God recipe too cheap");
+                        foreach(string line in recipe.steps)
+                        {
+                            var step=ForgeStep.Parse(line);
+                            if(step.Op=="shot" && (step.K("crater",-1)!=0 || ForgeInterpreter.ShotCount(step,1.6f)>9))
+                                throw new Exception("God projectile count/terrain budget exceeded");
                         }
                     }
                     if(recipe.id=="hn_hoi_hoan_nguyet_nhan")
@@ -76,7 +86,20 @@ namespace Sakuga
             }
             var moon=new NguyetKhuyetTech();
             if(ids.Contains(moon.Id) || moon.Entry!=Tier.Master || moon.School!=School.HuyenNguyet)throw new Exception("Native moon identity/realm mismatch");
-            if(count!=29 || novice!=6 || adept!=6 || expert!=6 || master!=5 || grandmaster!=6)throw new Exception("Expected 29 recipes plus native master moon = 30 forms");
+            if(count!=33 || novice!=6 || adept!=6 || expert!=6 || master!=5 || grandmaster!=6 || god!=4)throw new Exception("Expected 33 recipes plus 3 native techniques = 36 forms");
+            foreach(Technique ultimate in new Technique[]{new ThienNguyetTruyTheTech(),new VinhDaMinhNguyetTech()})
+                if(!ids.Add(ultimate.Id) || ultimate.Entry!=Tier.God || ultimate.School!=School.HuyenNguyet || ultimate.GetType().GetConstructor(Type.EmptyTypes)==null)
+                    throw new Exception("Native God technique not discoverable or duplicate");
+            if(LunarGodRules.FallProgress(.8f)!=0 || LunarGodRules.FallProgress(2)!=1 || LunarGodRules.ImpactDamage(9)!=3.8f)
+                throw new Exception("Moon warning/fall/damage bounds changed");
+            if(LunarGodRules.MaxActive!=6 || LunarGodRules.MaxTargets!=24 || LunarGodRules.MaxCandidates!=64 || LunarGodRules.DomainPulses!=4)
+                throw new Exception("Lunar God runtime budget changed");
+            var pixels=LunarGodHazard.BuildMoonCanvas();
+            if(pixels.W!=81 || pixels.H!=81 || pixels.Px[0].a!=0 || pixels.Px[40*81+40].a!=255)
+                throw new Exception("Moon canvas transparency/size invalid");
+            if(ForgeInterpreter.ShotCount(ForgeStep.Parse("shot Orb 0.23 count=9 fixed=1"),1.6f)!=9 ||
+               ForgeInterpreter.ShotCount(ForgeStep.Parse("shot Orb 0.5 count=3"),1.6f)!=5)
+                throw new Exception("Fixed nine-orb volley or legacy scaling broken");
             if(moonWaves!=3 || safeAreas!=2)throw new Exception("Missing triple crescent or safe lunar areas");
             foreach(string name in new[]{"SkyBeam","BlackHole"})
                 if(!(bool)typeof(ChoreoMove).GetMethod(name).GetParameters()[4].DefaultValue)

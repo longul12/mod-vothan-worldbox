@@ -2,6 +2,10 @@
 
 Mốc đầu tiên đưa lên Git: **1.1.0**.
 
+## 1.1.6 — Huyền Nguyệt, bước 6
+
+Đủ 36 thế theo danh sách: 33 Forge và 3 C#. Sáu thế God gồm mặt trăng giáng xuống, chín nguyệt cầu, chưởng lớn, nguyệt nhận từ trên cao, vùng minh nguyệt hồi chủ và đòn khai thiên. Mặt trăng 81×81 thủ tục cache một lần; hai hazard C# có cảnh báo/giới hạn vòng đời, tối đa 6 đang chạy và 24 mục tiêu/nhịp, không phá địa hình. Vĩnh Dạ bốn nhịp hồi chủ tối đa 4% khi ở trong vùng. Forge thêm fixed count, giữ scaling cũ khi không bật. Kiểm tra biên dịch, parser thật, ID, số thế/cấp, pixel mặt trăng, thời gian rơi, đạn cố định và ngân sách đã đạt; chưa xác minh gameplay/VFX thực tế. Một số hình ảnh vẫn tái sử dụng engine, xem roadmap. Bước 7 cân bằng, hoàn thiện và học tự nhiên còn lại.
+
 ## 1.1.5 — Huyền Nguyệt, bước 5
 
 Thêm 6 thế Grandmaster, tổng 30 thế. Có ba nguyệt khuyết lớn liên tiếp, nguyệt quang giáng xuống có cảnh báo, phân ảnh một mục tiêu, nguyệt luân hình quạt, né ra sau phản kích và nguyệt thực hút/nổ. Thêm lựa chọn terrain=false cho BlackHole/SkyBeam, giữ mặc định true của mọi chiêu cũ. Forge đọc được lunar/decay/floor cho projectile. Chiêu mới không thêm vòng AI riêng, dùng tài nguyên native; chưa đo hiệu năng gameplay. Kiểm tra biên dịch và parser thật cùng giới hạn chi phí, số trăng, vùng đánh và mặc định tương thích đã đạt. Chưa có sprite mặt trăng treo riêng, hoán đổi Actor thật hoặc trận pháp nhiều mục tiêu; bước tiếp theo là 6 thế God và mặt trăng giáng xuống.

@@ -7,6 +7,11 @@ namespace Sakuga
     /// <summary>Plays a recipe's steps on a Choreo move (see Forge for the language).</summary>
     internal static class ForgeInterpreter
     {
+        internal static int ShotCount(ForgeStep s,float many)
+        {
+            float count=s.K("count",1);
+            return Mathf.Max(1,Mathf.RoundToInt(count*(count>1 && s.K("fixed",0)<=0?many:1)));
+        }
         /// <summary>At load: an unknown step or name is an error (the recipe is rejected, never half played).</summary>
         public static void Check(ForgeStep s)
         {
@@ -218,7 +223,7 @@ namespace Sakuga
                             Area = s.K("area", 0f) * S,
                             Element = Forge.Enum(s.KS("element", null), el),
                             Impact = Forge.Enum(s.KS("impact", null), ShotImpact.Auto)
-                        }, Mathf.Max(1, Mathf.RoundToInt(s.K("count", 1f) * (s.K("count", 1f) > 1f ? N : 1f))), s.K("spread", 0f), s.K("gap", 0.06f));
+                          }, ShotCount(s,N), s.K("spread", 0f), s.K("gap", 0.06f));
                         break;
                     case "shockwave":
                         m.Shockwave(s.A(0, 3f) * S, s.A(1, 0.8f) * D, Forge.Enum(s.KS("hurt", "Knockdown"), Sakuga.Hurt.Knockdown), s.K("push", 0.8f));
