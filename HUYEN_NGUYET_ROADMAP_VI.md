@@ -8,7 +8,7 @@ Ngày bắt đầu: 2026-11-05. Đây là phần mở rộng trong Võ Thần; g
 |---|---|---|
 | 1 | Đăng ký phái, màu bạc lam, icon, tên, 6 thế Novice cấp I–III | Đã viết; kiểm tra offline, chưa thử game |
 | 2 | 6 thế Adept, kiểm tra phản ứng và chuỗi cận chiến/tầm xa | Đã viết; kiểm tra offline, chưa thử game |
-| 3 | 6 thế Expert, hất tung, truy kích, phân ảnh và hộ thể | Chưa làm |
+| 3 | 6 thế Expert, hất tung, nguyệt nhận, phân ảnh và hộ thể | Đã viết; kiểm tra offline, chưa thử game |
 | 4 | 6 thế Master, chuyển Nguyệt Khuyết từ CWP sang động tác Võ Thần | Chưa làm |
 | 5 | 6 thế Grandmaster, trận pháp và biến thể kiếm khí | Chưa làm |
 | 6 | 6 thế God, mặt trăng giáng xuống và tuyệt kỹ riêng | Chưa làm |
@@ -45,14 +45,16 @@ Mỗi bước cần biên dịch, kiểm tra công thức và ID, sau đó thử
 - Sát thương cơ bản gần công thức phái gốc; hồi 4–9 giây trước các hệ số của engine, mana 6–16. Chưa kết luận cân bằng thực tế.
 - Đã có thêm 6 thế Adept: Song Nguyệt Chưởng; Liên Hoàn Nguyệt Nhận; Hồi Hoàn Nguyệt Nhận; Đạp Nguyệt Truy Phong; Bán Nguyệt Hoành Tảo; Nguyệt Kính Phản Kích.
 - Adept dùng mana 10–35, hồi 5–10 giây trước hệ số engine. Hồi Hoàn có thể trúng mỗi chiều một lần, hệ số cơ bản 0,85/lượt; không có cơ chế trúng lặp vô hạn. Bán Nguyệt quét phía trước, planner ưu tiên ít nhất 2 địch gần; Nguyệt Kính chỉ phản đòn gần.
-- Chưa có mặt trăng khổng lồ, các chiêu Expert trở lên hoặc thay thế kỹ năng CWP.
+- Đã có 6 thế Expert: Ngưng Nguyệt Chưởng, Tam Điệp Nguyệt Nhận, Thăng Nguyệt Kích, Nguyệt Ảnh Phân Thân, Nguyệt Hoa Liên Bạo và Ngân Nguyệt Kết Giới.
+- Expert: mana 16–48, hồi 6–11 giây trước hệ số engine. Phân thân dùng clones chia tổng sát thương cho các ảnh, không sinh Actor thật. Liên Bạo dùng nguyệt cầu bay vòng cung rồi nổ nhỏ, chưa phải bãi mìn được đặt sẵn; crater=0. Kết Giới là phản ứng guard và xung kích, chưa có khiên hấp thụ kéo dài. Thăng Nguyệt tạo Link.Launched để các nguyệt nhận sẵn có nối thế, chưa thêm thế truy kích cận chiến trên không riêng.
+- Chưa có mặt trăng khổng lồ, các chiêu Master trở lên hoặc thay thế kỹ năng CWP.
 
 ## Kiểm tra trong game
 
 1. Khởi động lại game; cho NPC một cảnh giới Võ Thần rồi trao Huyền Nguyệt phái qua bảng trait.
 2. Để thử riêng, dùng NPC chỉ có một trait phái này; NPC có nhiều phái vẫn có thể chọn chiêu phái khác.
 3. Đánh thử ở gần/xa; quan sát chưởng, nguyệt nhận, lùi bước, hai phản ứng phòng thủ.
-4. So sánh cùng NPC ở Novice, Adept, Expert để kiểm tra cấp I–III: Novice có 6 thế; Adept trở lên có thêm 6 thế. Chưa có thế riêng mở từ Expert trở lên.
+4. So sánh cùng NPC ở Novice, Adept, Expert để kiểm tra cấp I–III: lần lượt có 6, 12, 18 thế. Chưa có thế riêng mở từ Master trở lên. Thử Thăng Nguyệt hất tung rồi nối nguyệt nhận, đánh đơn để xem phân ảnh, đánh nhóm để kích hoạt Liên Bạo.
 5. Save/load, xóa trait phái, đổi world, đấu giải và bí cảnh; kiểm tra không giữ hiệu ứng hoặc cấp quyền sai.
 
 Chỉ mở chọn ngẫu nhiên và công bố bộ phái đầy đủ sau khi hoàn thiện đủ sáu bậc cùng kiểm tra gameplay.

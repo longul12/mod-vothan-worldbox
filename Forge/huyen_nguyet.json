@@ -94,5 +94,53 @@
     "contact":"parried","answers":["Punch","Blade"],"forms":["Counter","Guard","Ki","Palm"],"worthy":false,
     "mana":[12,20,30],"cooldown":[8,9,10],
     "steps":["guard 0.25 hex","strike Palm 0.8 hurt=Reel push=2","shot SwordWave 0.45 speed=20 range=7 size=0.8 pierce=1","L2:shot SwordWave 0.12 speed=20 range=7 size=0.7 pierce=1","L3:strike Palm 0.12","recover 0.2"]
+  },
+  {
+    "id":"hn_ngung_nguyet_chuong","name":"Ngưng Nguyệt Chưởng",
+    "info":"Tụ ánh trăng rồi phóng chưởng lực bạc tầm xa. Cấp II–III thêm chưởng bồi nhẹ, tụ lực có thể bị ngắt.",
+    "school":"huyen_nguyet","tier":"expert","plan":"line","role":"Line","scale":"Light","element":"School",
+    "forms":["Ki","Palm","Projectile","Charge"],"accepts":["Thrown","Scattered"],"worthy":false,"len":11,"width":1.2,
+    "mana":[18,28,40],"cooldown":[7,8,9],
+    "steps":["charge 0.38 Palms 1.4","shot Fist 1.65 speed=21 range=11 size=1.15 push=2.8 pierce=1","L2:shot Fist 0.22 speed=21 range=11 size=0.8 pierce=0","L3:shot Fist 0.16 speed=21 range=11 size=0.8 pierce=0","recover 0.15"]
+  },
+  {
+    "id":"hn_tam_diep_nguyet_nhan","name":"Tam Điệp Nguyệt Nhận",
+    "info":"Ba nguyệt nhận xòe hình quạt để đánh nhiều hướng. Cấp II–III thêm nhát giữa; không tự bám mục tiêu.",
+    "school":"huyen_nguyet","tier":"expert","plan":"line","role":"Line","scale":"Light","element":"School",
+    "forms":["Ki","Projectile"],"accepts":["Launched","Scattered","Thrown"],"worthy":false,"len":10,"width":2.5,
+    "mana":[18,29,42],"cooldown":[7,8,9],
+    "steps":["charge 0.25 Raised 1.2","shot SwordWave 0.58 count=3 spread=28 gap=0.05 speed=22 range=10 size=0.9 pierce=1","L2:shot SwordWave 0.2 speed=22 range=10 size=0.8 pierce=1","L3:shot SwordWave 0.15 speed=22 range=10 size=0.8 pierce=1"]
+  },
+  {
+    "id":"hn_thang_nguyet_kich","name":"Thăng Nguyệt Kích",
+    "info":"Chưởng mở thế rồi đánh từ dưới lên hất tung đối thủ, tạo cơ hội nối nguyệt nhận trên không.",
+    "school":"huyen_nguyet","tier":"expert","plan":"melee","role":"Launcher","scale":"Light","element":"School",
+    "forms":["Ki","Palm","Rising"],"accepts":["Close","Down"],"worthy":false,
+    "mana":[16,26,38],"cooldown":[6,7,8],
+    "steps":["step","strike Palm 0.5","L2:strike Palm 0.18","L3:strike Palm 0.12","strike Palm 1.25 hurt=Launch lift=2.4 push=1.2 finisher","leaves Launched"]
+  },
+  {
+    "id":"hn_nguyet_anh_phan_than","name":"Nguyệt Ảnh Phân Thân",
+    "info":"Gọi hai dư ảnh đánh chưởng rồi bản thể đánh kết. Cấp II–III tăng số ảnh theo engine nhưng chia đều tổng sát thương, không sinh NPC thật.",
+    "school":"huyen_nguyet","tier":"expert","plan":"melee","role":"Chain","scale":"Light","element":"School",
+    "forms":["Ki","Palm","Fast"],"accepts":["Close","Down"],"worthy":false,"reach":3,
+    "mana":[20,31,44],"cooldown":[8,9,10],
+    "steps":["charge 0.2 Stance 1.0","ghost lines","clones 2 Palm 1.1","strike Palm 0.65 hurt=Reel push=1.5 finisher","L2:shot SwordWave 0.16 speed=20 range=6 size=0.6 pierce=0","L3:shot SwordWave 0.12 speed=20 range=6 size=0.6 pierce=0","recover 0.2"]
+  },
+  {
+    "id":"hn_nguyet_hoa_lien_bao","name":"Nguyệt Hoa Liên Bạo",
+    "info":"Tụ nguyệt cầu rồi phóng ba cầu theo đường vòng cung, nổ nhỏ nối tiếp khi chạm địch hoặc điểm rơi. Có thời gian bay để né; không đào hố.",
+    "school":"huyen_nguyet","tier":"expert","plan":"area","role":"Area","scale":"Light","element":"School",
+    "forms":["Ki","Projectile","Area","Charge"],"accepts":["Down","Scattered","Thrown"],"worthy":false,"radius":3,"range":10,"need":2,
+    "mana":[22,34,48],"cooldown":[9,10,11],
+    "steps":["charge 0.45 Raised 1.4","shot Orb 0.48 count=3 gap=0.18 spread=12 flight=Lob speed=14 range=10 size=0.9 area=1.2 crater=0 impact=Explode","L2:shot Orb 0.12 flight=Lob speed=14 range=10 size=0.7 area=1 crater=0 impact=Explode","L3:shot Orb 0.1 flight=Lob speed=14 range=10 size=0.7 area=1 crater=0 impact=Explode","recover 0.25"]
+  },
+  {
+    "id":"hn_ngan_nguyet_ket_gioi","name":"Ngân Nguyệt Kết Giới",
+    "info":"Đỡ đòn gần bằng nguyệt kính rồi phát vòng xung kích đẩy địch. Là phản ứng phòng thủ ngắn, chưa phải lá chắn hấp thụ sát thương theo thời gian.",
+    "school":"huyen_nguyet","tier":"expert","plan":"counter","role":"Defense","scale":"Light","element":"School",
+    "contact":"parried","answers":["Punch","Blade"],"forms":["Counter","Guard","Ki","Area"],"worthy":false,
+    "mana":[20,32,45],"cooldown":[9,10,11],
+    "steps":["guard 0.35 hex","shockwave 2.5 0.85 hurt=Reel push=2.5","L2:strike Palm 0.15","L3:strike Palm 0.1","recover 0.25"]
   }
 ]

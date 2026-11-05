@@ -2,6 +2,10 @@
 
 Mốc đầu tiên đưa lên Git: **1.1.0**.
 
+## 1.1.3 — Huyền Nguyệt, bước 3
+
+Thêm 6 thế Expert, tổng 18 thế. Có chưởng lực tầm xa, nguyệt nhận hình quạt, hất tung mở combo, phân ảnh chia tổng sát thương, nguyệt cầu nổ theo đợt và guard phản công xung kích. Không thêm NPC phân thân thật; nguyệt cầu đặt crater=0. Kết giới hiện chỉ là phòng thủ ngắn. Kiểm tra biên dịch, parser Forge, ID, giới hạn chi phí và công thức đã đạt; chưa thử game. Tiếp theo là Master và chuyển backend Nguyệt Khuyết từ CWP.
+
 ## 1.1.2 — Huyền Nguyệt, bước 2
 
 Thêm 6 thế Adept, nâng tổng số lên 12: liên hoàn chưởng, nguyệt nhận liên tiếp/quay về, lướt truy kích, quét hình quạt và đỡ phản công. Giữ AI/cấp I–III/hồi chiêu của engine. Nguyệt nhận Boomerang tính ngân sách hai chiều bay, không tăng sát thương mỗi lượt quá mức. Tạm trao phái thủ công; chưa chuyển kỹ năng CWP, chưa có thế Expert trở lên. Kiểm tra offline bằng Forge thật đã đạt; chưa xác nhận gameplay trực tiếp.
