@@ -1,0 +1,50 @@
+[
+  {
+    "id":"hn_nguyet_quang_chuong","name":"Nguyệt Quang Chưởng",
+    "info":"Chưởng ánh trăng mở thế, cấp II thêm chưởng bồi; kết thúc đẩy địch để nối nguyệt nhận.",
+    "school":"huyen_nguyet","tier":"novice","plan":"melee","role":"Single","scale":"Light","element":"School",
+    "forms":["Ki","Palm"],"accepts":["Close"],"worthy":false,
+    "mana":[6,10,15],"cooldown":[4,5,6],
+    "steps":["step","strike Palm 0.6","L2:strike Palm 0.25","strike Palm 0.7 hurt=Reel push=2.0 finisher","leaves Close"]
+  },
+  {
+    "id":"hn_tieu_nguyet_nhan","name":"Tiểu Nguyệt Nhận",
+    "info":"Phóng nguyệt nhận bạc thẳng phía trước. Cấp II–III thêm nhát bồi; số mục tiêu xuyên bị giới hạn.",
+    "school":"huyen_nguyet","tier":"novice","plan":"line","role":"Line","scale":"Light","element":"School",
+    "forms":["Ki","Projectile"],"accepts":["Thrown","Launched","Scattered"],"worthy":false,"len":9,"width":0.9,
+    "mana":[6,10,15],"cooldown":[5,6,7],
+    "steps":["charge 0.14 Palms 0.7","shot SwordWave 1.05 speed=22 range=9 size=0.8 pierce=2","L2:shot SwordWave 0.18 speed=22 range=9 size=0.6 pierce=2","L3:shot SwordWave 0.16 speed=22 range=9 size=0.6 pierce=2"]
+  },
+  {
+    "id":"hn_nguyet_anh_bo","name":"Nguyệt Ảnh Bộ",
+    "info":"Lùi bước để lại dư ảnh bạc rồi phóng nguyệt nhận phản kích. Không bất tử trong lúc di chuyển.",
+    "school":"huyen_nguyet","tier":"novice","plan":"line","role":"Mobility","scale":"Light","element":"School",
+    "forms":["Evasive","Ki","Projectile"],"accepts":["Close"],"worthy":false,"len":7,"width":0.8,
+    "mana":[7,11,16],"cooldown":[6,7,8],
+    "steps":["ghost lines","backhop 1.4","shot SwordWave 0.8 speed=20 range=7 size=0.7 pierce=1","L2:shot SwordWave 0.18 speed=20 range=7 size=0.6 pierce=1"]
+  },
+  {
+    "id":"hn_ngan_huy_ho_the","name":"Ngân Huy Hộ Thể",
+    "info":"Đón đòn cận chiến bằng nguyệt quang, sau đó phát chưởng đẩy đối thủ. Là phản ứng ngắn, không phải khiên vĩnh viễn.",
+    "school":"huyen_nguyet","tier":"novice","plan":"counter","role":"Defense","scale":"Light","element":"School",
+    "contact":"parried","answers":["Punch","Blade"],"forms":["Counter","Guard","Ki","Palm"],"worthy":false,
+    "mana":[7,11,16],"cooldown":[7,8,9],
+    "steps":["guard 0.3 hex","strike Palm 0.8 hurt=Reel push=2.5 finisher"]
+  },
+  {
+    "id":"hn_tan_nguyet_tram","name":"Tân Nguyệt Trảm",
+    "info":"Chém vòng cung gần người. Cấp II thêm nhát chéo, cấp III thêm nhát kết thúc; dùng để mở chuỗi cận chiến.",
+    "school":"huyen_nguyet","tier":"novice","plan":"melee","role":"Single","scale":"Light","element":"School",
+    "forms":["Blade","Fast"],"accepts":["Close"],"worthy":false,
+    "mana":[6,10,15],"cooldown":[5,6,7],
+    "steps":["step","strike Slash 0.45","L2:strike DiagSlash 0.25","strike DrawCut 0.7 hurt=Crumple finisher","L3:strike Slash 0.15","leaves Down"]
+  },
+  {
+    "id":"hn_hoi_quang_phan_chuong","name":"Hồi Quang Phản Chưởng",
+    "info":"Né đòn trực diện rồi trả chưởng. Cấp II thêm chưởng bồi, giữ khoảng nghỉ để đối thủ có thể đánh trả.",
+    "school":"huyen_nguyet","tier":"novice","plan":"counter","role":"Defense","scale":"Light","element":"School",
+    "contact":"evaded","answers":["Punch"],"forms":["Counter","Evasive","Ki","Palm"],"worthy":false,
+    "mana":[6,10,15],"cooldown":[6,7,8],
+    "steps":["slip 1","ghost lines","strike Palm 0.85 hurt=Reel push=1.5","L2:strike Palm 0.2","recover 0.15"]
+  }
+]

@@ -25,7 +25,7 @@ namespace Sakuga
     internal static class Schools
     {
         public const string Group = "sakuga_schools";
-        public const int Count = 7;
+        public const int Count = 8;
         /// <summary>Actor data: how many schools the mod has given the unit so far.</summary>
         private const string KeyGiven = "sakuga_schools_given";
 
@@ -62,6 +62,7 @@ namespace Sakuga
                 case School.EarthBreaker: return "earth_breaker";
                 case School.PhantomStep: return "phantom_step";
                 case School.HuntersWay: return "hunters_way";
+                case School.HuyenNguyet: return "huyen_nguyet";
                 default: return "none";
             }
         }
@@ -83,6 +84,7 @@ namespace Sakuga
                 case School.EarthBreaker: return new Color(0.68f, 0.5f, 0.3f, 1f);
                 case School.PhantomStep: return new Color(0.62f, 0.45f, 0.92f, 1f);
                 case School.HuntersWay: return new Color(0.45f, 0.72f, 0.34f, 1f);
+                case School.HuyenNguyet: return new Color(0.72f, 0.87f, 1f, 1f);
                 default: return UnityEngine.Color.white;
             }
         }
@@ -407,7 +409,7 @@ namespace Sakuga
                 return true;
             }
             bool any = false;
-            for (int i = (int)School.IronFist; i <= (int)School.HuntersWay; i++)
+            for (int i = (int)School.IronFist; i <= Count; i++)
             {
                 if (Knows(a, (School)i))
                 {
@@ -644,6 +646,9 @@ namespace Sakuga
                     }
                 }
             }
+            // Preview school: manual assignment until all six realm brackets are complete.
+            // Keep a real weight for existing members (legacy Trim must not discard the school).
+            if (!known) w[(int)School.HuyenNguyet] = 0f;
             return w;
         }
 

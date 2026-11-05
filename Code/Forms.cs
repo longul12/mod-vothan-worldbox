@@ -115,6 +115,7 @@ namespace Sakuga
         KiArts,
         EarthBreaker,
         PhantomStep,
-        HuntersWay
+        HuntersWay,
+        HuyenNguyet
     }
 }

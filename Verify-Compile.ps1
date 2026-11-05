@@ -29,6 +29,10 @@ $trees = New-Object 'System.Collections.Generic.List[Microsoft.CodeAnalysis.Synt
 foreach ($file in Get-ChildItem (Join-Path $PSScriptRoot 'Code') -Recurse -Filter *.cs) {
     $trees.Add([Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree]::ParseText([IO.File]::ReadAllText($file.FullName), [Microsoft.CodeAnalysis.CSharp.CSharpParseOptions]::Default, $file.FullName, [Text.Encoding]::UTF8, [Threading.CancellationToken]::None))
 }
+if($CheckSettings) {
+    $testPath=Join-Path $PSScriptRoot 'Tests/HuyenNguyetChecks.cs.txt'
+    $trees.Add([Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree]::ParseText([IO.File]::ReadAllText($testPath)))
+}
 $refs = New-Object 'System.Collections.Generic.List[Microsoft.CodeAnalysis.MetadataReference]'
 $paths = @(Get-ChildItem $managed -Filter *.dll | Where-Object Name -ne 'Assembly-CSharp.dll' | Select-Object -ExpandProperty FullName)
 $paths += (Join-Path $nml 'Assembly-CSharp-Publicized.dll')
@@ -44,6 +48,15 @@ $errors | ForEach-Object { $_.ToString() }
 if ($errors.Count -gt 0) { throw ('Compilation failed: ' + $errors.Count + ' errors') }
 'Compilation passed against installed WorldBox/NML assemblies.'
 if ($CheckSettings) {
+    [Reflection.Assembly]::Load([IO.File]::ReadAllBytes((Join-Path $managed 'Newtonsoft.Json.dll'))) | Out-Null
+    $stream=New-Object IO.MemoryStream
+    try {
+        $emitted=$compilation.Emit($stream)
+        if(!$emitted.Success){throw 'Could not emit school checks'}
+        $testAssembly=[Reflection.Assembly]::Load($stream.ToArray())
+        $testAssembly.GetType('Sakuga.HuyenNguyetChecks').GetMethod('Run').Invoke($null,@($PSScriptRoot)) | Out-Null
+    } finally {$stream.Dispose()}
+    'Huyen Nguyet checks passed: stable school IDs, unique recipes, six forms accepted by real Forge parser, costs and icon.'
      $modRoot=$PSScriptRoot
     $rules=[IO.File]::ReadAllText((Join-Path $modRoot 'Code/TribulationRules.cs'))
     $checks=@'

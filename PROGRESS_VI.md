@@ -2,6 +2,10 @@
 
 Mốc đầu tiên đưa lên Git: **1.1.0**.
 
+## 1.1.1 — Huyền Nguyệt, bước 1
+
+Thêm phái thứ tám và 6 thế Novice bằng Forge, có cấp I–III, màu bạc lam, icon trăng khuyết. Tạm trao thủ công, chưa chọn ngẫu nhiên cho NPC. Giữ ID bảy phái cũ. Kiểm tra biên dịch và bộ đọc Forge thật đã đạt; chưa chơi thử. Chưa chuyển Nguyệt Khuyết từ CWP. Xem [lộ trình 7 bước](HUYEN_NGUYET_ROADMAP_VI.md).
+
 ## Nền tảng
 
 CombatGods/Võ Đạo Chiến Thần của Turbo: hệ thống võ đạo, trường phái/kỹ thuật, AI chiến đấu, quyết đấu, VFX pixel và các năng lực cảnh giới cao. Thông tin gốc được giữ trong README.md và mod.json.

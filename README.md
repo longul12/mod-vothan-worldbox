@@ -1,6 +1,8 @@
 # Combat Gods
 
-Nhánh phát triển Việt hóa/bổ sung **Võ Đạo Chiến Thần 1.1.0**, dựa trên mod của **Turbo**.
+Nhánh phát triển Việt hóa/bổ sung **Võ Đạo Chiến Thần 1.1.1**, dựa trên mod của **Turbo**.
+
+Huyền Nguyệt phái đang phát triển từng bước: [lộ trình và cách thử 6 thế nhập môn](HUYEN_NGUYET_ROADMAP_VI.md).
 
 - [Tiến độ nhánh và hướng dẫn kiểm tra](PROGRESS_VI.md)
 - [Điều kiện Chân Thần và Cửu Trọng Lôi Kiếp](CHAN_THAN_VI.md)
