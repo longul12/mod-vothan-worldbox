@@ -33,6 +33,7 @@ namespace Sakuga
             public float Next, Ghost;
             public Vector2 Last;
             public bool Has;
+            public LunarGodVisual Lunar;
         }
 
         private static readonly Dictionary<Move, State> _st = new Dictionary<Move, State>();
@@ -77,12 +78,15 @@ namespace Sakuga
                     s.HasHue = true;
                 }
                 _st[m] = s;
+                int lunar=LunarGodVisual.Kind(m.Tech?.Id);
+                if(lunar!=0)s.Lunar=new LunarGodVisual(lunar);
             }
             if (s.School == School.None || !s.HasHue)
             {
                 return;
             }
             Actor a = m.A;
+            if(s.Lunar!=null && m is ChoreoMove cm)s.Lunar.Tick(cm,dt);
             float px = Choreo.PxOf(a), k = Choreo.KOf(a);
             Vector2 c = Choreo.BodyAt(a, 0.5f);
             Vector2 feet = Choreo.BodyAt(a, 0f);
@@ -114,7 +118,15 @@ namespace Sakuga
 
         public static void End(Move m)
         {
+            if(_st.TryGetValue(m,out State s))s.Lunar?.Kill();
             _st.Remove(m);
+        }
+
+        public static void Clear()
+        {
+            foreach(State s in _st.Values)s.Lunar?.Kill();
+            _st.Clear();
+            _stamped.Clear();
         }
 
         /// <summary>A school's name for the logs.</summary>

@@ -1,5 +1,24 @@
 # Huyền Nguyệt — VFX 1.1.8
 
+## Cập nhật 1.1.9 — tuyệt kỹ God
+
+- Cửu Nguyệt: chín trăng giữ bằng pool sau lưng lúc tụ lực; trăng lần lượt tắt theo nhịp phóng, projectile xuất phát từ vòng cung. Vẫn theo target/homing native, chưa phân phối đa mục tiêu như HomingSwarm.
+- Cự Chưởng: sprite bàn tay năm ngón riêng, bảng màu kem–tím; vẫn giữ đường bay Lob và nổ cũ, chưa đổi sang đẩy nhiều nhịp.
+- Thiên Mạc: năm nguyệt nhận treo thành hàng, projectile phóng từ trên cao, có vòng báo ngắn ở mục tiêu. Chưa đổi thành nhiều đội hình mưa.
+- Khai Thiên: trăng tụ phía sau và thêm lớp dư ảnh hồng tím sau nguyệt nhận. Dư ảnh không có damage/hitbox.
+- Trụy Thế: ảnh trăng kéo đuôi, sao lóe và mảnh cung vỡ khi chạm.
+- Vĩnh Dạ: ba dải phản chiếu ngang, xung sáng đúng bốn nhịp, mảnh trăng tan ở nhịp cuối.
+
+Giữ chi phí, planner, thời điểm damage và tổng sát thương; thay vị trí phát hình/đạn của Cửu Nguyệt và Thiên Mạc nên vẫn cần thử độ chính xác/va chạm thực tế. Không có miễn thương hoặc world freeze mới.
+
+LunarGodVisual tối đa chín held particle/move, kiểm tra generation khi sử dụng/trả pool; dọn lúc move kết thúc, bị ngắt hoặc Moves.Clear. Ngoài màn hình thu hồi hình; sprite cache thêm đúng một bàn tay. Không có AI/Actor scan mới.
+
+![Nghiên cứu chín trăng](Previews/lunar-god-contact.png)
+
+Ảnh là mô phỏng màu/chuyển động PixelFX, không phải capture gameplay. Source tại Previews/lunar-god.js cần checkout PixelFX để chạy. Đã render–xem–chỉnh ba lượt và check không cảnh báo. Kiểm tra biên dịch, parser 36 thế, sprite bàn tay, giới hạn vòng cung và ID phân loại đạt. Chưa đo FPS hoặc chơi thử.
+
+Các mô tả “chưa thay thế” của 1.1.8 bên dưới là ghi chép lịch sử; bàn tay God và chín nguyệt cầu đã có hình riêng từ 1.1.9.
+
 ## Hướng hình ảnh
 
 Dựa trên ảnh tham khảo người dùng cung cấp: thân trăng trắng ngà/kem vàng, bóng hồng tím, viền lam tím, sao bốn cánh thưa. Không sao chép sprite của game khác. Nguồn engine CombatGods của Turbo được giữ nguyên.

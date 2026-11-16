@@ -2,6 +2,10 @@
 
 Ngày bắt đầu: 2026-11-05. Đây là phần mở rộng trong Võ Thần; giữ nguồn gốc engine của Turbo.
 
+## 1.1.9 — nâng cấp God theo từng pha
+
+Đã bổ sung ngôn ngữ hình ảnh riêng cho sáu chiêu God; xem [tài liệu VFX](Docs/HUYEN_NGUYET_VFX_VI.md). Không đổi planner, số projectile, sát thương, mana, cooldown. Chưa hoàn tất cơ chế phân phối chín cầu sang nhiều mục tiêu, mưa theo đội hình hoặc chuỗi đòn kết mới; không coi những ý tưởng đó là đã triển khai.
+
 ## 1.1.8 — định hình VFX trăng kem–tím
 
 Thay bộ hình nguyệt nhận, thêm tụ lực/dấu va chạm riêng, trăng tròn đổ bóng theo mảng lớn và gia tốc rơi chỉ ở hình ảnh. Không sửa điều kiện/target ở 1.1.7. Đây là bước đầu hoàn thiện hình ảnh, chưa phải hoạt ảnh riêng cho toàn bộ 36 thế; [xem phạm vi, ảnh thử và cách chỉnh](Docs/HUYEN_NGUYET_VFX_VI.md).

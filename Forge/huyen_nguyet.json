@@ -233,7 +233,7 @@
   },
   {
     "id":"hn_cuu_nguyet_lien_chau","name":"Cửu Nguyệt Liên Châu",
-    "info":"Tụ nguyệt lực rồi phóng đúng chín nguyệt cầu truy đuổi nối tiếp. Mỗi cầu có sát thương nhỏ, không tăng số lượng theo cấp; chưa dựng chín mặt trăng sau lưng.",
+    "info":"Chín tiểu nguyệt tụ thành vòng cung sau lưng rồi phóng nối tiếp thành nguyệt cầu truy đuổi. Mỗi cầu có sát thương nhỏ; giữ đúng chín viên ở mọi cấp.",
     "school":"huyen_nguyet","tier":"god","plan":"line","role":"Line","scale":"Light","element":"School",
     "forms":["Ki","Projectile","Charge"],"accepts":["Thrown","Scattered","Launched"],"worthy":true,"len":14,"width":2,
     "mana":[55,80,110],"cooldown":[24,28,32],
@@ -241,7 +241,7 @@
   },
   {
     "id":"hn_nguyet_than_cu_chuong","name":"Nguyệt Thần Cự Chưởng",
-    "info":"Phóng chưởng lực khổng lồ theo đường vòng cung, nổ khi chạm mục tiêu. Dùng sprite quyền ảnh áp lực của engine; chưa có bàn tay năm ngón riêng.",
+    "info":"Tụ chưởng ảnh năm ngón màu kem vàng rồi phóng theo đường vòng cung, nổ khi chạm mục tiêu. Cấp cao thêm chưởng bồi nhỏ; không phá địa hình.",
     "school":"huyen_nguyet","tier":"god","plan":"area","role":"Area","scale":"Light","element":"School",
     "forms":["Ki","Palm","Area","Charge"],"accepts":["Down","Scattered"],"worthy":true,"radius":3.5,"range":12,"need":2,
     "mana":[58,84,115],"cooldown":[25,30,35],
@@ -249,7 +249,7 @@
   },
   {
     "id":"hn_thien_mac_nguyet_nhan","name":"Thiên Mạc Nguyệt Nhận",
-    "info":"Bay lên rồi phóng năm nguyệt nhận vòng cung xuống vùng địch, có thời gian bay để né. Cấp II–III thêm nhát bồi; không tạo hố.",
+    "info":"Tụ thiên màn năm nguyệt nhận, bay lên rồi phóng từ hàng trăng trên cao theo đường vòng cung xuống địch. Cấp II–III thêm nhát bồi; không tạo hố.",
     "school":"huyen_nguyet","tier":"god","plan":"area","role":"Area","scale":"Light","element":"School",
     "forms":["Ki","Projectile","Aerial","Area","Charge"],"accepts":["Scattered","Thrown","Down"],"worthy":true,"radius":4,"range":12,"need":2,
     "mana":[58,86,118],"cooldown":[26,31,36],

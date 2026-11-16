@@ -607,6 +607,7 @@ namespace Sakuga
                 SafeAbort(m);
                 Restore(m, true);
             }
+            SchoolStyle.Clear();
             _list.Clear();
             _byId.Clear();
             _active = 0;

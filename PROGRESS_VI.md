@@ -2,6 +2,10 @@
 
 Mốc đầu tiên đưa lên Git: **1.1.0**.
 
+## 1.1.9 — sáu tuyệt kỹ God, bước hình ảnh
+
+Chín trăng tụ sau lưng, phóng từ vòng cung; cự chưởng có sprite năm ngón; Thiên Mạc có hàng trăng trên cao; Khai Thiên có trăng tụ và hai lớp dư ảnh; Trụy Thế có đuôi trăng/mảnh vỡ; Vĩnh Dạ có dải phản chiếu và xung quang bốn nhịp. Giữ sát thương/mana/cooldown/planner, không thêm Actor scan. Sprite cache, particle held kiểm tra generation và dọn ở End/Clear. Đây chưa phải toàn bộ cơ chế mới trong đề xuất: phân phối đa mục tiêu, đợt mưa theo đội hình, đổi dạng nguyệt thực và đòn kết bổ sung còn lại. Offline đạt; chưa kiểm chứng gameplay/FPS.
+
 ## 1.1.8 — VFX trăng kem–tím
 
 Bộ VFX trăng kem–tím, sprite crescent/trăng tròn/sao bốn cánh cache hữu hạn; nối vào SchoolStyle và kiếm khí. Chi tiết và giới hạn tại [tài liệu VFX](Docs/HUYEN_NGUYET_VFX_VI.md). Không đổi planner, sát thương, cooldown hoặc mana. Kiểm tra offline đạt; chưa kiểm tra gameplay/FPS.

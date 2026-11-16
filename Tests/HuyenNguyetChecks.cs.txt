@@ -103,6 +103,17 @@ namespace Sakuga
             if(LunarGodRules.MaxActive!=6 || LunarGodRules.MaxTargets!=24 || LunarGodRules.MaxCandidates!=64 || LunarGodRules.DomainPulses!=4)
                 throw new Exception("Lunar God runtime budget changed");
             var pixels=LunarGodHazard.BuildMoonCanvas();
+            var palm=MoonArt.BuildPalm();
+            int palmPixels=0;
+            foreach(var c in palm.Px)if(c.a>0)palmPixels++;
+            if(palm.W!=49 || palm.H!=65 || palmPixels<600 || palm.Px[0].a!=0)
+                throw new Exception("Lunar open palm sprite invalid");
+            if(LunarGodVisual.Kind("hn_cuu_nguyet_lien_chau")!=1 ||
+                LunarGodVisual.Kind("hn_nhat_nguyet_khai_thien")!=4 || LunarGodVisual.Kind("dragon_wave")!=0)
+                throw new Exception("God visual leaked into existing schools");
+            for(int i=0;i<9;i++)
+                if(LunarGodVisual.HaloOffset(i).sqrMagnitude>20)
+                    throw new Exception("Moon halo exceeded visual bounds");
             var crescent=MoonArt.BuildCrescent(26);
             var star=MoonArt.BuildStar();
             int colored=0,opaque=0;

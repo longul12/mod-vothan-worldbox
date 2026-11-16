@@ -1,6 +1,6 @@
 # Combat Gods
 
-Nhánh phát triển Việt hóa/bổ sung **Võ Đạo Chiến Thần 1.1.8**, dựa trên mod của **Turbo**.
+Nhánh phát triển Việt hóa/bổ sung **Võ Đạo Chiến Thần 1.1.9**, dựa trên mod của **Turbo**.
 
 Huyền Nguyệt: [bộ màu và VFX trăng kem–tím, ảnh thử và cách kiểm tra](Docs/HUYEN_NGUYET_VFX_VI.md).
 

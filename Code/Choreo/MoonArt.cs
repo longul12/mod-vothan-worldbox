@@ -11,7 +11,47 @@ namespace Sakuga
             new Color32(255,241,201,255), new Color32(255,253,240,255)
         };
         private static readonly Sprite[][] Crescents = new Sprite[3][];
-        private static Sprite _moon, _star;
+        private static Sprite _moon, _star, _palm;
+        private static Sprite[] _moonFrames,_palmFrames;
+        public static readonly Color Rose=new Color(.94f,.55f,.84f);
+        internal static Canvas BuildPalm()
+        {
+            var c=new Canvas(49,65);
+            for(int y=0;y<65;y++)for(int x=0;x<49;x++)
+            {
+                bool body=x>=12 && x<=36 && y>=10 && y<=36;
+                bool wrist=x>=17 && x<=31 && y>=3 && y<16;
+                bool thumb=(x-9)*(x-9)/36f+(y-26)*(y-26)/100f<1;
+                bool finger=false;
+                for(int i=0;i<4;i++)
+                {
+                    int cx=15+i*6,top=i==1?60:i==2?57:i==0?53:48;
+                    if(Mathf.Abs(x-cx)<=2 && y>=32 && y<=top)finger=true;
+                }
+                if(!body && !wrist && !thumb && !finger)continue;
+                int ci=x%6==0?1:x<19?5:y<20?2:4;
+                // Two broad palm creases, not fine noise.
+                if(body && ((y==24 && x>18) || (y==31 && x<30)))ci=3;
+                c.Px[y*c.W+x]=Ramp[ci];
+            }
+            return c;
+        }
+        public static Sprite[] MoonFrames=>_moonFrames??(_moonFrames=new[]{Moon});
+        public static Sprite[] PalmFrames=>_palmFrames??(_palmFrames=new[]{
+            _palm??(_palm=BuildPalm().ToSprite("hn_open_palm",new Vector2(.5f,.5f)))});
+        public static void Shatter(Vector2 at,float px,float radius,int count=6)
+        {
+            if(!Kit.Visible(at,.5f))return;
+            count=Mathf.Clamp(count,3,8);
+            for(int i=0;i<count;i++)
+            {
+                float a=i*Mathf.PI*2/count+.25f;
+                Vector2 d=new Vector2(Mathf.Cos(a),Mathf.Sin(a));
+                Particle p=Fx.Spawn(Blade(false),at+d*radius*.2f,px*.35f,.45f,FxLayer.Top,22);
+                if(p!=null){p.Rot=a*Mathf.Rad2Deg;p.Spin=(i%2==0?1:-1)*120;
+                    p.Moving(d*radius*2,0,2).Color(Color.white,Fx.WithA(Rose,.5f),Fx.WithA(Rose,0));}
+            }
+        }
         internal static Canvas BuildCrescent(int radius)
         {
             radius=Mathf.Clamp(radius,6,26);

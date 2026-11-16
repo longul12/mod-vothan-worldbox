@@ -840,7 +840,10 @@ namespace Sakuga
             float ang = Mathf.Atan2(Dir.y, Dir.x) * Mathf.Rad2Deg;
             if (_head == null || !_head.Alive)
             {
-                _head = Fx.Spawn(HeadSprite(s), at, px, 1f, FxLayer.Top, 12);
+                int lunar=LunarGodVisual.Kind(By?.Tech?.Id);
+                float artScale=lunar==1 && Spec.Kind==ShotKind.Orb?s*.085f:
+                    lunar==2 && Spec.Kind==ShotKind.Fist?s*.28f:1;
+                _head = Fx.Spawn(HeadSprite(s), at, px*artScale, 1f, FxLayer.Top, 12);
                 if (_head != null)
                 {
                     _head.Held = true;
@@ -875,7 +878,9 @@ namespace Sakuga
                         break;
                 }
                 _head.Grad = null;
-                _head.R.color = Spec.Kind == ShotKind.SwordWave && (Spec.LunarCrescent || Hue.School == School.HuyenNguyet) ? Fx.WithA(Color.white,Hostile?1f:.6f)
+                if(LunarGodVisual.Kind(By?.Tech?.Id)==2 && Spec.Kind==ShotKind.Fist)_head.Rot=ang-90;
+                _head.R.color = (Spec.Kind == ShotKind.SwordWave && (Spec.LunarCrescent || Hue.School == School.HuyenNguyet) ||
+                    LunarGodVisual.Kind(By?.Tech?.Id)==1 || LunarGodVisual.Kind(By?.Tech?.Id)==2) ? Fx.WithA(Color.white,Hostile?1f:.6f)
                     : Spec.Kind == ShotKind.Boulder || Spec.Kind == ShotKind.Stone ? Color.Lerp(Fx.SoilColor(Combat.TileAt(Start)), Color.white, 0.15f)
                     : Spec.Kind == ShotKind.Arrow ? Color.Lerp(new Color(0.86f, 0.8f, 0.68f, 1f), Hue.Core, 0.3f)
                     : Spec.Kind == ShotKind.Javelin ? new Color(0.66f, 0.48f, 0.3f, 1f)
@@ -955,6 +960,11 @@ namespace Sakuga
                 {
                     Particle ghost=Fx.Spawn(MoonArt.Blade(true),at,px,.24f,FxLayer.Top,9);
                     if(ghost!=null){ghost.Rot=ang;ghost.Color(Fx.WithA(Hue.Ghost,.28f),Fx.WithA(Hue.Edge,0f));}
+                    if(By?.Tech?.Id=="hn_nhat_nguyet_khai_thien")
+                    {
+                        Particle echo=Fx.Spawn(MoonArt.Blade(true),at-Dir*1.2f,px*.92f,.3f,FxLayer.Top,8);
+                        if(echo!=null){echo.Rot=ang;echo.Color(Fx.WithA(MoonArt.Rose,.14f),Fx.WithA(Hue.Edge,0));}
+                    }
                 }
                 lastAt = Vector2.Lerp(lastAt, at, 0f);
                 switch (Spec.Kind)
@@ -999,6 +1009,9 @@ namespace Sakuga
 
         private Sprite[] HeadSprite(float s)
         {
+            int lunar=LunarGodVisual.Kind(By?.Tech?.Id);
+            if(lunar==1 && Spec.Kind==ShotKind.Orb)return MoonArt.MoonFrames;
+            if(lunar==2 && Spec.Kind==ShotKind.Fist)return MoonArt.PalmFrames;
             switch (Spec.Kind)
             {
                 case ShotKind.Bullet:
@@ -1292,7 +1305,16 @@ namespace Sakuga
                     ShotSpec s = count == 1 ? spec : (ShotSpec)spec.MemberwiseCloneShot();
                     s.Delay = spec.Delay + i * gap;
                     Actor tgt = m.V != null && m.VOk ? m.V : null;
-                    Shot sh = Shots.Fire(m.A, m, at, Choreo.Rotate(aim, off), tgt, Vector2.zero, s, hue);
+                    Vector2 muzzle=at;
+                    if(m.Tech?.Id=="hn_cuu_nguyet_lien_chau")
+                        muzzle=Choreo.BodyAt(m.A,.65f)+LunarGodVisual.HaloOffset(i)*m.Kk;
+                    if(m.Tech?.Id=="hn_thien_mac_nguyet_nhan")
+                    {
+                        muzzle=Choreo.BodyAt(m.A,.65f)+new Vector2((i-(count-1)*.5f)*1.5f,4.5f)*m.Kk;
+                        if(m.Vis && tgt!=null)Fx.Ring(tgt.current_position,m.Px,.4f,4,8,1,1,FxLayer.Ground,5,
+                            Art.Ground,1,Fx.WithA(hue.Edge,.6f),Fx.WithA(hue.Edge,0));
+                    }
+                    Shot sh = Shots.Fire(m.A, m, muzzle, Choreo.Rotate(aim, off), tgt, Vector2.zero, s, hue);
                     if (sh != null && tgt != null && off != 0f)
                     {
                         sh.Dir = Choreo.Rotate(sh.Dir, off).normalized;   // (a shot at a target is aimed at its feet: the fan is turned from there)
