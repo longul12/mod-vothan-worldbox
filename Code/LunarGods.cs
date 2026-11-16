@@ -88,7 +88,7 @@ namespace Sakuga
             {
                 if(_moon==null || !_moon.Alive || _moon.Gen!=_generation)
                 {
-                    _moon=Fx.Spawn(MoonSprite(),body,(_domain?2.4f:3.5f)/39f,1,FxLayer.Top,23);
+                    _moon=Fx.Spawn(MoonSprite(),body,(_domain?2.4f:3.5f)/MoonArt.FullRadius,1,FxLayer.Top,23);
                     if(_moon!=null){_moon.Held=true;_generation=_moon.Gen;}
                 }
                 if(_moon!=null && _moon.Gen==_generation){_moon.Pos=body;_moon.R.color=Color.white;}
@@ -101,7 +101,7 @@ namespace Sakuga
                     if(!_domain && Age>LunarGodRules.Warning)
                     {
                         Kit.Line(body,body+new Vector2(1,3),Px,.15f,2,FxLayer.Top,21,Fx.WithA(Color.white,.5f),Fx.WithA(Hue.Edge,0));
-                        Fx.Spawn(MoonArt.Moon,body+new Vector2(.4f,1),3.5f/39,.25f,FxLayer.Top,20)?
+                        Fx.Spawn(MoonArt.Moon,body+new Vector2(.4f,1),3.5f/MoonArt.FullRadius,.25f,FxLayer.Top,20)?
                             .Color(Fx.WithA(Hue.Ghost,.25f),Fx.WithA(Hue.Edge,0));
                     }
                     if(_domain)

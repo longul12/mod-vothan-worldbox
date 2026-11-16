@@ -2,6 +2,10 @@
 
 Mốc đầu tiên đưa lên Git: **1.1.0**.
 
+## 1.1.10 — sprite procedural theo mẫu trăng đã duyệt
+
+Trăng tròn trắng ngà/xám với mảng maria, crater và halo xanh alpha ba bậc; trăng khuyết kem vàng, bóng đào/hồng tím, viền lam. Các chiêu đang dùng MoonArt nhận hình mới tự động: nguyệt nhận, chín nguyệt cầu, Trụy Thế, Vĩnh Dạ và hình tụ lực. Không tạo kỹ thuật/trait mới, không sửa damage, planner, cooldown, mana hoặc hitbox. Đổi hệ số scale hình để giữ bán kính đĩa trăng khi thêm halo. Cache sprite giữ hữu hạn. Có ảnh xuất trực tiếp từ pixel C# trong Docs/Previews/moon-native, không phải ảnh AI.
+
 ## 1.1.9 — sáu tuyệt kỹ God, bước hình ảnh
 
 Chín trăng tụ sau lưng, phóng từ vòng cung; cự chưởng có sprite năm ngón; Thiên Mạc có hàng trăng trên cao; Khai Thiên có trăng tụ và hai lớp dư ảnh; Trụy Thế có đuôi trăng/mảnh vỡ; Vĩnh Dạ có dải phản chiếu và xung quang bốn nhịp. Giữ sát thương/mana/cooldown/planner, không thêm Actor scan. Sprite cache, particle held kiểm tra generation và dọn ở End/Clear. Đây chưa phải toàn bộ cơ chế mới trong đề xuất: phân phối đa mục tiêu, đợt mưa theo đội hình, đổi dạng nguyệt thực và đòn kết bổ sung còn lại. Offline đạt; chưa kiểm chứng gameplay/FPS.

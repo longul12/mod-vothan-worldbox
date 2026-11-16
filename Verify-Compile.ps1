@@ -55,6 +55,41 @@ if ($CheckSettings) {
         if(!$emitted.Success){throw 'Could not emit school checks'}
         $testAssembly=[Reflection.Assembly]::Load($stream.ToArray())
         $testAssembly.GetType('Sakuga.HuyenNguyetChecks').GetMethod('Run').Invoke($null,@($PSScriptRoot)) | Out-Null
+        if($env:SAKUGA_ART_PREVIEW) {
+            # Optional offline export from actual C# builders; no Unity texture API calls.
+            Add-Type -AssemblyName System.Drawing
+            $previewRoot=[IO.Path]::GetFullPath($env:SAKUGA_ART_PREVIEW)
+            [IO.Directory]::CreateDirectory($previewRoot) | Out-Null
+            $artType=$testAssembly.GetType('Sakuga.MoonArt')
+            foreach($entry in @(@('full-moon','BuildFullMoon'),@('crescent','BuildCrescent'))) {
+                $method=$artType.GetMethod($entry[1],[Reflection.BindingFlags]'NonPublic,Static')
+                $arguments=if($entry[1] -eq 'BuildCrescent'){@([int]26)}else{@()}
+                $canvas=$method.Invoke($null,$arguments)
+                $bitmap=New-Object Drawing.Bitmap($canvas.W,$canvas.H)
+                try {
+                    for($y=0;$y -lt $canvas.H;$y++){for($x=0;$x -lt $canvas.W;$x++){
+                        $pixel=$canvas.Px[$y*$canvas.W+$x]
+                        $bitmap.SetPixel($x,$canvas.H-1-$y,[Drawing.Color]::FromArgb($pixel.a,$pixel.r,$pixel.g,$pixel.b))
+                    }}
+                    $bitmap.Save((Join-Path $previewRoot ($entry[0]+'.png')),[Drawing.Imaging.ImageFormat]::Png)
+                } finally {$bitmap.Dispose()}
+            }
+            $sheet=New-Object Drawing.Bitmap(720,400)
+            $graphics=[Drawing.Graphics]::FromImage($sheet)
+            try {
+                $graphics.Clear([Drawing.Color]::FromArgb(12,14,38))
+                $graphics.InterpolationMode=[Drawing.Drawing2D.InterpolationMode]::NearestNeighbor
+                $graphics.PixelOffsetMode=[Drawing.Drawing2D.PixelOffsetMode]::Half
+                $full=[Drawing.Image]::FromFile((Join-Path $previewRoot 'full-moon.png'))
+                $crescent=[Drawing.Image]::FromFile((Join-Path $previewRoot 'crescent.png'))
+                try {
+                    $graphics.DrawImage($full,25,25,324,324)
+                    $graphics.DrawImage($crescent,400,50,275,275)
+                    $sheet.Save((Join-Path $previewRoot 'comparison.png'),[Drawing.Imaging.ImageFormat]::Png)
+                } finally {$full.Dispose();$crescent.Dispose()}
+            } finally {$graphics.Dispose();$sheet.Dispose()}
+            "Native moon pixels exported: $previewRoot"
+        }
     } finally {$stream.Dispose()}
     'Huyen Nguyet checks passed: 33 recipes + 3 native techniques = 36; God budgets, procedural moon pixels, warning/fall rules, fixed nine-orb volley, legacy scaling, grants, parser and icons.'
      $modRoot=$PSScriptRoot

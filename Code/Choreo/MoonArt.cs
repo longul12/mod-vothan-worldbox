@@ -11,6 +11,12 @@ namespace Sakuga
             new Color32(255,241,201,255), new Color32(255,253,240,255)
         };
         private static readonly Sprite[][] Crescents = new Sprite[3][];
+        public const float FullRadius=33f;
+        private static readonly Color32[] Silver={
+            new Color32(255,255,247,255),new Color32(237,236,225,255),
+            new Color32(211,211,204,255),new Color32(178,180,178,255),
+            new Color32(150,157,161,255)
+        };
         private static Sprite _moon, _star, _palm;
         private static Sprite[] _moonFrames,_palmFrames;
         public static readonly Color Rose=new Color(.94f,.55f,.84f);
@@ -60,10 +66,22 @@ namespace Sakuga
             {
                 float dx=x-mid,dy=y-mid,d=Mathf.Sqrt(dx*dx+dy*dy);
                 float cut=Mathf.Sqrt((dx+radius*.4f)*(dx+radius*.4f)+dy*dy);
-                if(d>radius || cut<radius*.91f)continue;
+                if(d>radius || cut<radius*.91f)
+                {
+                    if(d>radius && d<radius+1 && cut>radius*.91f)
+                        c.Px[y*c.W+x]=new Color32(121,145,239,65);
+                    continue;
+                }
                 float edge=radius-d,inner=cut-radius*.91f;
-                int ci=edge<1?0:inner<1.4f?2:edge<2.5f?5:dy>0?4:3;
-                c.Px[y*c.W+x]=Ramp[ci];
+                float q=inner/Mathf.Max(1,inner+edge);
+                Color32 color=edge<1.1f?new Color32(107,123,224,255):
+                    q<.26f?new Color32(255,254,211,255):
+                    q<.55f?new Color32(255,239,182,255):
+                    q<.8f?new Color32(255,206,192,255):new Color32(242,181,207,255);
+                float ux=Mathf.Floor(dx/2)*2/radius,uy=Mathf.Floor(dy/2)*2/radius;
+                if(edge>1.5f && q>.48f && (Patch(ux,uy,.52f,.48f,.18f,.25f) ||
+                    Patch(ux,uy,.76f,-.15f,.14f,.2f)))color=new Color32(190,151,214,255);
+                c.Px[y*c.W+x]=color;
             }
             return c;
         }
@@ -72,17 +90,36 @@ namespace Sakuga
             var c=new Canvas(81,81);
             for(int y=0;y<81;y++)for(int x=0;x<81;x++)
             {
-                float dx=(x-40)/39f,dy=(y-40)/39f,r=dx*dx+dy*dy;
-                if(r>1)continue;
-                float light=.68f-.17f*dx+.12f*dy;
-                // Broad crater clusters, not random speckles: clear even at game scale.
-                if((dx+.32f)*(dx+.32f)+(dy-.12f)*(dy-.12f)<.045f ||
-                   (dx-.25f)*(dx-.25f)+(dy+.35f)*(dy+.35f)<.025f ||
-                   (dx-.38f)*(dx-.38f)+(dy-.35f)*(dy-.35f)<.065f)light-=.24f;
-                int ci=r>.94f?1:r>.84f?5:light<.49f?2:light<.66f?3:light<.8f?4:5;
-                c.Px[y*81+x]=Ramp[ci];
+                float dx=x-40,dy=y-40,d=Mathf.Sqrt(dx*dx+dy*dy);
+                if(d>39)continue;
+                if(d>FullRadius)
+                {
+                    byte alpha=(byte)(d<35?120:d<37?65:25);
+                    c.Px[y*81+x]=new Color32(130,191,225,alpha);continue;
+                }
+                float ux=Mathf.Floor(dx/2)*2/FullRadius,uy=Mathf.Floor(dy/2)*2/FullRadius;
+                int shade=1;
+                if(Patch(ux,uy,-.28f,.4f,.38f,.22f) || Patch(ux,uy,.12f,.13f,.25f,.32f) ||
+                   Patch(ux,uy,.45f,-.06f,.24f,.23f) || Patch(ux,uy,-.48f,-.32f,.2f,.28f))shade=3;
+                if(Patch(ux,uy,.03f,-.23f,.3f,.17f) || Patch(ux,uy,.42f,.43f,.15f,.14f))shade=2;
+                if(Patch(ux,uy,-.42f,-.48f,.11f,.12f))shade=4;
+                if(Patch(ux,uy,-.1f,.53f,.25f,.13f) || Patch(ux,uy,.3f,.22f,.32f,.13f))shade=3;
+                if(Patch(ux,uy,-.28f,.13f,.17f,.13f) || Patch(ux,uy,.21f,-.1f,.13f,.1f))shade=1;
+                if(Patch(ux,uy,-.13f,-.40f,.19f,.10f))shade=2;
+                if(Patch(ux,uy,-.47f,.25f,.12f,.08f) || Patch(ux,uy,.53f,-.36f,.11f,.09f))shade=2;
+                if(Patch(ux,uy,-.06f,.38f,.11f,.08f) || Patch(ux,uy,.35f,.08f,.09f,.12f))shade=1;
+                if(Patch(ux,uy,-.38f,-.22f,.14f,.12f) && !Patch(ux,uy,-.36f,-.23f,.09f,.07f))shade=2;
+                if(Patch(ux,uy,.1f,-.12f,.11f,.09f) && !Patch(ux,uy,.1f,-.12f,.06f,.05f))shade=0;
+                if(Patch(ux,uy,.18f,-.50f,.2f,.18f) && !Patch(ux,uy,.18f,-.50f,.14f,.12f))shade=0;
+                if(d>FullRadius-2.4f)shade=0;
+                c.Px[y*81+x]=Silver[shade];
             }
             return c;
+        }
+        private static bool Patch(float x,float y,float cx,float cy,float rx,float ry)
+        {
+            float dx=(x-cx)/rx,dy=(y-cy)/ry;
+            return dx*dx+dy*dy<1+.12f*Mathf.Sin(x*31+y*17);
         }
         internal static Canvas BuildStar()
         {

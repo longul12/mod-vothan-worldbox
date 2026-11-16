@@ -841,7 +841,7 @@ namespace Sakuga
             if (_head == null || !_head.Alive)
             {
                 int lunar=LunarGodVisual.Kind(By?.Tech?.Id);
-                float artScale=lunar==1 && Spec.Kind==ShotKind.Orb?s*.085f:
+                float artScale=lunar==1 && Spec.Kind==ShotKind.Orb?s*(3.315f/MoonArt.FullRadius):
                     lunar==2 && Spec.Kind==ShotKind.Fist?s*.28f:1;
                 _head = Fx.Spawn(HeadSprite(s), at, px*artScale, 1f, FxLayer.Top, 12);
                 if (_head != null)

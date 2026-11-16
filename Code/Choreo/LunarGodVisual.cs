@@ -45,7 +45,7 @@ namespace Sakuga
                 if(_parts[i]==null || !_parts[i].Alive || _parts[i].Gen!=_gen[i])
                 {
                     Sprite sprite=_kind==2?MoonArt.PalmFrames[0]:_kind==3?MoonArt.Blade(false)[0]:MoonArt.Moon;
-                    float scale=_kind==1?.65f/39:_kind==2?m.Px*.6f:_kind==3?m.Px*.8f:2.1f/39;
+                    float scale=_kind==1?.65f/MoonArt.FullRadius:_kind==2?m.Px*.6f:_kind==3?m.Px*.8f:2.1f/MoonArt.FullRadius;
                     _parts[i]=Fx.Spawn(sprite,at,scale*m.Kk,1,FxLayer.Top,18);
                     if(_parts[i]!=null){_parts[i].Held=true;_gen[i]=_parts[i].Gen;}
                 }

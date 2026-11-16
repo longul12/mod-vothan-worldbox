@@ -1,5 +1,25 @@
 # Huyền Nguyệt — VFX 1.1.8
 
+## 1.1.10 — chuyển mẫu đã duyệt sang C#
+
+MoonArt.BuildFullMoon vẽ trăng bạc trắng/xám với mảng bóng không ngẫu nhiên, viền sáng và halo xanh ba bậc alpha. BuildCrescent dùng phần khoét lệch, kem vàng phía trong, đào/hồng tím phía ngoài, mảng tím và viền lam. Sprite sinh một lần rồi cache, không tải ảnh AI hoặc xử lý pixel mỗi frame. Trăng khuyết mặc định quay phần lồi sang phải; renderer xoay theo hướng bay.
+
+Áp dụng vào toàn bộ người dùng MoonArt sẵn có; không thêm trait/chiêu mới. Bán kính đĩa trăng là 33px trong canvas 81px để chừa halo, scale renderer bù tương ứng, không đổi hitbox.
+
+![Pixel thực từ C#](Previews/moon-native/comparison.png)
+
+Ảnh trên xuất trực tiếp từ Canvas C#, phóng nearest-neighbour; không phải gameplay capture hoặc ảnh mô phỏng AI. Hai PNG full-moon.png và crescent.png cùng thư mục có nền alpha.
+
+Xuất lại bằng PowerShell tại root mod (chỉ dùng offline):
+
+```powershell
+$env:SAKUGA_ART_PREVIEW = Join-Path $PWD 'Docs/Previews/moon-native'
+powershell -NoProfile -ExecutionPolicy Bypass -File ./Verify-Compile.ps1 -CheckSettings
+Remove-Item Env:SAKUGA_ART_PREVIEW
+```
+
+Verifier chỉ xuất khi biến môi trường trên được đặt; không gọi Unity Texture API. Đã xem/chỉnh ba lượt từ pixel native, kiểm tra palette ở cả ba kích thước, halo/alpha và 36 thế. Chưa xác minh trực tiếp trong WorldBox.
+
 ## Cập nhật 1.1.9 — tuyệt kỹ God
 
 - Cửu Nguyệt: chín trăng giữ bằng pool sau lưng lúc tụ lực; trăng lần lượt tắt theo nhịp phóng, projectile xuất phát từ vòng cung. Vẫn theo target/homing native, chưa phân phối đa mục tiêu như HomingSwarm.

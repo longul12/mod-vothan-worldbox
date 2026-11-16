@@ -124,6 +124,27 @@ namespace Sakuga
                 throw new Exception("Moon sprite silhouette/palette invalid");
             if(pixels.W!=81 || pixels.H!=81 || pixels.Px[0].a!=0 || pixels.Px[40*81+40].a!=255)
                 throw new Exception("Moon canvas transparency/size invalid");
+            int silver=0,halo=0;
+            foreach(var c in pixels.Px)
+            {
+                if(c.a>0 && c.a<255 && c.b>c.r)halo++;
+                if(c.a==255 && System.Math.Abs((int)c.r-c.b)<15)silver++;
+            }
+            if(silver<2000 || halo<500 || MoonArt.FullRadius!=33)
+                throw new Exception("Approved silver moon or blue halo missing");
+            foreach(int radius in new[]{9,14,26})
+            {
+                var blade=MoonArt.BuildCrescent(radius);int cream=0,pink=0,blue=0;
+                foreach(var c in blade.Px)
+                {
+                    if(c.a==0)continue;
+                    if(c.r>240 && c.g>220 && c.b<220)cream++;
+                    if(c.r>230 && c.g<220 && c.b>180)pink++;
+                    if(c.b>c.r)blue++;
+                }
+                if(cream<5 || pink<2 || blue<5)
+                    throw new Exception("Approved crescent palette missing at radius "+radius);
+            }
             if(ForgeInterpreter.ShotCount(ForgeStep.Parse("shot Orb 0.23 count=9 fixed=1"),1.6f)!=9 ||
                ForgeInterpreter.ShotCount(ForgeStep.Parse("shot Orb 0.5 count=3"),1.6f)!=5)
                 throw new Exception("Fixed nine-orb volley or legacy scaling broken");
