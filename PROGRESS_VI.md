@@ -2,6 +2,10 @@
 
 Mốc đầu tiên đưa lên Git: **1.1.0**.
 
+## 1.1.8 — VFX trăng kem–tím
+
+Bộ VFX trăng kem–tím, sprite crescent/trăng tròn/sao bốn cánh cache hữu hạn; nối vào SchoolStyle và kiếm khí. Chi tiết và giới hạn tại [tài liệu VFX](Docs/HUYEN_NGUYET_VFX_VI.md). Không đổi planner, sát thương, cooldown hoặc mana. Kiểm tra offline đạt; chưa kiểm tra gameplay/FPS.
+
 ## 1.1.7 — điều kiện/target gốc cho Huyền Nguyệt
 
 Theo yêu cầu 2026-11-16: không thêm các cổng thi triển riêng. Nguyệt Khuyết dùng cùng hàm planner với Sword Wave, bỏ ngưỡng máu 15% và đồng hồ hồi riêng; Brain.Execute giữ toàn bộ mana/cooldown. Nhập cooldown cũ vào Fighter một lần. Vĩnh Dạ dùng chung Forge self-area quanh chủ; Trụy Thế dùng PickArea need=1 như second_sun và lấy điểm thả theo mục tiêu hiện tại ở lúc release. 33 thế Forge giữ các planner/reaktion sẵn có. Không đổi VFX/sát thương hoặc tuyên bố hết lag. Kiểm tra offline hai mod; CWP 0.16.1 đồng bộ tooltip/tài liệu.

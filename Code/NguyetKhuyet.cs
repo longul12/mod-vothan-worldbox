@@ -59,7 +59,6 @@ namespace Sakuga
             if(m==null)return false;
             // Explicit palette keeps this school's signature white/silver even at high tiers.
             m.Hue=Hue.For(Tiers.Of(a),School.HuyenNguyet,p.Level);
-            m.Hue.Core=Color.white;m.Hue.Main=new Color(.92f,.97f,1f);m.Hue.Edge=new Color(.65f,.84f,1f);
             m.Face(p.Dir);
             m.Charge(.3f,ChargeStyle.Palms,1.6f);
             m.Shoot(new ShotSpec {Kind=ShotKind.SwordWave,Speed=16,Range=12,Size=2.2f,

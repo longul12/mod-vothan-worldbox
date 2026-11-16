@@ -139,6 +139,9 @@ namespace Sakuga
             }
             switch (s.School)
             {
+                case School.HuyenNguyet:
+                    if (Random.value < .25f) MoonArt.Glint(c+r,px,.18f,.18f);
+                    break;
                 case School.IronFist:
                     // sparks and heat off its fists and shoulders, rising
                     Kit.Ember(c + r, px, Random.Range(0.25f, 0.45f), new Vector2(Random.Range(-6f, 6f), Random.Range(14f, 28f)) * px, Color.Lerp(h.Main, new Color(1f, 0.6f, 0.2f, 1f), 0.4f));
@@ -243,6 +246,10 @@ namespace Sakuga
             Vector2 side = new Vector2(-n.y, n.x);
             switch (s.School)
             {
+                case School.HuyenNguyet:
+                    Kit.Line(from,to,px,.18f,1,FxLayer.Top,14,Fx.WithA(h.Ghost,.5f),Fx.WithA(h.Edge,0));
+                    // Native trail cadence; no additional world scan or actor state.
+                    break;
                 case School.IronFist:
                     // a red speed blur, dust kicked up behind
                     Kit.Line(from, to, px, 0.12f, 3, FxLayer.Top, 13, Fx.WithA(h.Main, 0.75f), Fx.WithA(h.Edge, 0f));
@@ -348,6 +355,11 @@ namespace Sakuga
             Vector2 side = new Vector2(-d.y, d.x);
             switch (school)
             {
+                case School.HuyenNguyet:
+                    MoonArt.Glint(at,px,.7f*w*k,.22f);
+                    Fx.Ring(at,px,.3f,2,10*w*k,1,1,layer,19,1f,2f,
+                        Fx.WithA(h.Edge,.8f),Fx.WithA(h.GhostEnd,0));
+                    break;
                 case School.IronFist:
                     {
                         // the fist's print flashes on the body, and a ring of force goes out from it
@@ -483,6 +495,16 @@ namespace Sakuga
             float rr = Mathf.Lerp(10f, 4f, t) * px * k;
             switch (school)
             {
+                case School.HuyenNguyet:
+                    Fx.Spawn(MoonArt.Blade(false),hand,px*k*(.3f+.35f*t),.07f,FxLayer.Top,22)?
+                        .Color(Color.white,Fx.WithA(Color.white,.8f));
+                    if(Random.value<.25f)
+                    {
+                        Vector2 o=Random.insideUnitCircle.normalized*rr;
+                        Kit.Line(hand+o,hand+o*.45f,px,.12f,1,FxLayer.Top,20,
+                            Fx.WithA(h.Ghost,.8f),Fx.WithA(h.Core,0));
+                    }
+                    break;
                 case School.IronFist:
                     {
                         // the fist glows red-hot and sheds sparks; heat ripples off it

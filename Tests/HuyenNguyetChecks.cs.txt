@@ -103,6 +103,14 @@ namespace Sakuga
             if(LunarGodRules.MaxActive!=6 || LunarGodRules.MaxTargets!=24 || LunarGodRules.MaxCandidates!=64 || LunarGodRules.DomainPulses!=4)
                 throw new Exception("Lunar God runtime budget changed");
             var pixels=LunarGodHazard.BuildMoonCanvas();
+            var crescent=MoonArt.BuildCrescent(26);
+            var star=MoonArt.BuildStar();
+            int colored=0,opaque=0;
+            foreach(var color in crescent.Px)
+                if(color.a>0){opaque++;if(color.r!=color.b)colored++;}
+            if(crescent.W!=55 || crescent.H!=55 || opaque<150 || colored<100 ||
+               crescent.Px[27*55+27].a!=0 || star.Px[12*25+12].a!=255 || star.Px[0].a!=0)
+                throw new Exception("Moon sprite silhouette/palette invalid");
             if(pixels.W!=81 || pixels.H!=81 || pixels.Px[0].a!=0 || pixels.Px[40*81+40].a!=255)
                 throw new Exception("Moon canvas transparency/size invalid");
             if(ForgeInterpreter.ShotCount(ForgeStep.Parse("shot Orb 0.23 count=9 fixed=1"),1.6f)!=9 ||

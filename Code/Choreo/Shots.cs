@@ -875,7 +875,8 @@ namespace Sakuga
                         break;
                 }
                 _head.Grad = null;
-                _head.R.color = Spec.Kind == ShotKind.Boulder || Spec.Kind == ShotKind.Stone ? Color.Lerp(Fx.SoilColor(Combat.TileAt(Start)), Color.white, 0.15f)
+                _head.R.color = Spec.Kind == ShotKind.SwordWave && (Spec.LunarCrescent || Hue.School == School.HuyenNguyet) ? Fx.WithA(Color.white,Hostile?1f:.6f)
+                    : Spec.Kind == ShotKind.Boulder || Spec.Kind == ShotKind.Stone ? Color.Lerp(Fx.SoilColor(Combat.TileAt(Start)), Color.white, 0.15f)
                     : Spec.Kind == ShotKind.Arrow ? Color.Lerp(new Color(0.86f, 0.8f, 0.68f, 1f), Hue.Core, 0.3f)
                     : Spec.Kind == ShotKind.Javelin ? new Color(0.66f, 0.48f, 0.3f, 1f)
                     : Spec.Kind == ShotKind.Fist ? Color.Lerp(Hue.Main, Color.white, 0.2f)
@@ -952,8 +953,8 @@ namespace Sakuga
                 _trailT = Spec.LunarCrescent ? 0.07f : Shots.Count > 60 ? 0.05f : 0f;
                 if(Spec.LunarCrescent)
                 {
-                    Particle ghost=Fx.Spawn(ChoreoArt.Crescent(26,9),at,px,.24f,FxLayer.Top,9);
-                    if(ghost!=null){ghost.Rot=ang;ghost.Color(Fx.WithA(Color.white,.22f),Fx.WithA(Hue.Edge,0f));}
+                    Particle ghost=Fx.Spawn(MoonArt.Blade(true),at,px,.24f,FxLayer.Top,9);
+                    if(ghost!=null){ghost.Rot=ang;ghost.Color(Fx.WithA(Hue.Ghost,.28f),Fx.WithA(Hue.Edge,0f));}
                 }
                 lastAt = Vector2.Lerp(lastAt, at, 0f);
                 switch (Spec.Kind)
@@ -1011,7 +1012,7 @@ namespace Sakuga
                 case ShotKind.WindBlade:
                     return new[] { ChoreoArt.Crescent(Mathf.RoundToInt(5f * s), 1) };
                 case ShotKind.SwordWave:
-                    if(Spec.LunarCrescent)return new[]{ChoreoArt.Crescent(26,9)};
+                    if(Spec.LunarCrescent || Hue.School==School.HuyenNguyet)return MoonArt.Blade(Spec.LunarCrescent,s);
                     return new[] { ChoreoArt.Crescent(Mathf.RoundToInt(8f * s), 2) };
                 case ShotKind.LightSword:
                     return new[] { ChoreoArt.LightSword(Mathf.RoundToInt(9f * s)) };

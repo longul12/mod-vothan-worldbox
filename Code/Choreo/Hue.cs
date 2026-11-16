@@ -85,6 +85,15 @@ namespace Sakuga
                     h.GhostEnd = Fx.WithA(Color.Lerp(s, t, 0.5f), 0f);
                     break;
             }
+            if (school == School.HuyenNguyet && e == Element.School)
+            {
+                h.Core = new Color(1f,.99f,.94f);
+                h.Main = new Color(1f,.945f,.788f);
+                h.Edge = new Color(.58f,.545f,.82f);
+                h.Dark = new Color(.20f,.14f,.34f);
+                h.Ghost = new Color(.84f,.74f,.90f,.65f);
+                h.GhostEnd = Fx.WithA(h.Edge,0);
+            }
             if (tier == Tier.None)
             {
                 h.Rim = new Color(1f, 0.9f, 0.7f, 1f);

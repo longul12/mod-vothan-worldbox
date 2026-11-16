@@ -2,6 +2,10 @@
 
 Ngày bắt đầu: 2026-11-05. Đây là phần mở rộng trong Võ Thần; giữ nguồn gốc engine của Turbo.
 
+## 1.1.8 — định hình VFX trăng kem–tím
+
+Thay bộ hình nguyệt nhận, thêm tụ lực/dấu va chạm riêng, trăng tròn đổ bóng theo mảng lớn và gia tốc rơi chỉ ở hình ảnh. Không sửa điều kiện/target ở 1.1.7. Đây là bước đầu hoàn thiện hình ảnh, chưa phải hoạt ảnh riêng cho toàn bộ 36 thế; [xem phạm vi, ảnh thử và cách chỉnh](Docs/HUYEN_NGUYET_VFX_VI.md).
+
 ## 1.1.7 — điều kiện và target theo Võ Thần
 
 - Nguyệt Khuyết và Sword Wave dùng chung `SwordWaveTech.PlanWave`: PickLine, loại mục tiêu quá sát 1,5 ô ngoài Forced, thưởng điểm khi ít nhất 3 địch trên đường. Tầm/vùng đánh/sát thương giữ riêng theo chiêu, không dựng AI mới.
