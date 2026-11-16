@@ -8,7 +8,7 @@ namespace Sakuga
     internal static class MoonSwordApi
     {
         public const string Source="cwp_relic_tongtian_sword", Id="hn_nguyet_khuyet";
-        private const string ReadyKey="sakuga.hn.moon_ready.v1", Migrated="sakuga.hn.moon_migrated.v1";
+        private const string ReadyKey="sakuga.hn.moon_ready.v1", Migrated="sakuga.hn.moon_native_migrated.v2";
         public static bool IsAvailable()=>Techniques.Get(Id)!=null && Techniques.Trait(Techniques.Get(Id))!=null;
         public static bool HasSource(Actor a)=>a?.data!=null && a.isAlive() && a.hasTrait(Source);
         public static int GrantedLevel(bool source,int learned)=>source?Math.Max(1,learned):learned;
@@ -17,6 +17,13 @@ namespace Sakuga
         public static void Reconcile(Actor a)
         {
             if(!HasSource(a))return;
+            Technique tech=Techniques.Get(Id);
+            if(tech==null)return;
+            if(!Fighters.TryGet(a,out Fighter fighter))
+            {
+                Fighters.Touch(a);
+                if(!Fighters.TryGet(a,out fighter))return;
+            }
             a.data.get(Migrated,out bool imported,false);
             if(!imported)
             {
@@ -24,21 +31,10 @@ namespace Sakuga
                 if(float.IsNaN(remaining)||float.IsInfinity(remaining))remaining=10;
                 a.data.get(ReadyKey,out float existing,0f);
                 if(float.IsNaN(existing)||float.IsInfinity(existing))existing=0;
-                a.data.set(ReadyKey,Mathf.Max(existing,(float)Fighter.Now+Mathf.Clamp(remaining,0,10)));
+                float left=Mathf.Max(Mathf.Clamp(remaining,0,10),Mathf.Clamp(existing-(float)Fighter.Now,0,14));
+                fighter.SetCooldown(tech,Mathf.Max(fighter.CooldownLeft(tech),left));
                 a.data.set(Migrated,true);
             }
-            if(!Fighters.TryGet(a,out _))Fighters.Touch(a);
-        }
-        public static bool Ready(Actor a)
-        {
-            if(a?.data==null)return false;
-            a.data.get(ReadyKey,out float at,0f);
-            return !float.IsNaN(at) && !float.IsInfinity(at) && Fighter.Now>=at;
-        }
-        public static void Mark(Actor a,int level)
-        {
-            a.data.set(ReadyKey,(float)Fighter.Now+Cooldown(level));
-            a.data.set(Migrated,true);
         }
     }
 
@@ -55,12 +51,10 @@ namespace Sakuga
         public override bool Accepts(Link link)=>link==Link.Launched || link==Link.Scattered || link==Link.Thrown;
         public override Plan Plan(Ctx c,int level)
         {
-            if(c.HpPct<0.15f || !MoonSwordApi.Ready(c.Self))return null;
-            return Choreo.PickLine(c,this,level,12f,2.2f,MoonSwordApi.Multiplier(level),1,false);
+            return SwordWaveTech.PlanWave(c,this,level,12f,2.2f,MoonSwordApi.Multiplier(level));
         }
         public override bool Begin(Actor a,Plan p)
         {
-            if(!MoonSwordApi.Ready(a) || Combat.HpPct(a)<.15f)return false;
             ChoreoMove m=ChoreoMove.Make(a,p,this);
             if(m==null)return false;
             // Explicit palette keeps this school's signature white/silver even at high tiers.
@@ -72,10 +66,8 @@ namespace Sakuga
                 Mult=MoonSwordApi.Multiplier(p.Level),Pierce=7,Crater=0,Area=0,Fire=false,
                 PierceDecay=.9f,PierceFloor=.65f,LunarCrescent=true,Push=1.4f,Element=Element.School});
             m.Recover(.25f);
-            if(!m.Start())return false;
-            // Native techniques consume cooldown on starting, including a subsequently broken charge.
-            MoonSwordApi.Mark(a,p.Level);
-            return true;
+            // Brain.Execute owns mana/cooldown exactly as for the original techniques.
+            return m.Start();
         }
         [SakugaInit]
         internal static void Texts()
@@ -83,7 +75,7 @@ namespace Sakuga
             foreach(string lang in new[]{"en","cz","vi"})
             {
                 LM.Add(lang,"trait_sakuga_"+MoonSwordApi.Id,"Nguyệt Khuyết");
-                LM.Add(lang,"trait_sakuga_"+MoonSwordApi.Id+"_info","Tụ lực phóng vầng trăng khuyết lớn xuyên tối đa 8 địch, sát thương giảm 10% mỗi lần xuyên, sàn 65%. Cấp I–III: 140/170/200%, hồi tối thiểu 10/12/14 giây thế giới; cần 15% máu. Có thể bị ngắt, né hoặc phản đòn. Thái Hư Thiên Kiếm cấp quyền ít nhất cấp I; không cộng thành hai chiêu.");
+                LM.Add(lang,"trait_sakuga_"+MoonSwordApi.Id+"_info","Tụ lực phóng vầng trăng khuyết lớn xuyên tối đa 8 địch, sát thương giảm 10% mỗi lần xuyên, sàn 65%. Cấp I–III: 140/170/200%, hồi cơ sở 10/12/14 giây theo hệ số Võ Thần. Chọn mục tiêu như Sword Wave; không có ngưỡng máu riêng. Có thể bị ngắt, né hoặc phản đòn. Thái Hư Thiên Kiếm cấp quyền ít nhất cấp I; không cộng thành hai chiêu.");
                 LM.Add(lang,"sakuga_title_"+MoonSwordApi.Id,"NGUYET KHUYET");
             }
         }

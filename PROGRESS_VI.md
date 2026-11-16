@@ -2,6 +2,10 @@
 
 Mốc đầu tiên đưa lên Git: **1.1.0**.
 
+## 1.1.7 — điều kiện/target gốc cho Huyền Nguyệt
+
+Theo yêu cầu 2026-11-16: không thêm các cổng thi triển riêng. Nguyệt Khuyết dùng cùng hàm planner với Sword Wave, bỏ ngưỡng máu 15% và đồng hồ hồi riêng; Brain.Execute giữ toàn bộ mana/cooldown. Nhập cooldown cũ vào Fighter một lần. Vĩnh Dạ dùng chung Forge self-area quanh chủ; Trụy Thế dùng PickArea need=1 như second_sun và lấy điểm thả theo mục tiêu hiện tại ở lúc release. 33 thế Forge giữ các planner/reaktion sẵn có. Không đổi VFX/sát thương hoặc tuyên bố hết lag. Kiểm tra offline hai mod; CWP 0.16.1 đồng bộ tooltip/tài liệu.
+
 ## 1.1.6 — Huyền Nguyệt, bước 6
 
 Đủ 36 thế theo danh sách: 33 Forge và 3 C#. Sáu thế God gồm mặt trăng giáng xuống, chín nguyệt cầu, chưởng lớn, nguyệt nhận từ trên cao, vùng minh nguyệt hồi chủ và đòn khai thiên. Mặt trăng 81×81 thủ tục cache một lần; hai hazard C# có cảnh báo/giới hạn vòng đời, tối đa 6 đang chạy và 24 mục tiêu/nhịp, không phá địa hình. Vĩnh Dạ bốn nhịp hồi chủ tối đa 4% khi ở trong vùng. Forge thêm fixed count, giữ scaling cũ khi không bật. Kiểm tra biên dịch, parser thật, ID, số thế/cấp, pixel mặt trăng, thời gian rơi, đạn cố định và ngân sách đã đạt; chưa xác minh gameplay/VFX thực tế. Một số hình ảnh vẫn tái sử dụng engine, xem roadmap. Bước 7 cân bằng, hoàn thiện và học tự nhiên còn lại.

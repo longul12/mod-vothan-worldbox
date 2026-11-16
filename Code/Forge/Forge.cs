@@ -392,7 +392,7 @@ namespace Sakuga
                 case "area":
                     return Choreo.PickArea(c, this, level, R.radius * Forge.Size[Mathf.Clamp(level, 1, 3) - 1], R.range, total, R.need);
                 case "self":
-                    return Around(c, R.radius * Forge.Size[Mathf.Clamp(level, 1, 3) - 1], total);
+                    return PlanAround(c, R.radius * Forge.Size[Mathf.Clamp(level, 1, 3) - 1], total, R.need);
                 default:
                     return Choreo.PickMelee(c, this, level, new MeleeWant
                     {
@@ -408,7 +408,7 @@ namespace Sakuga
         private static readonly List<Actor> _near = new List<Actor>();
 
         /// <summary>A burst around itself: worth it when enough enemies stand within its reach (the nearest is the target).</summary>
-        private Plan Around(Ctx c, float radius, float total)
+        internal static Plan PlanAround(Ctx c, float radius, float total, int need)
         {
             if (c == null || c.Enemies.Count == 0)
             {
@@ -416,7 +416,7 @@ namespace Sakuga
             }
             _near.Clear();
             int count = c.CountNear(c.Pos, radius, _near);
-            int needed = c.Linked ? Mathf.Max(1, R.need - 1) : R.need;
+            int needed = c.Linked ? Mathf.Max(1, need - 1) : need;
             if (count == 0 || count < needed && !c.Forced)
             {
                 return null;

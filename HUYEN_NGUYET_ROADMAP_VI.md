@@ -2,6 +2,15 @@
 
 Ngày bắt đầu: 2026-11-05. Đây là phần mở rộng trong Võ Thần; giữ nguồn gốc engine của Turbo.
 
+## 1.1.7 — điều kiện và target theo Võ Thần
+
+- Nguyệt Khuyết và Sword Wave dùng chung `SwordWaveTech.PlanWave`: PickLine, loại mục tiêu quá sát 1,5 ô ngoài Forced, thưởng điểm khi ít nhất 3 địch trên đường. Tầm/vùng đánh/sát thương giữ riêng theo chiêu, không dựng AI mới.
+- Bỏ ngưỡng máu 15% và đồng hồ Ready/Mark riêng. Chỉ Brain.Execute kiểm tra hồi chiêu/mana và trả chi phí theo engine. Dữ liệu cooldown cũ chỉ dùng để nhập một lần vào Fighter.SetCooldown; sau đó theo vòng đời Fighter gốc, không còn mức hồi tối thiểu riêng qua Actor.data.
+- Trụy Thế theo Forge `second_sun`: PickArea, cho chọn vùng có một địch. Vĩnh Dạ gọi chung PlanAround của chiêu `self` như `circle_of_ten_thousand`, lấy tâm tại người thi triển. Giữ logic Forced và giảm số địch yêu cầu khi Linked của engine.
+- Điểm đặt hazard lấy tại lúc thả chiêu như SpotOr/self-area gốc; sau khi vòng cảnh báo xuất hiện thì cố định. Không tự thêm dự đoán tốc độ địch hoặc điều kiện máu/cảnh giới ngoài cơ chế học chiêu sẵn có.
+- 33 thế Forge tiếp tục dùng nguyên các planner và phản ứng chung; không thêm cổng điều kiện vào interpreter. Giới hạn hazard/particle là ngân sách hiệu năng hiện có, vẫn giữ.
+- Đợt này chưa sửa VFX, đo FPS hoặc kết luận đã hết giật. CWP 0.16.1 chỉ đồng bộ mô tả quyền dùng từ pháp bảo.
+
 ## Các bước và điều kiện hoàn thành
 
 | Bước | Phạm vi | Trạng thái |
@@ -48,7 +57,7 @@ Mỗi bước cần biên dịch, kiểm tra công thức và ID, sau đó thử
 - Đã có 6 thế Expert: Ngưng Nguyệt Chưởng, Tam Điệp Nguyệt Nhận, Thăng Nguyệt Kích, Nguyệt Ảnh Phân Thân, Nguyệt Hoa Liên Bạo và Ngân Nguyệt Kết Giới.
 - Expert: mana 16–48, hồi 6–11 giây trước hệ số engine. Phân thân dùng clones chia tổng sát thương cho các ảnh, không sinh Actor thật. Liên Bạo dùng nguyệt cầu bay vòng cung rồi nổ nhỏ, chưa phải bãi mìn được đặt sẵn; crater=0. Kết Giới là phản ứng guard và xung kích, chưa có khiên hấp thụ kéo dài. Thăng Nguyệt tạo Link.Launched để các nguyệt nhận sẵn có nối thế, chưa thêm thế truy kích cận chiến trên không riêng.
 - Đã có 6 thế Master: Nguyệt Khuyết viết C# riêng, Vọng Nguyệt Đại Chưởng, Nguyệt Luân Hồi Chuyển, Nguyệt Ảnh Liên Hoàn, Trăng Tàn Phá Giáp, Nguyệt Lạc Truy Kích.
-- Nguyệt Khuyết native dùng sprite crescent 26/9 trắng bạc, dư ảnh 0,07 giây; tốc độ 16, tầm 12, xuyên tối đa 8 địch, giảm 10% mỗi mục tiêu sàn 65%. Cấp I–III: hệ số 1,4/1,7/2,0, mana 24/36/52; hồi tối thiểu 10/12/14 giây thế giới từ lúc bắt đầu (bị ngắt vẫn tốn). Native Brain có thể áp dụng hồi chiêu dài hơn. Đồng hồ khác fallback CWP cũ.
+- Nguyệt Khuyết native dùng sprite crescent 26/9 trắng bạc, dư ảnh 0,07 giây; tốc độ 16, tầm 12, xuyên tối đa 8 địch, giảm 10% mỗi mục tiêu sàn 65%. Cấp I–III: hệ số 1,4/1,7/2,0, mana 24/36/52; hồi cơ sở 10/12/14 giây do Brain áp dụng hệ số như chiêu gốc. Từ 1.1.7 không có ngưỡng máu hoặc đồng hồ hồi riêng.
 - Chỉ Nguyệt Khuyết bật cờ LunarCrescent và falloff của ShotSpec; mọi projectile cũ giữ mặc định không suy giảm. Kiếm khí có thể bị phản/cản theo engine và vùng đánh chịu hệ số hình thể. Dùng chung pool hiệu ứng native.
 - Các thế Master khác dùng mana 24–58 và hồi 8–14 giây trước hệ số engine. Nguyệt Luân hiện là hai vòng xung kích, chưa có luân bay quỹ đạo riêng. Trăng Tàn hiện là đòn nặng, chưa xuyên phần trăm giáp. Nguyệt Lạc nối Link.Launched, không đào hố.
 - Đã có 6 thế Grandmaster: Tam Trọng Nguyệt Khuyết, Minh Nguyệt Chiếu Không, Nguyệt Ảnh Trận, Nguyệt Luân Thiên Vũ, Kính Nguyệt Hoán Vị, Nguyệt Thực Chấn. Tổng 30 thế (29 Forge + 1 C#).

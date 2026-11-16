@@ -85,6 +85,14 @@ namespace Sakuga
                 }
             }
             var moon=new NguyetKhuyetTech();
+            for(int level=1;level<=3;level++)
+            {
+                if(moon.Plan(null,level)!=null || new SwordWaveTech().Plan(null,level)!=null ||
+                   new ThienNguyetTruyTheTech().Plan(null,level)!=null || new VinhDaMinhNguyetTech().Plan(null,level)!=null)
+                    throw new Exception("Native planner accepted a missing combat context");
+            }
+            if(typeof(MoonSwordApi).GetMethod("Ready")!=null || typeof(MoonSwordApi).GetMethod("Mark")!=null)
+                throw new Exception("Moon private cooldown gates must not override Brain.Execute");
             if(ids.Contains(moon.Id) || moon.Entry!=Tier.Master || moon.School!=School.HuyenNguyet)throw new Exception("Native moon identity/realm mismatch");
             if(count!=33 || novice!=6 || adept!=6 || expert!=6 || master!=5 || grandmaster!=6 || god!=4)throw new Exception("Expected 33 recipes plus 3 native techniques = 36 forms");
             foreach(Technique ultimate in new Technique[]{new ThienNguyetTruyTheTech(),new VinhDaMinhNguyetTech()})

@@ -48,7 +48,13 @@ namespace Sakuga
 
         public override Plan Plan(Ctx c, int level)
         {
-            Plan p = Choreo.PickLine(c, this, level, Range(level), 0.55f, Mult(level) + (level == 2 ? Second : 0f), 1, true);
+            return PlanWave(c,this,level,Range(level),0.55f,Mult(level)+(level==2?Second:0f));
+        }
+
+        // Shared with the moon-school wave: preserve the original target policy in one place.
+        internal static Plan PlanWave(Ctx c,Technique technique,int level,float range,float width,float total)
+        {
+            Plan p = Choreo.PickLine(c, technique, level, range, width, total, 1, true);
             if (p == null || c.Forced)
             {
                 return p;

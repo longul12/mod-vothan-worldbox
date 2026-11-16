@@ -25,20 +25,24 @@ namespace Sakuga
         public override Plan Plan(Ctx c,int level)
         {
             if(LunarGodHazard.Active>=LunarGodRules.MaxActive)return null;
-            return Choreo.PickArea(c,this,level,Domain?4.5f:5.5f,Domain?4f:12f,
-                Domain?1.8f:LunarGodRules.ImpactDamage(level),2);
+            // Native Forge self-area policy (circle_of_ten_thousand) for a caster-centred domain.
+            if(Domain)return ForgedTechnique.PlanAround(c,4.5f,1.8f,2);
+            // Native Forge second_sun policy: a targeted area can be used on a single foe.
+            return Choreo.PickArea(c,this,level,5.5f,12f,LunarGodRules.ImpactDamage(level),1);
         }
         public override bool Begin(Actor a,Plan p)
         {
             if(LunarGodHazard.Active>=LunarGodRules.MaxActive)return false;
             var m=ChoreoMove.Make(a,p,this);if(m==null)return false;
-            Vector2 at=p.Point;bool domain=Domain;int level=p.Level;
+            bool domain=Domain;int level=p.Level;
             m.Hue.Core=Color.white;m.Hue.Main=new Color(.85f,.94f,1f);m.Hue.Edge=new Color(.5f,.72f,1f);
             m.Charge(domain?.8f:1.1f,ChargeStyle.Raised,2f);
             m.Do(mm=>
             {
                 if(LunarGodHazard.Active<LunarGodRules.MaxActive)
                 {
+                    // Same release-time anchor as native self-area and SpotOr-targeted hazards.
+                    Vector2 at=domain?mm.Pose.Ground:mm.V!=null && mm.VOk?mm.VG:mm.Point;
                     Areas.Add(new LunarGodHazard(mm,at,level,domain));
                     Cinema.Title(domain?"VINH DA MINH NGUYET":"THIEN NGUYET TRUY THE",new Color(.8f,.92f,1f),1.5f,at);
                 }
