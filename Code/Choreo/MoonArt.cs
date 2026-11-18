@@ -18,6 +18,11 @@ namespace Sakuga
             new Color32(150,157,161,255)
         };
         private static Sprite _moon, _star, _palm;
+        private static Sprite _impact, _mirror, _gather, _wake;
+        public static Sprite Impact=>_impact??(_impact=LunarPixelBank.Build("impact"));
+        public static Sprite Mirror=>_mirror??(_mirror=LunarPixelBank.Build("mirror"));
+        public static Sprite Gather=>_gather??(_gather=LunarPixelBank.Build("gather"));
+        public static Sprite Wake=>_wake??(_wake=LunarPixelBank.Build("wake"));
         private static Sprite[] _moonFrames,_palmFrames;
         public static readonly Color Rose=new Color(.94f,.55f,.84f);
         internal static Canvas BuildPalm()

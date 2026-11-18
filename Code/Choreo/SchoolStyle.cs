@@ -30,7 +30,7 @@ namespace Sakuga
             public School School;
             public Hue Hue;
             public bool HasHue;
-            public float Next, Ghost;
+            public float Next, Ghost, LunarWake;
             public Vector2 Last;
             public bool Has;
             public LunarGodVisual Lunar;
@@ -80,6 +80,13 @@ namespace Sakuga
                 _st[m] = s;
                 int lunar=LunarGodVisual.Kind(m.Tech?.Id);
                 if(lunar!=0)s.Lunar=new LunarGodVisual(lunar);
+                if(m.Tech?.Id=="hn_nguyet_kinh_phan_kich")
+                {
+                    Vector2 at=Choreo.BodyAt(m.A,.6f);
+                    if(Kit.Visible(at,.3f))
+                        Fx.Spawn(MoonArt.Mirror,at,Choreo.PxOf(m.A)*Choreo.KOf(m.A)*.45f,.25f,FxLayer.Top,19)?
+                            .Sized(.75f,1.1f).Color(Color.white,Fx.WithA(s.Hue.Edge,0));
+                }
             }
             if (s.School == School.None || !s.HasHue)
             {
@@ -260,6 +267,13 @@ namespace Sakuga
             {
                 case School.HuyenNguyet:
                     Kit.Line(from,to,px,.18f,1,FxLayer.Top,14,Fx.WithA(h.Ghost,.5f),Fx.WithA(h.Edge,0));
+                    if(Time.time>=s.LunarWake)
+                    {
+                        s.LunarWake=Time.time+.09f;
+                        Particle wake=Fx.Spawn(MoonArt.Wake,from,px*k*.3f,.22f,FxLayer.Top,13);
+                        if(wake!=null){wake.Rot=Mathf.Atan2(n.y,n.x)*Mathf.Rad2Deg;
+                            wake.Sized(.8f,1.25f).Color(Fx.WithA(Color.white,.55f),Fx.WithA(h.Edge,0));}
+                    }
                     // Native trail cadence; no additional world scan or actor state.
                     break;
                 case School.IronFist:
@@ -368,7 +382,10 @@ namespace Sakuga
             switch (school)
             {
                 case School.HuyenNguyet:
-                    MoonArt.Glint(at,px,.7f*w*k,.22f);
+                    Particle lunarHit=Fx.Spawn(MoonArt.Impact,at,px*.45f*w*k,.19f,layer,23);
+                    if(lunarHit!=null){lunarHit.Rot=Mathf.Atan2(d.y,d.x)*Mathf.Rad2Deg;
+                        lunarHit.Sized(.65f,1.15f).Color(Color.white,Fx.WithA(h.Edge,0));}
+                    MoonArt.Shatter(at,px*k*.65f,8f*px*w*k,3);
                     Fx.Ring(at,px,.3f,2,10*w*k,1,1,layer,19,1f,2f,
                         Fx.WithA(h.Edge,.8f),Fx.WithA(h.GhostEnd,0));
                     break;
@@ -508,7 +525,7 @@ namespace Sakuga
             switch (school)
             {
                 case School.HuyenNguyet:
-                    Fx.Spawn(MoonArt.Blade(false),hand,px*k*(.3f+.35f*t),.07f,FxLayer.Top,22)?
+                    Fx.Spawn(MoonArt.Gather,hand,px*k*(.18f+.18f*t),.07f,FxLayer.Top,22)?
                         .Color(Color.white,Fx.WithA(Color.white,.8f));
                     if(Random.value<.25f)
                     {
