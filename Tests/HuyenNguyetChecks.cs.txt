@@ -23,7 +23,12 @@ namespace Sakuga
                     if(tech.School!=School.HuyenNguyet || tech.Entry<Tier.Novice || tech.Entry>Tier.God)
                         throw new Exception("Wrong moon school/entry");
                     if(tech.Entry==Tier.Novice)novice++;else if(tech.Entry==Tier.Adept)adept++;else if(tech.Entry==Tier.Expert)expert++;else if(tech.Entry==Tier.Master)master++;else if(tech.Entry==Tier.Grandmaster)grandmaster++;else god++;
-                    if(tech.Icon!="ui/Icons/sakuga/iconSchoolHuyenNguyet")throw new Exception("Missing school icon fallback");
+                    string ownIcon="ui/Icons/sakuga/icon"+Technique.Pascal(recipe.id);
+                    if(tech.Icon!=ownIcon)throw new Exception("Lunar move still uses fallback icon: "+recipe.id);
+                    string iconPath=Path.Combine(root,"GameResources",ownIcon+".png");
+                    if(!File.Exists(iconPath))throw new Exception("Missing lunar move icon: "+recipe.id);
+                    byte[] png=File.ReadAllBytes(iconPath);
+                    if(png.Length<26 || png[0]!=137 || png[19]!=32 || png[23]!=32 || png[25]!=6)throw new Exception("Expected 32px RGBA lunar move icon: "+recipe.id);
                     for(int i=0;i<3;i++)
                         if(recipe.mana[i]<=0 || recipe.mana[i]>130 || recipe.cooldown[i]<4 || recipe.cooldown[i]>65)
                             throw new Exception("Invalid preview costs");
